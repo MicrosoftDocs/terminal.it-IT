@@ -1,0 +1,46 @@
+- name: Terminale Windows
+  items:
+    - name: Panoramica
+      href: index.md
+    - name: Operazioni preliminari
+      href: get-started.md
+    - name: Personalizzare le impostazioni
+      items:
+        - name: Impostazioni globali
+          href: customize-settings/global-settings.md
+        - name: Impostazioni del profilo
+          href: customize-settings/profile-settings.md
+        - name: Combinazioni di colori
+          href: customize-settings/color-schemes.md
+        - name: Combinazioni di tasti
+          href: customize-settings/key-bindings.md
+    - name: Argomenti della riga di comando
+      href: command-line-arguments.md
+    - name: Profili dinamici
+      href: dynamic-profiles.md
+    - name: Ricerca
+      href: search.md
+    - name: Riquadri
+      href: panes.md
+    - name: Cascadia Code
+      href: cascadia-code.md
+    - name: Esercitazioni
+      items:
+        - name: Configurazione di Powerline
+          href: tutorials/powerline-setup.md
+        - name: SSH
+          href: tutorials/ssh.md
+        - name: Impostare il titolo della scheda
+          href: tutorials/tab-title.md
+    - name: Raccolta di terminali personalizzati
+      items:
+        - name: Powerline in PowerShell
+          href: custom-terminal-gallery/powerline-in-powershell.md
+        - name: Raspberry Ubuntu
+          href: custom-terminal-gallery/raspberry-ubuntu.md
+        - name: Tema Vetro smerigliato
+          href: custom-terminal-gallery/frosted-glass-theme.md
+        - name: Prompt dei comandi retro
+          href: custom-terminal-gallery/retro-command-prompt.md
+    - name: Risoluzione dei problemi
+      href: troubleshooting.md
