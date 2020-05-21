@@ -41,8 +41,11 @@
     "globalMetadata": {
       "breadcrumb_path": "/windows/terminal/breadcrumb/toc.json",
       "extendBreadcrumb": true,
+      "keywords": "Windows Terminal, terminal, windows shell, terminal docs",
       "feedback_system": "None",
-      "disable_contribution_on_translation_quality": ["MTE95","MTE75","MT","Blank"]
+      "disable_contribution_on_translation_quality": ["MTE95","MTE75","MT","Blank"],
+      "searchScope": ["TerminalDocs"],
+      "hideScope": true
     },
     "fileMetadata": {},
     "template": [],
