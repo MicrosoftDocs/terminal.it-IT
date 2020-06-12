@@ -7,12 +7,12 @@ ms.date: 05/19/2020
 ms.topic: overview
 ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: cfefc48d19db97e18429a4653afe8cad9cd811ca
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: ab29130e34e6d3adbda37a002a03383211d27bce
+ms.sourcegitcommit: a77ad8aec5bbeba1e58a92c49dc2ebd67a426ae7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83416646"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83866363"
 ---
 # <a name="what-is-windows-terminal"></a>Che cos'è Terminale Windows?
 
@@ -35,7 +35,7 @@ Puoi configurare Terminale Windows con un'ampia varietà di combinazioni di colo
 
 In Terminale Windows puoi usare un'ampia varietà di combinazioni di tasti personalizzate in base alle tue preferenze. Se una specifica scelta rapida da tastiera non soddisfa le tue esigenze, puoi cambiarla come preferisci.
 
-Ad esempio, la combinazione predefinita di tasti di scelta rapida per la copia di testo dalla riga di comando è <kbd>CTRL+MAIUSC+C</kbd>. Puoi sostituirla con <kbd>CTRL+1</kbd> o con qualsiasi altra combinazione a scelta. Per aprire una nuova scheda, la combinazione predefinita di tasti di scelta rapida è <kbd>CTRL+T</kbd>, ma puoi scegliere di sostituirla con <kbd>CTRL+2</kbd>. La combinazione predefinita di tasti di scelta rapida per passare tra le schede aperte è <kbd>CTRL+TAB</kbd>, ma puoi sostituirla con <kbd>CTRL+-</kbd> e usarla per creare invece una nuova scheda.
+Ad esempio, la combinazione predefinita di tasti di scelta rapida per la copia di testo dalla riga di comando è <kbd>CTRL+MAIUSC+C</kbd>. Puoi sostituirla con <kbd>CTRL+1</kbd> o con qualsiasi altra combinazione a scelta. Per aprire una nuova scheda, la combinazione predefinita di tasti di scelta rapida è <kbd>CTRL+MAIUSC+T</kbd>, ma puoi scegliere di sostituirla con <kbd>CTRL+2</kbd>. La combinazione predefinita di tasti di scelta rapida per passare tra le schede aperte è <kbd>CTRL+TAB</kbd>, ma puoi sostituirla con <kbd>CTRL+-</kbd> e usarla per creare invece una nuova scheda.
 
 Per informazioni sulla personalizzazione delle combinazioni di tasti, vedi la [pagina Combinazioni di tasti](./customize-settings/key-bindings.md).
 
