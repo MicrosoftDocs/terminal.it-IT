@@ -3,18 +3,18 @@ title: Terminale Windows - Impostazioni globali
 description: Informazioni su come personalizzare le impostazioni globali in Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/19/2020
+ms.date: 06/18/2020
 ms.topic: how-to
 ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: 3cbe4b2b99f8115ff4eeaab5f525de393d7e5eb1
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: ba3197bb8b9466d37c01432b60314a7a00227898
+ms.sourcegitcommit: 91a802863cd0730d2e364377ffe44f819a66ff2a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83415956"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994310"
 ---
-# <a name="global-settings-in-the-windows-terminal"></a>Impostazioni globali di Terminale Windows
+# <a name="global-settings-in-windows-terminal"></a>Impostazioni globali di Terminale Windows
 
 Le proprietà elencate di seguito interessano l'intera finestra del terminale, indipendentemente dalle impostazioni del profilo. Queste proprietà devono essere inserite nella radice del file settings.json.
 
@@ -26,9 +26,12 @@ Imposta il profilo predefinito che viene aperto quando si digita <kbd>ctrl+shift
 
 **Obbligatoria:** Obbligatoria
 
-**Accetta:** GUID in formato stringa
+**Accetta:** GUID o nome del profilo in formato stringa
 
 **Valore predefinito:** GUID di PowerShell
+
+> [!IMPORTANT]
+> L'uso del nome del profilo per `defaultProfile` è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
 
 <br />
 
@@ -103,13 +106,13 @@ Quando è impostata su `true`, le schede vengono sempre visualizzate. Quando è 
 
 :::row:::
 :::column span="":::
-Consente di impostare la larghezza delle schede. Con `"equal"` tutte le schede hanno la stessa larghezza. Con `"titleLength"` ogni scheda viene adattata alla lunghezza del titolo.
+Consente di impostare la larghezza delle schede. Con `"equal"` tutte le schede hanno la stessa larghezza. Con `"titleLength"` ogni scheda viene adattata alla lunghezza del titolo. `"compact"` comprime tutte le schede inattive fino alla larghezza dell'icona, lasciando alla scheda attiva più spazio per visualizzare il titolo completo.
 
 **Nome della proprietà:** `tabWidthMode`
 
 **Obbligatoria:** Facoltativo
 
-**Accetta:** `"equal"`, `"titleLength"`
+**Accetta:** `"equal"`, `"titleLength"`, `"compact"`
 
 **Valore predefinito:** `"equal"`
 
@@ -119,6 +122,9 @@ Consente di impostare la larghezza delle schede. Con `"equal"` tutte le schede h
 
 :::column-end:::
 :::row-end:::
+
+> [!IMPORTANT]
+> L'impostazione `"compact"` è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
 
 ### <a name="hide-close-all-tabs-popup"></a>Nascondi il popup di chiusura di tutte le schede
 
@@ -147,17 +153,35 @@ ___
 
 ## <a name="launch-settings"></a>Impostazioni per l'avvio
 
-### <a name="launch-maximized"></a>Avvio a schermo intero
+### <a name="launch-on-startup-preview"></a>Avvio all'avvio del sistema ([anteprima](https://aka.ms/terminal-preview/))
 
-Consente di definire se il terminale verrà avviato a schermo intero in modo da occupare tutto lo spazio nella schermata o in una finestra.
+Se questa proprietà è impostata su `true`, abilita l'avvio di Terminale Windows all'avvio del sistema. L'impostazione su `false` disabiliterà la voce dell'attività di avvio del sistema. Nota: se la voce dell'attività di avvio del sistema di Terminale Windows viene disabilitata da criteri dell'organizzazione o da un'azione dell'utente, questa impostazione non avrà effetto.
+
+**Nome della proprietà:** `startOnUserLogin`
+
+**Obbligatoria:** Facoltativo
+
+**Accetta:** `true`, `false`
+
+**Valore predefinito:** `false`
+
+> [!IMPORTANT]
+> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
+
+### <a name="launch-size"></a>Dimensioni all'avvio
+
+Definisce se il terminale verrà avviato con dimensioni ingrandite, a schermo intero o in una finestra.
 
 **Nome della proprietà:** `launchMode`
 
 **Obbligatoria:** Facoltativo
 
-**Accetta:** `"default"`, `"maximized"`
+**Accetta:** `"default"`, `"maximized"`, `"fullscreen"`
 
 **Valore predefinito:** `"default"`
+
+> [!IMPORTANT]
+> L'impostazione `"fullscreen"` è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
 
 ### <a name="launch-position"></a>Posizione di avvio
 
@@ -316,3 +340,35 @@ Quando è impostata su `true`, la finestra verrà allineata al limite del caratt
 
 :::column-end:::
 :::row-end:::
+
+<br />
+
+___
+
+## <a name="rendering-settings"></a>Impostazioni di rendering
+
+Per cambiare le impostazioni di rendering, vedere le informazioni aggiuntive disponibili nella [pagina sulla risoluzione dei problemi](./../troubleshooting.md#the-text-is-blurry) per assistenza.
+
+### <a name="screen-redrawing"></a>Ridisegno dello schermo
+
+Se questa proprietà è impostata su `true`, il terminale ridisegnerà ogni frame dello schermo. Se è impostata su `false`, verrà eseguito solo il rendering degli aggiornamenti dello schermo tra frame.
+
+**Nome della proprietà:** `experimental.rendering.forceFullRepaint`
+
+**Obbligatoria:** Facoltativo
+
+**Accetta:** `true`, `false`
+
+**Valore predefinito:** `false`
+
+### <a name="software-rendering"></a>Rendering del software
+
+Se questa proprietà è impostata su `true`, il terminale userà il renderer software, ossia WARP, invece di quello hardware.
+
+**Nome della proprietà:** `experimental.rendering.software`
+
+**Obbligatoria:** Facoltativo
+
+**Accetta:** `true`, `false`
+
+**Valore predefinito:** `false`

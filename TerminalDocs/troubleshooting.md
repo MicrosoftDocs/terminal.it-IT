@@ -7,12 +7,12 @@ ms.date: 05/19/2020
 ms.topic: overview
 ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: 29d3ce72210c30fcbf38393d733c6157670465bb
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: ce2fe1e2efb26fe413b23a4e7ab08dcf0e0ed8dc
+ms.sourcegitcommit: d8e23557224bc50a82a36dc80ac68b9d11dfdde9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83415876"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720077"
 ---
 # <a name="troubleshooting-in-windows-terminal"></a>Risoluzione dei problemi di Terminale Windows
 
@@ -44,11 +44,11 @@ Per fare in modo che il titolo della scheda venga impostato automaticamente dall
 
 ## <a name="command-line-arguments-in-powershell"></a>Argomenti della riga di comando in PowerShell
 
-Per informazioni sul funzionamento degli argomenti della riga di comando in PowerShell, vedi la [pagina Argomenti della riga di comando](./command-line-arguments.md).
+Per informazioni sul funzionamento degli argomenti della riga di comando in PowerShell, vedere la [pagina Argomenti della riga di comando](./command-line-arguments.md).
 
 ## <a name="command-line-arguments-in-wsl"></a>Argomenti della riga di comando in WSL
 
-Per informazioni sul funzionamento degli argomenti della riga di comando in WSL, vedi la [pagina Argomenti della riga di comando](./command-line-arguments.md).
+Per informazioni sul funzionamento degli argomenti della riga di comando in WSL, vedere la [pagina Argomenti della riga di comando](./command-line-arguments.md).
 
 ## <a name="problem-setting-startingdirectory"></a>Problema con l'impostazione di `startingDirectory`
 
@@ -71,3 +71,7 @@ Se vuoi disabilitare questa funzionalità per il corretto funzionamento di `Ctrl
 Imposta l'opzione 'Cambia layout di tastiera' su 'Non assegnato' (o su una combinazione senza <kbd>CTRL+MAIUSC</kbd>), quindi seleziona **OK** e poi **Applica**. La combinazione di tasti <kbd>CTRL+MAIUSC+0</kbd> dovrebbe ora funzionare e viene passata al terminale.
 
 Se al contrario usi questa funzionalità di tasti di scelta rapida per più lingue di input, puoi [configurare combinazioni di tasti personalizzate](./customize-settings/key-bindings.md) nel file settings.json.
+
+## <a name="the-text-is-blurry"></a>Il testo è sfocato
+
+Alcuni driver video e combinazioni di hardware non gestiscono lo scorrimento e/o le aree modificate senza sfocare i dati del frame precedente. Per ovviare a questo problema, è possibile aggiungere una combinazione di [queste impostazioni di rendering globali](./customize-settings/global-settings.md#rendering-settings) per ridurre la pressione esercitata sull'hardware dal renderer di testo del terminale.

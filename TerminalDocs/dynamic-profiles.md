@@ -6,16 +6,16 @@ ms.author: cinnamon
 ms.date: 05/19/2020
 ms.topic: concept
 ms.service: terminal
-ms.openlocfilehash: 9c54dc2182584873d9d0c1358083d5142d07ef48
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: 7ab394cea84eaab08b14edf859ef0cd9390d7267
+ms.sourcegitcommit: a489b75e14e2c123bf6b4ac2a15ff85b515564be
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83416126"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83553193"
 ---
 # <a name="dynamic-profiles-in-windows-terminal"></a>Profili dinamici in Terminale Windows
 
-Terminale Windows creerà automaticamente il sottosistema Windows per Linux (WSL) e i profili di PowerShell se hai installato queste shell nel computer. In questo modo è più facile avere tutte le shell incluse nel terminale senza dover individuare i relativi file eseguibili. Questi profili vengono generati con la proprietà `source`, che indica al terminale dove trovare il file eseguibile appropriato.
+Terminale Windows creerà automaticamente il sottosistema Windows per Linux (WSL) e i profili di PowerShell se queste shell sono installate nel computer. In questo modo è più facile avere tutte le shell incluse nel terminale senza dover individuare i relativi file eseguibili. Questi profili vengono generati con la proprietà `source`, che indica al terminale dove trovare il file eseguibile appropriato.
 
 Dopo l'installazione, il terminale imposterà PowerShell come profilo predefinito. Per informazioni su come cambiare il profilo predefinito, vedi la [pagina delle impostazioni globali](./customize-settings/global-settings.md).
 

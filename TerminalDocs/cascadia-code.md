@@ -6,12 +6,12 @@ ms.author: cinnamon
 ms.date: 05/19/2020
 ms.topic: overview
 ms.service: terminal
-ms.openlocfilehash: e9af1ea8445514534c64410fe494d35186d028b5
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: c2d9b8461c168639f1453050e18f0650afb738fb
+ms.sourcegitcommit: d8e23557224bc50a82a36dc80ac68b9d11dfdde9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83415856"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720097"
 ---
 # <a name="cascadia-code"></a>Cascadia Code
 
@@ -30,7 +30,7 @@ Sono disponibili più versioni di Cascadia Code che includono legature e glifi. 
 
 ## <a name="powerline-and-programming-ligatures"></a>Legature di Powerline di programmazione
 
-Powerline è un plug-in comune della riga di comando che ti consente di visualizzare altre informazioni nel prompt. Per la corretta visualizzazione di queste informazioni, usa alcuni glifi aggiuntivi. Per altre informazioni sulla configurazione di Powerline nel prompt dei comandi, vedi la pagina [Powerline in Terminale Windows](./tutorials/powerline-setup.md).
+Powerline è un plug-in comune della riga di comando che consente di visualizzare altre informazioni nel prompt. Per la corretta visualizzazione di queste informazioni, usa alcuni glifi aggiuntivi. Per altre informazioni sulla configurazione di Powerline nel prompt dei comandi, vedi la pagina [Powerline in Terminale Windows](./tutorials/powerline-setup.md).
 
 Le legature di programmazione sono glifi creati combinando caratteri. Sono particolarmente utili per la scrittura di codice. Le varianti "Code" includono legature, mentre le varianti "Mono" no.
 

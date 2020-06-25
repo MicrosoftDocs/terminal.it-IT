@@ -3,15 +3,15 @@ title: Riquadri di Terminale Windows
 description: Informazioni su come dividere i riquadri in Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/19/2020
+ms.date: 06/18/2020
 ms.topic: how-to
 ms.service: terminal
-ms.openlocfilehash: 5d13d48d8e9317c229720937f916f57769da7261
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: 0e2d7a50e1a3c933f7ab2d98bda5be6b8ee44e7e
+ms.sourcegitcommit: 91a802863cd0730d2e364377ffe44f819a66ff2a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83416306"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994333"
 ---
 # <a name="panes-in-windows-terminal"></a>Riquadri in Terminale Windows
 
@@ -19,7 +19,9 @@ I riquadri offrono la possibilità di eseguire più applicazioni da riga di coma
 
 ## <a name="creating-a-new-pane"></a>Creazione di un nuovo riquadro
 
-In Terminale Windows puoi creare un nuovo riquadro verticale o orizzontale. La divisione in verticale apre un nuovo riquadro a destra di quello con lo stato attivo, mentre la divisione in orizzontale ne apre uno nuovo sotto quello con lo stato attivo. Per creare un nuovo riquadro verticale del profilo predefinito, premi <kbd>ALT+MAIUSC++</kbd>. Per creare un riquadro orizzontale del profilo predefinito, premi <kbd>ALT+MAIUSC+-</kbd>.
+### <a name="using-the-keyboard"></a>Uso della tastiera
+
+In Terminale Windows è possibile creare un nuovo riquadro verticale o orizzontale. La divisione in verticale apre un nuovo riquadro a destra di quello con lo stato attivo, mentre la divisione in orizzontale ne apre uno nuovo sotto quello con lo stato attivo. Per creare un nuovo riquadro verticale del profilo predefinito, premi <kbd>ALT+MAIUSC++</kbd>. Per creare un riquadro orizzontale del profilo predefinito, premi <kbd>ALT+MAIUSC+-</kbd>.
 
 ![Creazione di riquadri di Terminale Windows](./images/open-panes.gif)
 _Configurazione: [Raspberry Ubuntu](./custom-terminal-gallery/raspberry-ubuntu.md)_
@@ -31,6 +33,15 @@ Per cambiare queste combinazioni di tasti, puoi crearne altre usando l'azione `s
 { "command": { "action": "splitPane", "split": "horizontal" }, "keys": "alt+shift+-" },
 { "command": { "action": "splitPane", "split": "auto" }, "keys": "alt+shift+|" }
 ```
+
+### <a name="using-the-dropdown-menu-preview"></a>Uso del menu a discesa ([anteprima](https://aka.ms/terminal-preview/))
+
+Per aprire un nuovo riquadro tramite il menu a discesa, tenere premuto <kbd>ALT</kbd> e fare clic sul profilo desiderato. In questo modo la finestra o il riquadro attivo viene diviso in modalità `auto` in un nuovo riquadro del profilo selezionato. La divisione in modalità `auto` viene applicata nella direzione con il bordo più lungo per creare un riquadro.
+
+![Riquadro a discesa di Terminale Windows](./images/alt-click-pane.gif)
+
+> [!IMPORTANT]
+> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
 
 ## <a name="switching-between-panes"></a>Passaggio tra riquadri
 

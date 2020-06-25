@@ -3,24 +3,24 @@ title: Argomenti della riga di comando di Terminale Windows
 description: Informazioni su come creare argomenti della riga di comando per Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/19/2020
+ms.date: 06/18/2020
 ms.topic: how-to
 ms.service: terminal
-ms.openlocfilehash: e30fd547052a87c88b72d015e132e32b1889af05
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: d40b0527bab94289457cf8c8a88931f4df943496
+ms.sourcegitcommit: 91a802863cd0730d2e364377ffe44f819a66ff2a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83415896"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994378"
 ---
 # <a name="using-command-line-arguments-for-windows-terminal"></a>Uso degli argomenti della riga di comando per Terminale Windows
 
 Per aprire una nuova istanza di Terminale Windows dalla riga di comando, puoi usare `wt.exe`. In alternativa, puoi anche usare l'alias di esecuzione `wt`.
 
 > [!NOTE]
-> Se hai creato Terminale Windows dal codice sorgente disponibile in [GitHub](https://github.com/microsoft/terminal), puoi aprire tale build usando `wtd.exe` o `wtd`.
+> Se Terminale Windows è stato creato dal codice sorgente disponibile in [GitHub](https://github.com/microsoft/terminal), è possibile aprire tale build usando `wtd.exe` o `wtd`.
 
-![Argomenti della riga di comando di Terminale Windows per riquadri divisi](./images/terminal-command-args.gif)
+![Argomento della riga di comando di Terminale Windows per i riquadri divisi](./images/terminal-command-args.gif)
 
 ## <a name="command-line-syntax"></a>Sintassi della riga di comando
 
@@ -30,7 +30,7 @@ La riga di comando `wt` accetta due tipi di valori, ovvero **opzioni** e **coman
 wt [options] [command ; ]
 ```
 
-Per visualizzare un messaggio della Guida con l'elenco degli argomenti della riga di comando, immetti `wt -h`, `wt --help`, `wt -?` o `wt /?`.
+Per visualizzare un messaggio della Guida con l'elenco degli argomenti della riga di comando disponibili, immettere `wt -h`, `wt --help`, `wt -?` o `wt /?`.
 
 ## <a name="options-and-commands"></a>Opzioni e comandi
 
@@ -39,12 +39,20 @@ Di seguito è riportato l'elenco completo di opzioni e comandi supportati per la
 | Opzione | Description |
 | ------ | ----------- |
 | `--help`, `-h`, `-?`, `/?` | Visualizza il messaggio della Guida. |
+| `--maximized`, `-M` | Avvia il terminale ingrandito. |
+| `--fullscreen`, `-F` | Avvia il terminale a schermo intero. |
+
+> [!IMPORTANT]
+> `--maximized`, `-M` e `--fullscreen`, `-F` sono disponibili solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
 
 | Comando | Parametri | Description |
 | ------- | ---------- | ----------- |
-| `new-tab` | `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline` | Crea una nuova scheda. |
-| `split-pane` | `-H, --horizontal`, `-V, --vertical`, `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline` | Divide un nuovo riquadro. |
+| `new-tab` | `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline`, `--title` | Crea una nuova scheda. |
+| `split-pane` | `-H, --horizontal`, `-V, --vertical`, `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline`, `--title` | Divide un nuovo riquadro. |
 | `focus-tab` | `--target, -t tab-index` | Imposta lo stato attivo su una specifica scheda. |
+
+> [!IMPORTANT]
+> `--title` è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
 
 ## <a name="command-line-argument-examples"></a>Esempi di argomenti della riga di comando
 
@@ -125,7 +133,7 @@ wt ; ;
 wt `; `;
 ```
 
-PowerShell usa un punto e virgola (;) per delimitare le istruzioni. Per interpretare un punto e virgola ; come delimitatore di comandi per gli argomenti della riga di comando wt, devi usare i caratteri di escape del punto e virgola con accenti gravi. PowerShell include anche l'operatore di interruzione analisi (--%), che indica di arrestare l'interpretazione di qualsiasi stringa dopo tale operatore e di passarla esattamente così come è.
+PowerShell usa un punto e virgola (;) per delimitare le istruzioni. Per interpretare un punto e virgola ; come delimitatore di comandi per gli argomenti della riga di comando wt, è necessario usare i caratteri di escape del punto e virgola con accenti gravi. PowerShell include anche l'operatore di interruzione analisi (--%), che indica di arrestare l'interpretazione di qualsiasi stringa dopo tale operatore e di passarla esattamente così come è.
 
 #### <a name="linux"></a>[Linux](#tab/linux)
 
@@ -153,7 +161,7 @@ wt -p "Command Prompt" ; new-tab -p "Windows PowerShell"
 wt -p "Command Prompt" `; new-tab -p "Windows PowerShell"
 ```
 
-PowerShell usa un punto e virgola (;) per delimitare le istruzioni. Per interpretare un punto e virgola ; come delimitatore di comandi per gli argomenti della riga di comando wt, devi usare i caratteri di escape del punto e virgola con accenti gravi. PowerShell include anche l'operatore di interruzione analisi (--%), che indica di arrestare l'interpretazione di qualsiasi stringa dopo tale operatore e di passarla esattamente così come è.
+PowerShell usa un punto e virgola (;) per delimitare le istruzioni. Per interpretare un punto e virgola ; come delimitatore di comandi per gli argomenti della riga di comando wt, è necessario usare i caratteri di escape del punto e virgola con accenti gravi. PowerShell include anche l'operatore di interruzione analisi (--%), che indica di arrestare l'interpretazione di qualsiasi stringa dopo tale operatore e di passarla esattamente così come è.
 
 #### <a name="linux"></a>[Linux](#tab/linux)
 
@@ -183,7 +191,7 @@ wt -p "Command Prompt" ; split-pane -p "Windows PowerShell" ; split-pane -H wsl.
 wt -p "Command Prompt" `; split-pane -p "Windows PowerShell" `; split-pane -H wsl.exe
 ```
 
-PowerShell usa un punto e virgola (;) per delimitare le istruzioni. Per interpretare un punto e virgola ; come delimitatore di comandi per gli argomenti della riga di comando wt, devi usare i caratteri di escape del punto e virgola con accenti gravi. PowerShell include anche l'operatore di interruzione analisi (--%), che indica di arrestare l'interpretazione di qualsiasi stringa dopo tale operatore e di passarla esattamente così come è.
+PowerShell usa un punto e virgola (;) per delimitare le istruzioni. Per interpretare un punto e virgola ; come delimitatore di comandi per gli argomenti della riga di comando wt, è necessario usare i caratteri di escape del punto e virgola con accenti gravi. PowerShell include anche l'operatore di interruzione analisi (--%), che indica di arrestare l'interpretazione di qualsiasi stringa dopo tale operatore e di passarla esattamente così come è.
 
 #### <a name="linux"></a>[Linux](#tab/linux)
 
@@ -197,6 +205,37 @@ Gli alias di esecuzione non funzionano nelle distribuzioni WSL. Se vuoi usare wt
 <!-- End tab selectors.  -->
 
 Il flag `-H` (o `--horizontal`) indica che i riquadri devono essere divisi orizzontalmente. Il flag `-V` (o `--vertical`) indica che i riquadri devono essere divisi verticalmente.
+
+### <a name="tab-title-preview"></a>Titolo della scheda ([anteprima](https://aka.ms/terminal-preview/))
+
+Per aprire una nuova istanza del terminale con titoli di schede personalizzati, usare l'argomento `--title`. Per impostare il titolo di ogni scheda all'apertura di due schede, immettere:
+
+<!-- Start tab selectors. -->
+#### <a name="command-prompt"></a>[Prompt dei comandi](#tab/windows)
+
+```bash
+wt --title tabname1 ; new-tab -p "Ubuntu-18.04" --title tabname2
+```
+
+#### <a name="powershell"></a>[PowerShell](#tab/powershell)
+
+```powershell
+wt --title tabname1 `; new-tab -p "Ubuntu-18.04" --title tabname2
+```
+
+#### <a name="linux"></a>[Linux](#tab/linux)
+
+```bash
+cmd.exe /c "wt.exe" --title tabname1 \; new-tab -p "Ubuntu-18.04" --title tabname2
+```
+
+Gli alias di esecuzione non funzionano nelle distribuzioni WSL. Se vuoi usare wt.exe dalla riga di comando WSL, puoi generarlo direttamente da CMD eseguendo `cmd.exe`. L'opzione `/c` indica a CMD di terminare dopo l'esecuzione e i caratteri `\;` (barra + punto e virgola) separano i comandi.
+
+---
+<!-- End tab selectors.  -->
+
+> [!IMPORTANT]
+> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
 
 ### <a name="tab-focus"></a>Stato attivo della scheda
 

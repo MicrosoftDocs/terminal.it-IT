@@ -3,20 +3,20 @@ title: Terminale Windows - Tasti di scelta rapida
 description: Informazioni su come creare tasti di scelta rapida personalizzati per Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/19/2020
+ms.date: 06/18/2020
 ms.topic: how-to
 ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: 76bf91f8d7c2b49c2dc6bcf0c83640b57b2acd01
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: 2716e3bfbbc290eb3f2bdce58d0de5c12ee3225d
+ms.sourcegitcommit: 91a802863cd0730d2e364377ffe44f819a66ff2a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83415966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994294"
 ---
 # <a name="custom-key-bindings-in-windows-terminal"></a>Tasti di scelta rapida personalizzati in Terminale Windows
 
-In Terminale Windows puoi creare tasti di scelta rapida personalizzati per controllare l'interazione con il terminale tramite la tastiera.
+In Terminale Windows è possibile creare tasti di scelta rapida personalizzati per controllare l'interazione con il terminale tramite la tastiera.
 
 ## <a name="key-binding-formats"></a>Formati di tasti di scelta rapida
 
@@ -155,17 +155,27 @@ Apre il menu a discesa.
 { "command": "openNewTabDropdown", "keys": "ctrl+shift+space" }
 ```
 
-### <a name="open-settings-file"></a>Apri file di impostazioni
+### <a name="open-settings-files"></a>Apri file di impostazioni
 
-Apre il file settings.
+Apre i file di impostazioni predefiniti o personalizzati. Senza il campo `target` verrà aperto il file settings.json.
 
 **Nome del comando:** `openSettings`
 
 **Associazione predefinita:**
 
 ```json
-{ "command": "openSettings", "keys": "ctrl+," }
+{ "command": "openSettings", "keys": "ctrl+," },
+{ "command": { "action": "openSettings", "target": "defaultsFile" }, "keys": "ctrl+alt+," },
 ```
+
+#### <a name="actions"></a>Azioni
+
+| Nome | Obbligatoria | Tipo accettato | Description |
+| ---- | --------- | ------- | ----------- |
+| `target` | Facoltativo | `"settingsFile"`, `"defaultsFile"`, `"allFiles"` | Il file di impostazioni da aprire. |
+
+> [!IMPORTANT]
+> Il campo `target` è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
 
 ### <a name="toggle-full-screen"></a>Attiva/Disattiva schermo intero
 

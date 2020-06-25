@@ -7,14 +7,14 @@ ms.date: 05/19/2020
 ms.topic: how-to
 ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: 4c4b602f2d8d6e3da20ef0b26845517e4512fd87
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: 9f7e6133a08a21c3b77689cd8dce32dacbf80351
+ms.sourcegitcommit: d8e23557224bc50a82a36dc80ac68b9d11dfdde9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83415916"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720137"
 ---
-# <a name="color-schemes-in-the-windows-terminal"></a>Combinazioni colori in Terminale Windows
+# <a name="color-schemes-in-windows-terminal"></a>Combinazioni colori in Terminale Windows
 
 ## <a name="creating-your-own-color-scheme"></a>Creazione di una combinazione colori personalizzata
 
@@ -25,7 +25,7 @@ ms.locfileid: "83415916"
     "name" : "Campbell",
 
     "cursorColor": "#FFFFFF",
-    "selectionBackground": "#",
+    "selectionBackground": "#FFFFFF",
 
     "background" : "#0C0C0C",
     "foreground" : "#CCCCCC",
@@ -57,7 +57,7 @@ ___
 
 ## <a name="included-color-schemes"></a>Combinazioni colori incluse
 
-Le combinazioni colori di Terminale Windows sono incluse nel file defaults.json. Per accedervi, tieni premuto <kbd>alt</kbd> mentre fai clic sulla voce di menu Impostazioni. Se vuoi impostare una combinazione colori all'interno di uno dei profili della riga di comando, aggiungi la proprietà `colorScheme` specificando come valore l'impostazione `name` della combinazione colori.
+Le combinazioni colori di Terminale Windows sono incluse nel file defaults.json. Per accedervi, tieni premuto <kbd>alt</kbd> mentre fai clic sulla voce di menu Impostazioni. Per impostare una combinazione colori all'interno di uno dei profili della riga di comando, aggiungere la proprietà `colorScheme` specificando come valore l'impostazione `name` della combinazione colori.
 
 ```json
 "colorScheme": "COLOR SCHEME NAME"

@@ -3,18 +3,18 @@ title: Terminale Windows - Impostazioni del profilo
 description: Informazioni su come personalizzare i singoli profili in Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/19/2020
+ms.date: 06/18/2020
 ms.topic: how-to
 ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: 309fb40736718df7d1670a7376806b70ef0e35fe
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: ad7121f9cd6583562c03bf0e35d2928f46fe5d91
+ms.sourcegitcommit: 91a802863cd0730d2e364377ffe44f819a66ff2a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83416086"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994385"
 ---
-# <a name="profile-settings-in-the-windows-terminal"></a>Impostazioni del profilo in Terminale Windows
+# <a name="profile-settings-in-windows-terminal"></a>Impostazioni del profilo in Terminale Windows
 
 Le impostazioni elencate di seguito sono specifiche dei singoli profili univoci. Se vuoi applicare un'impostazione a tutti i profili, puoi aggiungerla alla sezione `defaults` prima dell'elenco dei profili nel file settings.json.
 
@@ -80,6 +80,9 @@ Directory in cui viene avviata la shell quando viene caricata.
 **Valore predefinito:** `"%USERPROFILE%"`
 
 <br />
+
+> [!NOTE]
+> Quando si imposta la directory iniziale in cui si aprono le distribuzioni WSL installate, è consigliabile usare il formato "startingDirectory": "//wsl$/<distro name>", sostituendo il segnaposto con il nome della distribuzione. Ad esempio, "startingDirectory": "//wsl$/Ubuntu-20.04".
 
 ___
 
@@ -176,6 +179,21 @@ Consente di impostare le dimensioni del carattere del profilo in punti.
 
 **Valore predefinito:** `12`
 
+### <a name="font-weight-preview"></a>Spessore dei caratteri ([anteprima](https://aka.ms/terminal-preview/))
+
+Questa proprietà imposta lo spessore (tratti sottili o spessi) per il tipo di carattere del profilo.
+
+**Nome della proprietà:** `fontWeight`
+
+**Obbligatoria:** Facoltativo
+
+**Accetta**  `"normal"`, `"thin"`, `"extra-light"`, `"light"`, `"semi-light"`, `"medium"`, `"semi-bold"`, `"bold"`, `"extra-bold"`, `"black"`, `"extra-black"` oppure un intero che corrisponde alla rappresentazione numerica dello spesso del tipo di carattere OpenType
+
+**Valore predefinito:** `"normal"`
+
+> [!IMPORTANT]
+> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
+
 ### <a name="padding"></a>Spaziatura interna
 
 :::row:::
@@ -248,6 +266,27 @@ Consente di impostare l'altezza percentuale del cursore a partire dalla parte in
 **Obbligatoria:** Facoltativo
 
 **Accetta:** intero compreso tra 25-100
+
+<br />
+
+___
+
+## <a name="keyboard-settings"></a>Impostazioni da tastiera
+
+### <a name="altgr-aliasing-preview"></a>Aliasing di ALTGR ([anteprima](https://aka.ms/terminal-preview/))
+
+Questa proprietà consente di controllare se Terminale Windows considererà <kbd>CTRL+ALT</kbd> come alias di <kbd>ALTGR</kbd>.
+
+**Nome della proprietà:** `altGrAliasing`
+
+**Obbligatoria:** Facoltativo
+
+**Accetta:** `true`, `false`
+
+**Valore predefinito:** `true`
+
+> [!IMPORTANT]
+> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
 
 <br />
 
