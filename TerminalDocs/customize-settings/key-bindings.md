@@ -3,44 +3,44 @@ title: Terminale Windows - Tasti di scelta rapida
 description: Informazioni su come creare tasti di scelta rapida personalizzati per Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/19/2020
+ms.date: 06/18/2020
 ms.topic: how-to
 ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: 76bf91f8d7c2b49c2dc6bcf0c83640b57b2acd01
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: 2716e3bfbbc290eb3f2bdce58d0de5c12ee3225d
+ms.sourcegitcommit: 91a802863cd0730d2e364377ffe44f819a66ff2a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83415966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994294"
 ---
-# <a name="custom-key-bindings-in-windows-terminal"></a><span data-ttu-id="b3fcc-103">Tasti di scelta rapida personalizzati in Terminale Windows</span><span class="sxs-lookup"><span data-stu-id="b3fcc-103">Custom key bindings in Windows Terminal</span></span>
+# <a name="custom-key-bindings-in-windows-terminal"></a><span data-ttu-id="308c4-103">Tasti di scelta rapida personalizzati in Terminale Windows</span><span class="sxs-lookup"><span data-stu-id="308c4-103">Custom key bindings in Windows Terminal</span></span>
 
-<span data-ttu-id="b3fcc-104">In Terminale Windows puoi creare tasti di scelta rapida personalizzati per controllare l'interazione con il terminale tramite la tastiera.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-104">You can create custom key bindings (keyboard shortcuts) inside the Windows Terminal that give you control of how you interact with the terminal using your keyboard.</span></span>
+<span data-ttu-id="308c4-104">In Terminale Windows è possibile creare tasti di scelta rapida personalizzati per controllare l'interazione con il terminale tramite la tastiera.</span><span class="sxs-lookup"><span data-stu-id="308c4-104">You can create custom key bindings (keyboard shortcuts) inside Windows Terminal that give you control of how you interact with the terminal using your keyboard.</span></span>
 
-## <a name="key-binding-formats"></a><span data-ttu-id="b3fcc-105">Formati di tasti di scelta rapida</span><span class="sxs-lookup"><span data-stu-id="b3fcc-105">Key binding formats</span></span>
+## <a name="key-binding-formats"></a><span data-ttu-id="308c4-105">Formati di tasti di scelta rapida</span><span class="sxs-lookup"><span data-stu-id="308c4-105">Key binding formats</span></span>
 
-<span data-ttu-id="b3fcc-106">I tasti di scelta rapida possono essere strutturati nei formati seguenti:</span><span class="sxs-lookup"><span data-stu-id="b3fcc-106">Key bindings can be structured in the following formats:</span></span>
+<span data-ttu-id="308c4-106">I tasti di scelta rapida possono essere strutturati nei formati seguenti:</span><span class="sxs-lookup"><span data-stu-id="308c4-106">Key bindings can be structured in the following formats:</span></span>
 
-### <a name="commands-without-arguments"></a><span data-ttu-id="b3fcc-107">Comandi senza argomenti</span><span class="sxs-lookup"><span data-stu-id="b3fcc-107">Commands without arguments</span></span>
+### <a name="commands-without-arguments"></a><span data-ttu-id="308c4-107">Comandi senza argomenti</span><span class="sxs-lookup"><span data-stu-id="308c4-107">Commands without arguments</span></span>
 
 ```json
 { "command": "commandName", "keys": "modifiers+key" }
 ```
 
-<span data-ttu-id="b3fcc-108">Questa impostazione predefinita, ad esempio, usa il tasto di scelta rapida <kbd>alt+f4</kbd> per chiudere la finestra del terminale:</span><span class="sxs-lookup"><span data-stu-id="b3fcc-108">For example, this default setting uses the shortcut key <kbd>alt+f4</kbd> to close the terminal window:</span></span>
+<span data-ttu-id="308c4-108">Questa impostazione predefinita, ad esempio, usa il tasto di scelta rapida <kbd>alt+f4</kbd> per chiudere la finestra del terminale:</span><span class="sxs-lookup"><span data-stu-id="308c4-108">For example, this default setting uses the shortcut key <kbd>alt+f4</kbd> to close the terminal window:</span></span>
 
 ```json
 { "command": "closeWindow", "keys": "alt+f4" }
 ```
 
-### <a name="commands-with-arguments"></a><span data-ttu-id="b3fcc-109">Comandi con argomenti</span><span class="sxs-lookup"><span data-stu-id="b3fcc-109">Commands with arguments</span></span>
+### <a name="commands-with-arguments"></a><span data-ttu-id="308c4-109">Comandi con argomenti</span><span class="sxs-lookup"><span data-stu-id="308c4-109">Commands with arguments</span></span>
 
 ```json
 { "command": { "action": "commandName", "argument": "value" }, "keys": "modifiers+key" }
 ```
 
-<span data-ttu-id="b3fcc-110">Questa impostazione predefinita, ad esempio, usa il tasto di scelta rapida <kbd>ctrl+maiusc+1</kbd> per aprire una nuova scheda nel terminale in base al profilo elencato per primo nel menu a discesa (in genere verrà aperto il profilo PowerShell):</span><span class="sxs-lookup"><span data-stu-id="b3fcc-110">For example, this default setting uses the shortcut key <kbd>ctrl+shift+1</kbd> to open a new tab in the terminal based on whichever profile is listed first in your dropdown menu (typically this will open the PowerShell profile):</span></span>
+<span data-ttu-id="308c4-110">Questa impostazione predefinita, ad esempio, usa il tasto di scelta rapida <kbd>ctrl+maiusc+1</kbd> per aprire una nuova scheda nel terminale in base al profilo elencato per primo nel menu a discesa (in genere verrà aperto il profilo PowerShell):</span><span class="sxs-lookup"><span data-stu-id="308c4-110">For example, this default setting uses the shortcut key <kbd>ctrl+shift+1</kbd> to open a new tab in the terminal based on whichever profile is listed first in your dropdown menu (typically this will open the PowerShell profile):</span></span>
 
 ```json
 { "command": { "action": "newTab", "index": 0 }, "keys": "ctrl+shift+1" }
@@ -50,75 +50,75 @@ ms.locfileid: "83415966"
 
 ___
 
-## <a name="key-binding-properties"></a><span data-ttu-id="b3fcc-111">Proprietà dei tasti di scelta rapida</span><span class="sxs-lookup"><span data-stu-id="b3fcc-111">Key binding properties</span></span>
+## <a name="key-binding-properties"></a><span data-ttu-id="308c4-111">Proprietà dei tasti di scelta rapida</span><span class="sxs-lookup"><span data-stu-id="308c4-111">Key binding properties</span></span>
 
-<span data-ttu-id="b3fcc-112">È possibile creare tasti di scelta rapida usando le proprietà seguenti.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-112">Key bindings can be constructed using the following properties.</span></span>
+<span data-ttu-id="308c4-112">È possibile creare tasti di scelta rapida usando le proprietà seguenti.</span><span class="sxs-lookup"><span data-stu-id="308c4-112">Key bindings can be constructed using the following properties.</span></span>
 
-### <a name="command"></a><span data-ttu-id="b3fcc-113">Comando</span><span class="sxs-lookup"><span data-stu-id="b3fcc-113">Command</span></span>
+### <a name="command"></a><span data-ttu-id="308c4-113">Comando</span><span class="sxs-lookup"><span data-stu-id="308c4-113">Command</span></span>
 
-<span data-ttu-id="b3fcc-114">Comando eseguito quando vengono premuti i tasti associati.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-114">This is the command executed when the associated keys are pressed.</span></span>
+<span data-ttu-id="308c4-114">Comando eseguito quando vengono premuti i tasti associati.</span><span class="sxs-lookup"><span data-stu-id="308c4-114">This is the command executed when the associated keys are pressed.</span></span>
 
-<span data-ttu-id="b3fcc-115">**Nome della proprietà:** `command`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-115">**Property name:** `command`</span></span>
+<span data-ttu-id="308c4-115">**Nome della proprietà:** `command`</span><span class="sxs-lookup"><span data-stu-id="308c4-115">**Property name:** `command`</span></span>
 
-<span data-ttu-id="b3fcc-116">**Obbligatoria:** Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="b3fcc-116">**Necessity:** Required</span></span>
+<span data-ttu-id="308c4-116">**Obbligatoria:** Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="308c4-116">**Necessity:** Required</span></span>
 
-<span data-ttu-id="b3fcc-117">**Accetta:** String</span><span class="sxs-lookup"><span data-stu-id="b3fcc-117">**Accepts:** String</span></span>
+<span data-ttu-id="308c4-117">**Accetta:** String</span><span class="sxs-lookup"><span data-stu-id="308c4-117">**Accepts:** String</span></span>
 
-### <a name="keys"></a><span data-ttu-id="b3fcc-118">Tasti</span><span class="sxs-lookup"><span data-stu-id="b3fcc-118">Keys</span></span>
+### <a name="keys"></a><span data-ttu-id="308c4-118">Tasti</span><span class="sxs-lookup"><span data-stu-id="308c4-118">Keys</span></span>
 
-<span data-ttu-id="b3fcc-119">Definisce le combinazioni di tasti usate per chiamare il comando.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-119">This defines the key combinations used to call the command.</span></span> <span data-ttu-id="b3fcc-120">Con la proprietà keys è possibile associare più modificatori a un unico tasto.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-120">Keys can have any number of modifiers with one key.</span></span> <span data-ttu-id="b3fcc-121">I tasti e i modificatori accettati sono elencati [di seguito](#accepted-modifiers-and-keys).</span><span class="sxs-lookup"><span data-stu-id="b3fcc-121">Accepted modifiers and keys are listed [below](#accepted-modifiers-and-keys).</span></span>
+<span data-ttu-id="308c4-119">Definisce le combinazioni di tasti usate per chiamare il comando.</span><span class="sxs-lookup"><span data-stu-id="308c4-119">This defines the key combinations used to call the command.</span></span> <span data-ttu-id="308c4-120">Con la proprietà keys è possibile associare più modificatori a un unico tasto.</span><span class="sxs-lookup"><span data-stu-id="308c4-120">Keys can have any number of modifiers with one key.</span></span> <span data-ttu-id="308c4-121">I tasti e i modificatori accettati sono elencati [di seguito](#accepted-modifiers-and-keys).</span><span class="sxs-lookup"><span data-stu-id="308c4-121">Accepted modifiers and keys are listed [below](#accepted-modifiers-and-keys).</span></span>
 
-<span data-ttu-id="b3fcc-122">**Nome della proprietà:** `keys`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-122">**Property name:** `keys`</span></span>
+<span data-ttu-id="308c4-122">**Nome della proprietà:** `keys`</span><span class="sxs-lookup"><span data-stu-id="308c4-122">**Property name:** `keys`</span></span>
 
-<span data-ttu-id="b3fcc-123">**Obbligatoria:** Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="b3fcc-123">**Necessity:** Required</span></span>
+<span data-ttu-id="308c4-123">**Obbligatoria:** Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="308c4-123">**Necessity:** Required</span></span>
 
-<span data-ttu-id="b3fcc-124">**Accetta:** stringa o matrice[stringa]</span><span class="sxs-lookup"><span data-stu-id="b3fcc-124">**Accepts:** String or array[string]</span></span>
+<span data-ttu-id="308c4-124">**Accetta:** stringa o matrice[stringa]</span><span class="sxs-lookup"><span data-stu-id="308c4-124">**Accepts:** String or array[string]</span></span>
 
-### <a name="action"></a><span data-ttu-id="b3fcc-125">Azione</span><span class="sxs-lookup"><span data-stu-id="b3fcc-125">Action</span></span>
+### <a name="action"></a><span data-ttu-id="308c4-125">Azione</span><span class="sxs-lookup"><span data-stu-id="308c4-125">Action</span></span>
 
-<span data-ttu-id="b3fcc-126">Aggiunge funzionalità aggiuntive a determinati comandi.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-126">This adds additional functionality to certain commands.</span></span>
+<span data-ttu-id="308c4-126">Aggiunge funzionalità aggiuntive a determinati comandi.</span><span class="sxs-lookup"><span data-stu-id="308c4-126">This adds additional functionality to certain commands.</span></span>
 
-<span data-ttu-id="b3fcc-127">**Nome della proprietà:** `action`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-127">**Property name:** `action`</span></span>
+<span data-ttu-id="308c4-127">**Nome della proprietà:** `action`</span><span class="sxs-lookup"><span data-stu-id="308c4-127">**Property name:** `action`</span></span>
 
-<span data-ttu-id="b3fcc-128">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="b3fcc-128">**Necessity:** Optional</span></span>
+<span data-ttu-id="308c4-128">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="308c4-128">**Necessity:** Optional</span></span>
 
-<span data-ttu-id="b3fcc-129">**Accetta:** String</span><span class="sxs-lookup"><span data-stu-id="b3fcc-129">**Accepts:** String</span></span>
+<span data-ttu-id="308c4-129">**Accetta:** String</span><span class="sxs-lookup"><span data-stu-id="308c4-129">**Accepts:** String</span></span>
 
 <br />
 
 ___
 
-## <a name="accepted-modifiers-and-keys"></a><span data-ttu-id="b3fcc-130">Tasti e modificatori accettati</span><span class="sxs-lookup"><span data-stu-id="b3fcc-130">Accepted modifiers and keys</span></span>
+## <a name="accepted-modifiers-and-keys"></a><span data-ttu-id="308c4-130">Tasti e modificatori accettati</span><span class="sxs-lookup"><span data-stu-id="308c4-130">Accepted modifiers and keys</span></span>
 
-### <a name="modifiers"></a><span data-ttu-id="b3fcc-131">Modificatori</span><span class="sxs-lookup"><span data-stu-id="b3fcc-131">Modifiers</span></span>
+### <a name="modifiers"></a><span data-ttu-id="308c4-131">Modificatori</span><span class="sxs-lookup"><span data-stu-id="308c4-131">Modifiers</span></span>
 
-<span data-ttu-id="b3fcc-132">`ctrl+`, `shift+`, `alt+`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-132">`ctrl+`, `shift+`, `alt+`</span></span>
+<span data-ttu-id="308c4-132">`ctrl+`, `shift+`, `alt+`</span><span class="sxs-lookup"><span data-stu-id="308c4-132">`ctrl+`, `shift+`, `alt+`</span></span>
 
-### <a name="modifier-keys"></a><span data-ttu-id="b3fcc-133">Tasti di modifica</span><span class="sxs-lookup"><span data-stu-id="b3fcc-133">Modifier keys</span></span>
+### <a name="modifier-keys"></a><span data-ttu-id="308c4-133">Tasti di modifica</span><span class="sxs-lookup"><span data-stu-id="308c4-133">Modifier keys</span></span>
 
-| <span data-ttu-id="b3fcc-134">Type</span><span class="sxs-lookup"><span data-stu-id="b3fcc-134">Type</span></span> | <span data-ttu-id="b3fcc-135">Tasti</span><span class="sxs-lookup"><span data-stu-id="b3fcc-135">Keys</span></span> |
+| <span data-ttu-id="308c4-134">Type</span><span class="sxs-lookup"><span data-stu-id="308c4-134">Type</span></span> | <span data-ttu-id="308c4-135">Tasti</span><span class="sxs-lookup"><span data-stu-id="308c4-135">Keys</span></span> |
 | ---- | ---- |
-| <span data-ttu-id="b3fcc-136">Tasti funzione e alfanumerici</span><span class="sxs-lookup"><span data-stu-id="b3fcc-136">Function and alphanumeric keys</span></span> | <span data-ttu-id="b3fcc-137">`f1-f24`, `a-z`, `0-9`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-137">`f1-f24`, `a-z`, `0-9`</span></span> |
-| <span data-ttu-id="b3fcc-138">Simboli</span><span class="sxs-lookup"><span data-stu-id="b3fcc-138">Symbols</span></span> | <span data-ttu-id="b3fcc-139">``` ` ```, `-`, `=`, `[`, `]`, `\`, `;`, `'`, `,`, `.`, `/`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-139">``` ` ```, `-`, `=`, `[`, `]`, `\`, `;`, `'`, `,`, `.`, `/`</span></span> |
-| <span data-ttu-id="b3fcc-140">Tasti di direzione</span><span class="sxs-lookup"><span data-stu-id="b3fcc-140">Arrow keys</span></span> | <span data-ttu-id="b3fcc-141">`down`, `left`, `right`, `up`, `pagedown`, `pageup`, `pgdn`, `pgup`, `end`, `home`, `plus`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-141">`down`, `left`, `right`, `up`, `pagedown`, `pageup`, `pgdn`, `pgup`, `end`, `home`, `plus`</span></span> |
-| <span data-ttu-id="b3fcc-142">Tasti di azione</span><span class="sxs-lookup"><span data-stu-id="b3fcc-142">Action keys</span></span> | <span data-ttu-id="b3fcc-143">`tab`, `enter`, `esc`, `escape`, `space`, `backspace`, `delete`, `insert`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-143">`tab`, `enter`, `esc`, `escape`, `space`, `backspace`, `delete`, `insert`</span></span> |
-| <span data-ttu-id="b3fcc-144">Tasti del tastierino numerico</span><span class="sxs-lookup"><span data-stu-id="b3fcc-144">Numpad keys</span></span> | <span data-ttu-id="b3fcc-145">`numpad_0-numpad_9`, `numpad0-numpad9`, `numpad_add`, `numpad_plus`, `numpad_decimal`, `numpad_period`, `numpad_divide`, `numpad_minus`, `numpad_subtract`, `numpad_multiply`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-145">`numpad_0-numpad_9`, `numpad0-numpad9`, `numpad_add`, `numpad_plus`, `numpad_decimal`, `numpad_period`, `numpad_divide`, `numpad_minus`, `numpad_subtract`, `numpad_multiply`</span></span> |
+| <span data-ttu-id="308c4-136">Tasti funzione e alfanumerici</span><span class="sxs-lookup"><span data-stu-id="308c4-136">Function and alphanumeric keys</span></span> | <span data-ttu-id="308c4-137">`f1-f24`, `a-z`, `0-9`</span><span class="sxs-lookup"><span data-stu-id="308c4-137">`f1-f24`, `a-z`, `0-9`</span></span> |
+| <span data-ttu-id="308c4-138">Simboli</span><span class="sxs-lookup"><span data-stu-id="308c4-138">Symbols</span></span> | <span data-ttu-id="308c4-139">``` ` ```, `-`, `=`, `[`, `]`, `\`, `;`, `'`, `,`, `.`, `/`</span><span class="sxs-lookup"><span data-stu-id="308c4-139">``` ` ```, `-`, `=`, `[`, `]`, `\`, `;`, `'`, `,`, `.`, `/`</span></span> |
+| <span data-ttu-id="308c4-140">Tasti di direzione</span><span class="sxs-lookup"><span data-stu-id="308c4-140">Arrow keys</span></span> | <span data-ttu-id="308c4-141">`down`, `left`, `right`, `up`, `pagedown`, `pageup`, `pgdn`, `pgup`, `end`, `home`, `plus`</span><span class="sxs-lookup"><span data-stu-id="308c4-141">`down`, `left`, `right`, `up`, `pagedown`, `pageup`, `pgdn`, `pgup`, `end`, `home`, `plus`</span></span> |
+| <span data-ttu-id="308c4-142">Tasti di azione</span><span class="sxs-lookup"><span data-stu-id="308c4-142">Action keys</span></span> | <span data-ttu-id="308c4-143">`tab`, `enter`, `esc`, `escape`, `space`, `backspace`, `delete`, `insert`</span><span class="sxs-lookup"><span data-stu-id="308c4-143">`tab`, `enter`, `esc`, `escape`, `space`, `backspace`, `delete`, `insert`</span></span> |
+| <span data-ttu-id="308c4-144">Tasti del tastierino numerico</span><span class="sxs-lookup"><span data-stu-id="308c4-144">Numpad keys</span></span> | <span data-ttu-id="308c4-145">`numpad_0-numpad_9`, `numpad0-numpad9`, `numpad_add`, `numpad_plus`, `numpad_decimal`, `numpad_period`, `numpad_divide`, `numpad_minus`, `numpad_subtract`, `numpad_multiply`</span><span class="sxs-lookup"><span data-stu-id="308c4-145">`numpad_0-numpad_9`, `numpad0-numpad9`, `numpad_add`, `numpad_plus`, `numpad_decimal`, `numpad_period`, `numpad_divide`, `numpad_minus`, `numpad_subtract`, `numpad_multiply`</span></span> |
 
 <br />
 
 ___
 
-## <a name="application-level-commands"></a><span data-ttu-id="b3fcc-146">Comandi a livello di applicazione</span><span class="sxs-lookup"><span data-stu-id="b3fcc-146">Application-level commands</span></span>
+## <a name="application-level-commands"></a><span data-ttu-id="308c4-146">Comandi a livello di applicazione</span><span class="sxs-lookup"><span data-stu-id="308c4-146">Application-level commands</span></span>
 
-### <a name="close-window"></a><span data-ttu-id="b3fcc-147">Chiudi finestra</span><span class="sxs-lookup"><span data-stu-id="b3fcc-147">Close window</span></span>
+### <a name="close-window"></a><span data-ttu-id="308c4-147">Chiudi finestra</span><span class="sxs-lookup"><span data-stu-id="308c4-147">Close window</span></span>
 
 :::row:::
 :::column span="":::
-<span data-ttu-id="b3fcc-148">Chiude la finestra corrente e tutte le relative schede.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-148">This closes the current window and all tabs within it.</span></span> <span data-ttu-id="b3fcc-149">Se `confirmCloseAllTabs` è impostato su `true`, verrà visualizzata una finestra di dialogo per confermare la chiusura di tutte le schede.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-149">If `confirmCloseAllTabs` is set to `true`, a confirmation dialog will appear to ensure you'd like to close all your tabs.</span></span> <span data-ttu-id="b3fcc-150">Per altre informazioni su questa impostazione, vedi la [pagina delle impostazioni globali](./global-settings.md#hide-close-all-tabs-popup).</span><span class="sxs-lookup"><span data-stu-id="b3fcc-150">More information on this setting can be found on the [Global settings page](./global-settings.md#hide-close-all-tabs-popup).</span></span>
+<span data-ttu-id="308c4-148">Chiude la finestra corrente e tutte le relative schede.</span><span class="sxs-lookup"><span data-stu-id="308c4-148">This closes the current window and all tabs within it.</span></span> <span data-ttu-id="308c4-149">Se `confirmCloseAllTabs` è impostato su `true`, verrà visualizzata una finestra di dialogo per confermare la chiusura di tutte le schede.</span><span class="sxs-lookup"><span data-stu-id="308c4-149">If `confirmCloseAllTabs` is set to `true`, a confirmation dialog will appear to ensure you'd like to close all your tabs.</span></span> <span data-ttu-id="308c4-150">Per altre informazioni su questa impostazione, vedi la [pagina delle impostazioni globali](./global-settings.md#hide-close-all-tabs-popup).</span><span class="sxs-lookup"><span data-stu-id="308c4-150">More information on this setting can be found on the [Global settings page](./global-settings.md#hide-close-all-tabs-popup).</span></span>
 
-<span data-ttu-id="b3fcc-151">**Nome del comando:** `closeWindow`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-151">**Command name:** `closeWindow`</span></span>
+<span data-ttu-id="308c4-151">**Nome del comando:** `closeWindow`</span><span class="sxs-lookup"><span data-stu-id="308c4-151">**Command name:** `closeWindow`</span></span>
 
-<span data-ttu-id="b3fcc-152">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-152">**Default binding:**</span></span>
+<span data-ttu-id="308c4-152">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="308c4-152">**Default binding:**</span></span>
 
 ```json
 { "command": "closeWindow", "keys": "alt+f4" }
@@ -131,49 +131,59 @@ ___
 :::column-end:::
 :::row-end:::
 
-### <a name="find"></a><span data-ttu-id="b3fcc-154">Trova</span><span class="sxs-lookup"><span data-stu-id="b3fcc-154">Find</span></span>
+### <a name="find"></a><span data-ttu-id="308c4-154">Trova</span><span class="sxs-lookup"><span data-stu-id="308c4-154">Find</span></span>
 
-<span data-ttu-id="b3fcc-155">Apre la finestra di dialogo di ricerca.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-155">This opens the search dialog box.</span></span> <span data-ttu-id="b3fcc-156">Per altre informazioni sulla ricerca, vedi la [pagina relativa alla ricerca](./../search.md).</span><span class="sxs-lookup"><span data-stu-id="b3fcc-156">More information on search can be found on the [Search page](./../search.md).</span></span>
+<span data-ttu-id="308c4-155">Apre la finestra di dialogo di ricerca.</span><span class="sxs-lookup"><span data-stu-id="308c4-155">This opens the search dialog box.</span></span> <span data-ttu-id="308c4-156">Per altre informazioni sulla ricerca, vedi la [pagina relativa alla ricerca](./../search.md).</span><span class="sxs-lookup"><span data-stu-id="308c4-156">More information on search can be found on the [Search page](./../search.md).</span></span>
 
-<span data-ttu-id="b3fcc-157">**Nome del comando:** `find`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-157">**Command name:** `find`</span></span>
+<span data-ttu-id="308c4-157">**Nome del comando:** `find`</span><span class="sxs-lookup"><span data-stu-id="308c4-157">**Command name:** `find`</span></span>
 
-<span data-ttu-id="b3fcc-158">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-158">**Default binding:**</span></span>
+<span data-ttu-id="308c4-158">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="308c4-158">**Default binding:**</span></span>
 
 ```json
 { "command": "find", "keys": "ctrl+shift+f" }
 ```
 
-### <a name="open-the-dropdown"></a><span data-ttu-id="b3fcc-159">Apri menu a discesa</span><span class="sxs-lookup"><span data-stu-id="b3fcc-159">Open the dropdown</span></span>
+### <a name="open-the-dropdown"></a><span data-ttu-id="308c4-159">Apri menu a discesa</span><span class="sxs-lookup"><span data-stu-id="308c4-159">Open the dropdown</span></span>
 
-<span data-ttu-id="b3fcc-160">Apre il menu a discesa.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-160">This opens the dropdown menu.</span></span>
+<span data-ttu-id="308c4-160">Apre il menu a discesa.</span><span class="sxs-lookup"><span data-stu-id="308c4-160">This opens the dropdown menu.</span></span>
 
-<span data-ttu-id="b3fcc-161">**Nome del comando:** `openNewTabDropdown`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-161">**Command name:** `openNewTabDropdown`</span></span>
+<span data-ttu-id="308c4-161">**Nome del comando:** `openNewTabDropdown`</span><span class="sxs-lookup"><span data-stu-id="308c4-161">**Command name:** `openNewTabDropdown`</span></span>
 
-<span data-ttu-id="b3fcc-162">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-162">**Default binding:**</span></span>
+<span data-ttu-id="308c4-162">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="308c4-162">**Default binding:**</span></span>
 
 ```json
 { "command": "openNewTabDropdown", "keys": "ctrl+shift+space" }
 ```
 
-### <a name="open-settings-file"></a><span data-ttu-id="b3fcc-163">Apri file di impostazioni</span><span class="sxs-lookup"><span data-stu-id="b3fcc-163">Open settings file</span></span>
+### <a name="open-settings-files"></a><span data-ttu-id="308c4-163">Apri file di impostazioni</span><span class="sxs-lookup"><span data-stu-id="308c4-163">Open settings files</span></span>
 
-<span data-ttu-id="b3fcc-164">Apre il file settings.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-164">This opens the settings file.</span></span>
+<span data-ttu-id="308c4-164">Apre i file di impostazioni predefiniti o personalizzati.</span><span class="sxs-lookup"><span data-stu-id="308c4-164">This opens either the default or custom settings files.</span></span> <span data-ttu-id="308c4-165">Senza il campo `target` verrà aperto il file settings.json.</span><span class="sxs-lookup"><span data-stu-id="308c4-165">Without the `target` field, this will open the settings.json file.</span></span>
 
-<span data-ttu-id="b3fcc-165">**Nome del comando:** `openSettings`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-165">**Command name:** `openSettings`</span></span>
+<span data-ttu-id="308c4-166">**Nome del comando:** `openSettings`</span><span class="sxs-lookup"><span data-stu-id="308c4-166">**Command name:** `openSettings`</span></span>
 
-<span data-ttu-id="b3fcc-166">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-166">**Default binding:**</span></span>
+<span data-ttu-id="308c4-167">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="308c4-167">**Default binding:**</span></span>
 
 ```json
-{ "command": "openSettings", "keys": "ctrl+," }
+{ "command": "openSettings", "keys": "ctrl+," },
+{ "command": { "action": "openSettings", "target": "defaultsFile" }, "keys": "ctrl+alt+," },
 ```
 
-### <a name="toggle-full-screen"></a><span data-ttu-id="b3fcc-167">Attiva/Disattiva schermo intero</span><span class="sxs-lookup"><span data-stu-id="b3fcc-167">Toggle full screen</span></span>
+#### <a name="actions"></a><span data-ttu-id="308c4-168">Azioni</span><span class="sxs-lookup"><span data-stu-id="308c4-168">Actions</span></span>
 
-<span data-ttu-id="b3fcc-168">Consente di passare dalla finestra a schermo intero a quella con dimensioni predefinite e viceversa.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-168">This allows you to switch between full screen and default window sizes.</span></span>
+| <span data-ttu-id="308c4-169">Nome</span><span class="sxs-lookup"><span data-stu-id="308c4-169">Name</span></span> | <span data-ttu-id="308c4-170">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="308c4-170">Necessity</span></span> | <span data-ttu-id="308c4-171">Tipo accettato</span><span class="sxs-lookup"><span data-stu-id="308c4-171">Accepts</span></span> | <span data-ttu-id="308c4-172">Description</span><span class="sxs-lookup"><span data-stu-id="308c4-172">Description</span></span> |
+| ---- | --------- | ------- | ----------- |
+| `target` | <span data-ttu-id="308c4-173">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="308c4-173">Optional</span></span> | <span data-ttu-id="308c4-174">`"settingsFile"`, `"defaultsFile"`, `"allFiles"`</span><span class="sxs-lookup"><span data-stu-id="308c4-174">`"settingsFile"`, `"defaultsFile"`, `"allFiles"`</span></span> | <span data-ttu-id="308c4-175">Il file di impostazioni da aprire.</span><span class="sxs-lookup"><span data-stu-id="308c4-175">The settings file to open.</span></span> |
 
-<span data-ttu-id="b3fcc-169">**Nome del comando:** `toggleFullscreen`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-169">**Command name:** `toggleFullscreen`</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="308c4-176">Il campo `target` è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).</span><span class="sxs-lookup"><span data-stu-id="308c4-176">The `target` field is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview/).</span></span>
 
-<span data-ttu-id="b3fcc-170">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-170">**Default bindings:**</span></span>
+### <a name="toggle-full-screen"></a><span data-ttu-id="308c4-177">Attiva/Disattiva schermo intero</span><span class="sxs-lookup"><span data-stu-id="308c4-177">Toggle full screen</span></span>
+
+<span data-ttu-id="308c4-178">Consente di passare dalla finestra a schermo intero a quella con dimensioni predefinite e viceversa.</span><span class="sxs-lookup"><span data-stu-id="308c4-178">This allows you to switch between full screen and default window sizes.</span></span>
+
+<span data-ttu-id="308c4-179">**Nome del comando:** `toggleFullscreen`</span><span class="sxs-lookup"><span data-stu-id="308c4-179">**Command name:** `toggleFullscreen`</span></span>
+
+<span data-ttu-id="308c4-180">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="308c4-180">**Default bindings:**</span></span>
 
 ```json
 { "command": "toggleFullscreen", "keys": "alt+enter" },
@@ -184,33 +194,33 @@ ___
 
 ___
 
-## <a name="tab-management-commands"></a><span data-ttu-id="b3fcc-171">Comandi per la gestione delle schede</span><span class="sxs-lookup"><span data-stu-id="b3fcc-171">Tab management commands</span></span>
+## <a name="tab-management-commands"></a><span data-ttu-id="308c4-181">Comandi per la gestione delle schede</span><span class="sxs-lookup"><span data-stu-id="308c4-181">Tab management commands</span></span>
 
-### <a name="close-tab"></a><span data-ttu-id="b3fcc-172">Chiudi scheda</span><span class="sxs-lookup"><span data-stu-id="b3fcc-172">Close tab</span></span>
+### <a name="close-tab"></a><span data-ttu-id="308c4-182">Chiudi scheda</span><span class="sxs-lookup"><span data-stu-id="308c4-182">Close tab</span></span>
 
-<span data-ttu-id="b3fcc-173">Chiude la scheda corrente.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-173">This closes the current tab.</span></span>
+<span data-ttu-id="308c4-183">Chiude la scheda corrente.</span><span class="sxs-lookup"><span data-stu-id="308c4-183">This closes the current tab.</span></span>
 
-<span data-ttu-id="b3fcc-174">**Nome del comando:** `closeTab`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-174">**Command name:** `closeTab`</span></span>
+<span data-ttu-id="308c4-184">**Nome del comando:** `closeTab`</span><span class="sxs-lookup"><span data-stu-id="308c4-184">**Command name:** `closeTab`</span></span>
 
-### <a name="duplicate-tab"></a><span data-ttu-id="b3fcc-175">Duplica scheda</span><span class="sxs-lookup"><span data-stu-id="b3fcc-175">Duplicate tab</span></span>
+### <a name="duplicate-tab"></a><span data-ttu-id="308c4-185">Duplica scheda</span><span class="sxs-lookup"><span data-stu-id="308c4-185">Duplicate tab</span></span>
 
-<span data-ttu-id="b3fcc-176">Crea una copia della scheda corrente e la apre.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-176">This makes a copy of the current tab and opens it.</span></span>
+<span data-ttu-id="308c4-186">Crea una copia della scheda corrente e la apre.</span><span class="sxs-lookup"><span data-stu-id="308c4-186">This makes a copy of the current tab and opens it.</span></span>
 
-<span data-ttu-id="b3fcc-177">**Nome del comando:** `duplicateTab`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-177">**Command name:** `duplicateTab`</span></span>
+<span data-ttu-id="308c4-187">**Nome del comando:** `duplicateTab`</span><span class="sxs-lookup"><span data-stu-id="308c4-187">**Command name:** `duplicateTab`</span></span>
 
-<span data-ttu-id="b3fcc-178">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-178">**Default binding:**</span></span>
+<span data-ttu-id="308c4-188">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="308c4-188">**Default binding:**</span></span>
 
 ```json
 { "command": "duplicateTab", "keys": "ctrl+shift+d" }
 ```
 
-### <a name="new-tab"></a><span data-ttu-id="b3fcc-179">Nuova scheda</span><span class="sxs-lookup"><span data-stu-id="b3fcc-179">New tab</span></span>
+### <a name="new-tab"></a><span data-ttu-id="308c4-189">Nuova scheda</span><span class="sxs-lookup"><span data-stu-id="308c4-189">New tab</span></span>
 
-<span data-ttu-id="b3fcc-180">Crea una nuova scheda. Se viene specificato senza argomenti, il profilo predefinito verrà aperto in una nuova scheda. Se non viene specificata un'azione, verrà usata l'impostazione equivalente del profilo predefinito.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-180">This creates a new tab. Without any arguments, this will open the default profile in a new tab. If an action is not specified, the default profile's equivalent setting will be used.</span></span>
+<span data-ttu-id="308c4-190">Crea una nuova scheda. Se viene specificato senza argomenti, il profilo predefinito verrà aperto in una nuova scheda. Se non viene specificata un'azione, verrà usata l'impostazione equivalente del profilo predefinito.</span><span class="sxs-lookup"><span data-stu-id="308c4-190">This creates a new tab. Without any arguments, this will open the default profile in a new tab. If an action is not specified, the default profile's equivalent setting will be used.</span></span>
 
-<span data-ttu-id="b3fcc-181">**Nome del comando:** `newTab`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-181">**Command name:** `newTab`</span></span>
+<span data-ttu-id="308c4-191">**Nome del comando:** `newTab`</span><span class="sxs-lookup"><span data-stu-id="308c4-191">**Command name:** `newTab`</span></span>
 
-<span data-ttu-id="b3fcc-182">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-182">**Default bindings:**</span></span>
+<span data-ttu-id="308c4-192">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="308c4-192">**Default bindings:**</span></span>
 
 ```json
 { "command": "newTab", "keys": "ctrl+shift+t" },
@@ -225,47 +235,47 @@ ___
 { "command": { "action": "newTab", "index": 8 }, "keys": "ctrl+shift+9" }
 ```
 
-#### <a name="actions"></a><span data-ttu-id="b3fcc-183">Azioni</span><span class="sxs-lookup"><span data-stu-id="b3fcc-183">Actions</span></span>
+#### <a name="actions"></a><span data-ttu-id="308c4-193">Azioni</span><span class="sxs-lookup"><span data-stu-id="308c4-193">Actions</span></span>
 
-| <span data-ttu-id="b3fcc-184">Nome</span><span class="sxs-lookup"><span data-stu-id="b3fcc-184">Name</span></span> | <span data-ttu-id="b3fcc-185">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="b3fcc-185">Necessity</span></span> | <span data-ttu-id="b3fcc-186">Tipo accettato</span><span class="sxs-lookup"><span data-stu-id="b3fcc-186">Accepts</span></span> | <span data-ttu-id="b3fcc-187">Description</span><span class="sxs-lookup"><span data-stu-id="b3fcc-187">Description</span></span> |
+| <span data-ttu-id="308c4-194">Nome</span><span class="sxs-lookup"><span data-stu-id="308c4-194">Name</span></span> | <span data-ttu-id="308c4-195">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="308c4-195">Necessity</span></span> | <span data-ttu-id="308c4-196">Tipo accettato</span><span class="sxs-lookup"><span data-stu-id="308c4-196">Accepts</span></span> | <span data-ttu-id="308c4-197">Description</span><span class="sxs-lookup"><span data-stu-id="308c4-197">Description</span></span> |
 | ---- | --------- | ------- | ----------- |
-| `commandLine` | <span data-ttu-id="b3fcc-188">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="b3fcc-188">Optional</span></span> | <span data-ttu-id="b3fcc-189">Nome del file eseguibile in formato stringa</span><span class="sxs-lookup"><span data-stu-id="b3fcc-189">Executable file name as a string</span></span> | <span data-ttu-id="b3fcc-190">Esegue l'eseguibile all'interno della scheda.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-190">Executable run within the tab.</span></span> |
-| `startingDirectory` | <span data-ttu-id="b3fcc-191">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="b3fcc-191">Optional</span></span> | <span data-ttu-id="b3fcc-192">Percorso della cartella in formato stringa</span><span class="sxs-lookup"><span data-stu-id="b3fcc-192">Folder location as a string</span></span> | <span data-ttu-id="b3fcc-193">Directory in cui verrà aperta la scheda.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-193">Directory in which the tab will open.</span></span> |
-| `tabTitle` | <span data-ttu-id="b3fcc-194">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="b3fcc-194">Optional</span></span> | <span data-ttu-id="b3fcc-195">String</span><span class="sxs-lookup"><span data-stu-id="b3fcc-195">String</span></span> | <span data-ttu-id="b3fcc-196">Titolo della nuova scheda.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-196">Title of the new tab.</span></span> |
-| `index` | <span data-ttu-id="b3fcc-197">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="b3fcc-197">Optional</span></span> | <span data-ttu-id="b3fcc-198">Intero</span><span class="sxs-lookup"><span data-stu-id="b3fcc-198">Integer</span></span> | <span data-ttu-id="b3fcc-199">Profilo che verrà aperto in base alla relativa posizione nel menu a discesa (a partire da 0).</span><span class="sxs-lookup"><span data-stu-id="b3fcc-199">Profile that will open based on its position in the dropdown (starting at 0).</span></span> |
-| `profile` | <span data-ttu-id="b3fcc-200">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="b3fcc-200">Optional</span></span> | <span data-ttu-id="b3fcc-201">Nome o GUID del profilo in formato stringa</span><span class="sxs-lookup"><span data-stu-id="b3fcc-201">Profile's name or GUID as a string</span></span> | <span data-ttu-id="b3fcc-202">Profilo che verrà aperto in base al relativo nome o GUID.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-202">Profile that will open based on its GUID or name.</span></span> |
+| `commandLine` | <span data-ttu-id="308c4-198">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="308c4-198">Optional</span></span> | <span data-ttu-id="308c4-199">Nome del file eseguibile in formato stringa</span><span class="sxs-lookup"><span data-stu-id="308c4-199">Executable file name as a string</span></span> | <span data-ttu-id="308c4-200">Esegue l'eseguibile all'interno della scheda.</span><span class="sxs-lookup"><span data-stu-id="308c4-200">Executable run within the tab.</span></span> |
+| `startingDirectory` | <span data-ttu-id="308c4-201">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="308c4-201">Optional</span></span> | <span data-ttu-id="308c4-202">Percorso della cartella in formato stringa</span><span class="sxs-lookup"><span data-stu-id="308c4-202">Folder location as a string</span></span> | <span data-ttu-id="308c4-203">Directory in cui verrà aperta la scheda.</span><span class="sxs-lookup"><span data-stu-id="308c4-203">Directory in which the tab will open.</span></span> |
+| `tabTitle` | <span data-ttu-id="308c4-204">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="308c4-204">Optional</span></span> | <span data-ttu-id="308c4-205">String</span><span class="sxs-lookup"><span data-stu-id="308c4-205">String</span></span> | <span data-ttu-id="308c4-206">Titolo della nuova scheda.</span><span class="sxs-lookup"><span data-stu-id="308c4-206">Title of the new tab.</span></span> |
+| `index` | <span data-ttu-id="308c4-207">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="308c4-207">Optional</span></span> | <span data-ttu-id="308c4-208">Intero</span><span class="sxs-lookup"><span data-stu-id="308c4-208">Integer</span></span> | <span data-ttu-id="308c4-209">Profilo che verrà aperto in base alla relativa posizione nel menu a discesa (a partire da 0).</span><span class="sxs-lookup"><span data-stu-id="308c4-209">Profile that will open based on its position in the dropdown (starting at 0).</span></span> |
+| `profile` | <span data-ttu-id="308c4-210">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="308c4-210">Optional</span></span> | <span data-ttu-id="308c4-211">Nome o GUID del profilo in formato stringa</span><span class="sxs-lookup"><span data-stu-id="308c4-211">Profile's name or GUID as a string</span></span> | <span data-ttu-id="308c4-212">Profilo che verrà aperto in base al relativo nome o GUID.</span><span class="sxs-lookup"><span data-stu-id="308c4-212">Profile that will open based on its GUID or name.</span></span> |
 
-### <a name="open-next-tab"></a><span data-ttu-id="b3fcc-203">Apri scheda successiva</span><span class="sxs-lookup"><span data-stu-id="b3fcc-203">Open next tab</span></span>
+### <a name="open-next-tab"></a><span data-ttu-id="308c4-213">Apri scheda successiva</span><span class="sxs-lookup"><span data-stu-id="308c4-213">Open next tab</span></span>
 
-<span data-ttu-id="b3fcc-204">Apre la scheda a destra di quella corrente.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-204">This opens the tab to the right of the current one.</span></span>
+<span data-ttu-id="308c4-214">Apre la scheda a destra di quella corrente.</span><span class="sxs-lookup"><span data-stu-id="308c4-214">This opens the tab to the right of the current one.</span></span>
 
-<span data-ttu-id="b3fcc-205">**Nome del comando:** `nextTab`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-205">**Command name:** `nextTab`</span></span>
+<span data-ttu-id="308c4-215">**Nome del comando:** `nextTab`</span><span class="sxs-lookup"><span data-stu-id="308c4-215">**Command name:** `nextTab`</span></span>
 
-<span data-ttu-id="b3fcc-206">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-206">**Default binding:**</span></span>
+<span data-ttu-id="308c4-216">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="308c4-216">**Default binding:**</span></span>
 
 ```json
 { "command": "nextTab", "keys": "ctrl+tab" }
 ```
 
-### <a name="open-previous-tab"></a><span data-ttu-id="b3fcc-207">Apri scheda precedente</span><span class="sxs-lookup"><span data-stu-id="b3fcc-207">Open previous tab</span></span>
+### <a name="open-previous-tab"></a><span data-ttu-id="308c4-217">Apri scheda precedente</span><span class="sxs-lookup"><span data-stu-id="308c4-217">Open previous tab</span></span>
 
-<span data-ttu-id="b3fcc-208">Apre la scheda a sinistra di quella corrente.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-208">This opens the tab to the left of the current one.</span></span>
+<span data-ttu-id="308c4-218">Apre la scheda a sinistra di quella corrente.</span><span class="sxs-lookup"><span data-stu-id="308c4-218">This opens the tab to the left of the current one.</span></span>
 
-<span data-ttu-id="b3fcc-209">**Nome del comando:** `prevTab`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-209">**Command name:** `prevTab`</span></span>
+<span data-ttu-id="308c4-219">**Nome del comando:** `prevTab`</span><span class="sxs-lookup"><span data-stu-id="308c4-219">**Command name:** `prevTab`</span></span>
 
-<span data-ttu-id="b3fcc-210">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-210">**Default binding:**</span></span>
+<span data-ttu-id="308c4-220">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="308c4-220">**Default binding:**</span></span>
 
 ```json
 { "command": "prevTab", "keys": "ctrl+shift+tab" }
 ```
 
-### <a name="open-a-specific-tab"></a><span data-ttu-id="b3fcc-211">Apri una scheda specifica</span><span class="sxs-lookup"><span data-stu-id="b3fcc-211">Open a specific tab</span></span>
+### <a name="open-a-specific-tab"></a><span data-ttu-id="308c4-221">Apri una scheda specifica</span><span class="sxs-lookup"><span data-stu-id="308c4-221">Open a specific tab</span></span>
 
-<span data-ttu-id="b3fcc-212">Apre una scheda specifica a seconda dell'indice.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-212">This opens a specific tab depending on the index.</span></span>
+<span data-ttu-id="308c4-222">Apre una scheda specifica a seconda dell'indice.</span><span class="sxs-lookup"><span data-stu-id="308c4-222">This opens a specific tab depending on the index.</span></span>
 
-<span data-ttu-id="b3fcc-213">**Nome del comando:** `switchToTab`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-213">**Command name:** `switchToTab`</span></span>
+<span data-ttu-id="308c4-223">**Nome del comando:** `switchToTab`</span><span class="sxs-lookup"><span data-stu-id="308c4-223">**Command name:** `switchToTab`</span></span>
 
-<span data-ttu-id="b3fcc-214">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-214">**Default bindings:**</span></span>
+<span data-ttu-id="308c4-224">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="308c4-224">**Default bindings:**</span></span>
 
 ```json
 { "command": { "action": "switchToTab", "index": 0 }, "keys": "ctrl+alt+1" },
@@ -279,37 +289,37 @@ ___
 { "command": { "action": "switchToTab", "index": 8 }, "keys": "ctrl+alt+9" }
 ```
 
-#### <a name="actions"></a><span data-ttu-id="b3fcc-215">Azioni</span><span class="sxs-lookup"><span data-stu-id="b3fcc-215">Actions</span></span>
+#### <a name="actions"></a><span data-ttu-id="308c4-225">Azioni</span><span class="sxs-lookup"><span data-stu-id="308c4-225">Actions</span></span>
 
-| <span data-ttu-id="b3fcc-216">Nome</span><span class="sxs-lookup"><span data-stu-id="b3fcc-216">Name</span></span> | <span data-ttu-id="b3fcc-217">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="b3fcc-217">Necessity</span></span> | <span data-ttu-id="b3fcc-218">Tipo accettato</span><span class="sxs-lookup"><span data-stu-id="b3fcc-218">Accepts</span></span> | <span data-ttu-id="b3fcc-219">Description</span><span class="sxs-lookup"><span data-stu-id="b3fcc-219">Description</span></span> |
+| <span data-ttu-id="308c4-226">Nome</span><span class="sxs-lookup"><span data-stu-id="308c4-226">Name</span></span> | <span data-ttu-id="308c4-227">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="308c4-227">Necessity</span></span> | <span data-ttu-id="308c4-228">Tipo accettato</span><span class="sxs-lookup"><span data-stu-id="308c4-228">Accepts</span></span> | <span data-ttu-id="308c4-229">Description</span><span class="sxs-lookup"><span data-stu-id="308c4-229">Description</span></span> |
 | ---- | --------- | ------- | ----------- |
-| `index` | <span data-ttu-id="b3fcc-220">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="b3fcc-220">Required</span></span> | <span data-ttu-id="b3fcc-221">Intero</span><span class="sxs-lookup"><span data-stu-id="b3fcc-221">Integer</span></span> | <span data-ttu-id="b3fcc-222">Scheda che verrà aperta in base alla relativa posizione nella barra delle schede (a partire da 0).</span><span class="sxs-lookup"><span data-stu-id="b3fcc-222">Tab that will open based on its position in the tab bar (starting at 0).</span></span> |
+| `index` | <span data-ttu-id="308c4-230">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="308c4-230">Required</span></span> | <span data-ttu-id="308c4-231">Intero</span><span class="sxs-lookup"><span data-stu-id="308c4-231">Integer</span></span> | <span data-ttu-id="308c4-232">Scheda che verrà aperta in base alla relativa posizione nella barra delle schede (a partire da 0).</span><span class="sxs-lookup"><span data-stu-id="308c4-232">Tab that will open based on its position in the tab bar (starting at 0).</span></span> |
 
 <br />
 
 ___
 
-## <a name="pane-management-commands"></a><span data-ttu-id="b3fcc-223">Comandi di gestione dei riquadri</span><span class="sxs-lookup"><span data-stu-id="b3fcc-223">Pane management commands</span></span>
+## <a name="pane-management-commands"></a><span data-ttu-id="308c4-233">Comandi di gestione dei riquadri</span><span class="sxs-lookup"><span data-stu-id="308c4-233">Pane management commands</span></span>
 
-### <a name="close-pane"></a><span data-ttu-id="b3fcc-224">Chiudi riquadro</span><span class="sxs-lookup"><span data-stu-id="b3fcc-224">Close pane</span></span>
+### <a name="close-pane"></a><span data-ttu-id="308c4-234">Chiudi riquadro</span><span class="sxs-lookup"><span data-stu-id="308c4-234">Close pane</span></span>
 
-<span data-ttu-id="b3fcc-225">Chiude il riquadro attivo.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-225">This closes the active pane.</span></span> <span data-ttu-id="b3fcc-226">Se non sono presenti riquadri divisi, chiude la scheda corrente. Se è aperta una sola scheda, chiude la finestra.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-226">If there aren't any split panes, this will close the current tab. If there is only one tab open, this will close the window.</span></span>
+<span data-ttu-id="308c4-235">Chiude il riquadro attivo.</span><span class="sxs-lookup"><span data-stu-id="308c4-235">This closes the active pane.</span></span> <span data-ttu-id="308c4-236">Se non sono presenti riquadri divisi, chiude la scheda corrente. Se è aperta una sola scheda, chiude la finestra.</span><span class="sxs-lookup"><span data-stu-id="308c4-236">If there aren't any split panes, this will close the current tab. If there is only one tab open, this will close the window.</span></span>
 
-<span data-ttu-id="b3fcc-227">**Nome del comando:** `closePane`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-227">**Command name:** `closePane`</span></span>
+<span data-ttu-id="308c4-237">**Nome del comando:** `closePane`</span><span class="sxs-lookup"><span data-stu-id="308c4-237">**Command name:** `closePane`</span></span>
 
-<span data-ttu-id="b3fcc-228">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-228">**Default binding:**</span></span>
+<span data-ttu-id="308c4-238">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="308c4-238">**Default binding:**</span></span>
 
 ```json
 { "command": "closePane", "keys": "ctrl+shift+w" }
 ```
 
-### <a name="move-pane-focus"></a><span data-ttu-id="b3fcc-229">Sposta stato attivo nel riquadro</span><span class="sxs-lookup"><span data-stu-id="b3fcc-229">Move pane focus</span></span>
+### <a name="move-pane-focus"></a><span data-ttu-id="308c4-239">Sposta stato attivo nel riquadro</span><span class="sxs-lookup"><span data-stu-id="308c4-239">Move pane focus</span></span>
 
-<span data-ttu-id="b3fcc-230">Consente di spostare lo stato attivo in un altro riquadro a seconda della direzione.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-230">This changes focus to a different pane depending on the direction.</span></span>
+<span data-ttu-id="308c4-240">Consente di spostare lo stato attivo in un altro riquadro a seconda della direzione.</span><span class="sxs-lookup"><span data-stu-id="308c4-240">This changes focus to a different pane depending on the direction.</span></span>
 
-<span data-ttu-id="b3fcc-231">**Nome del comando:** `moveFocus`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-231">**Command name:** `moveFocus`</span></span>
+<span data-ttu-id="308c4-241">**Nome del comando:** `moveFocus`</span><span class="sxs-lookup"><span data-stu-id="308c4-241">**Command name:** `moveFocus`</span></span>
 
-<span data-ttu-id="b3fcc-232">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-232">**Default bindings:**</span></span>
+<span data-ttu-id="308c4-242">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="308c4-242">**Default bindings:**</span></span>
 
 ```json
 { "command": { "action": "moveFocus", "direction": "down" }, "keys": "alt+down" },
@@ -318,19 +328,19 @@ ___
 { "command": { "action": "moveFocus", "direction": "up" }, "keys": "alt+up" }
 ```
 
-#### <a name="actions"></a><span data-ttu-id="b3fcc-233">Azioni</span><span class="sxs-lookup"><span data-stu-id="b3fcc-233">Actions</span></span>
+#### <a name="actions"></a><span data-ttu-id="308c4-243">Azioni</span><span class="sxs-lookup"><span data-stu-id="308c4-243">Actions</span></span>
 
-| <span data-ttu-id="b3fcc-234">Nome</span><span class="sxs-lookup"><span data-stu-id="b3fcc-234">Name</span></span> | <span data-ttu-id="b3fcc-235">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="b3fcc-235">Necessity</span></span> | <span data-ttu-id="b3fcc-236">Tipo accettato</span><span class="sxs-lookup"><span data-stu-id="b3fcc-236">Accepts</span></span> | <span data-ttu-id="b3fcc-237">Description</span><span class="sxs-lookup"><span data-stu-id="b3fcc-237">Description</span></span> |
+| <span data-ttu-id="308c4-244">Nome</span><span class="sxs-lookup"><span data-stu-id="308c4-244">Name</span></span> | <span data-ttu-id="308c4-245">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="308c4-245">Necessity</span></span> | <span data-ttu-id="308c4-246">Tipo accettato</span><span class="sxs-lookup"><span data-stu-id="308c4-246">Accepts</span></span> | <span data-ttu-id="308c4-247">Description</span><span class="sxs-lookup"><span data-stu-id="308c4-247">Description</span></span> |
 | ---- | --------- | ------- | ----------- |
-| `direction` | <span data-ttu-id="b3fcc-238">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="b3fcc-238">Required</span></span> | <span data-ttu-id="b3fcc-239">`"left"`, `"right"`, `"up"`, `"down"`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-239">`"left"`, `"right"`, `"up"`, `"down"`</span></span> | <span data-ttu-id="b3fcc-240">Direzione in cui viene spostato lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-240">Direction in which the focus will move.</span></span> |
+| `direction` | <span data-ttu-id="308c4-248">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="308c4-248">Required</span></span> | <span data-ttu-id="308c4-249">`"left"`, `"right"`, `"up"`, `"down"`</span><span class="sxs-lookup"><span data-stu-id="308c4-249">`"left"`, `"right"`, `"up"`, `"down"`</span></span> | <span data-ttu-id="308c4-250">Direzione in cui viene spostato lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="308c4-250">Direction in which the focus will move.</span></span> |
 
-### <a name="resize-a-pane"></a><span data-ttu-id="b3fcc-241">Ridimensiona un riquadro</span><span class="sxs-lookup"><span data-stu-id="b3fcc-241">Resize a pane</span></span>
+### <a name="resize-a-pane"></a><span data-ttu-id="308c4-251">Ridimensiona un riquadro</span><span class="sxs-lookup"><span data-stu-id="308c4-251">Resize a pane</span></span>
 
-<span data-ttu-id="b3fcc-242">Modifica le dimensioni del riquadro attivo.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-242">This changes the size of the active pane.</span></span>
+<span data-ttu-id="308c4-252">Modifica le dimensioni del riquadro attivo.</span><span class="sxs-lookup"><span data-stu-id="308c4-252">This changes the size of the active pane.</span></span>
 
-<span data-ttu-id="b3fcc-243">**Nome del comando:** `resizePane`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-243">**Command name:** `resizePane`</span></span>
+<span data-ttu-id="308c4-253">**Nome del comando:** `resizePane`</span><span class="sxs-lookup"><span data-stu-id="308c4-253">**Command name:** `resizePane`</span></span>
 
-<span data-ttu-id="b3fcc-244">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-244">**Default bindings:**</span></span>
+<span data-ttu-id="308c4-254">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="308c4-254">**Default bindings:**</span></span>
 
 ```json
 { "command": { "action": "resizePane", "direction": "down" }, "keys": "alt+shift+down" },
@@ -339,19 +349,19 @@ ___
 { "command": { "action": "resizePane", "direction": "up" }, "keys": "alt+shift+up" }
 ```
 
-#### <a name="actions"></a><span data-ttu-id="b3fcc-245">Azioni</span><span class="sxs-lookup"><span data-stu-id="b3fcc-245">Actions</span></span>
+#### <a name="actions"></a><span data-ttu-id="308c4-255">Azioni</span><span class="sxs-lookup"><span data-stu-id="308c4-255">Actions</span></span>
 
-| <span data-ttu-id="b3fcc-246">Nome</span><span class="sxs-lookup"><span data-stu-id="b3fcc-246">Name</span></span> | <span data-ttu-id="b3fcc-247">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="b3fcc-247">Necessity</span></span> | <span data-ttu-id="b3fcc-248">Tipo accettato</span><span class="sxs-lookup"><span data-stu-id="b3fcc-248">Accepts</span></span> | <span data-ttu-id="b3fcc-249">Description</span><span class="sxs-lookup"><span data-stu-id="b3fcc-249">Description</span></span> |
+| <span data-ttu-id="308c4-256">Nome</span><span class="sxs-lookup"><span data-stu-id="308c4-256">Name</span></span> | <span data-ttu-id="308c4-257">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="308c4-257">Necessity</span></span> | <span data-ttu-id="308c4-258">Tipo accettato</span><span class="sxs-lookup"><span data-stu-id="308c4-258">Accepts</span></span> | <span data-ttu-id="308c4-259">Description</span><span class="sxs-lookup"><span data-stu-id="308c4-259">Description</span></span> |
 | ---- | --------- | ------- | ----------- |
-| `direction` | <span data-ttu-id="b3fcc-250">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="b3fcc-250">Required</span></span> | <span data-ttu-id="b3fcc-251">`"left"`, `"right"`, `"up"`, `"down"`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-251">`"left"`, `"right"`, `"up"`, `"down"`</span></span> | <span data-ttu-id="b3fcc-252">Direzione in cui verranno modificate le dimensioni del riquadro.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-252">Direction in which the pane will be resized.</span></span> |
+| `direction` | <span data-ttu-id="308c4-260">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="308c4-260">Required</span></span> | <span data-ttu-id="308c4-261">`"left"`, `"right"`, `"up"`, `"down"`</span><span class="sxs-lookup"><span data-stu-id="308c4-261">`"left"`, `"right"`, `"up"`, `"down"`</span></span> | <span data-ttu-id="308c4-262">Direzione in cui verranno modificate le dimensioni del riquadro.</span><span class="sxs-lookup"><span data-stu-id="308c4-262">Direction in which the pane will be resized.</span></span> |
 
-### <a name="split-a-pane"></a><span data-ttu-id="b3fcc-253">Dividi un riquadro</span><span class="sxs-lookup"><span data-stu-id="b3fcc-253">Split a pane</span></span>
+### <a name="split-a-pane"></a><span data-ttu-id="308c4-263">Dividi un riquadro</span><span class="sxs-lookup"><span data-stu-id="308c4-263">Split a pane</span></span>
 
-<span data-ttu-id="b3fcc-254">Divide a metà il riquadro attivo e ne apre un altro.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-254">This halves the size of the active pane and opens another.</span></span> <span data-ttu-id="b3fcc-255">Se viene specificato senza argomenti, il profilo predefinito verrà aperto nel nuovo riquadro.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-255">Without any arguments, this will open the default profile in the new pane.</span></span> <span data-ttu-id="b3fcc-256">Se non viene specificata un'azione, verrà usata l'impostazione equivalente del profilo predefinito.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-256">If an action is not specified, the default profile's equivalent setting will be used.</span></span>
+<span data-ttu-id="308c4-264">Divide a metà il riquadro attivo e ne apre un altro.</span><span class="sxs-lookup"><span data-stu-id="308c4-264">This halves the size of the active pane and opens another.</span></span> <span data-ttu-id="308c4-265">Se viene specificato senza argomenti, il profilo predefinito verrà aperto nel nuovo riquadro.</span><span class="sxs-lookup"><span data-stu-id="308c4-265">Without any arguments, this will open the default profile in the new pane.</span></span> <span data-ttu-id="308c4-266">Se non viene specificata un'azione, verrà usata l'impostazione equivalente del profilo predefinito.</span><span class="sxs-lookup"><span data-stu-id="308c4-266">If an action is not specified, the default profile's equivalent setting will be used.</span></span>
 
-<span data-ttu-id="b3fcc-257">**Nome del comando:** `splitPane`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-257">**Command name:** `splitPane`</span></span>
+<span data-ttu-id="308c4-267">**Nome del comando:** `splitPane`</span><span class="sxs-lookup"><span data-stu-id="308c4-267">**Command name:** `splitPane`</span></span>
 
-<span data-ttu-id="b3fcc-258">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-258">**Default bindings:**</span></span>
+<span data-ttu-id="308c4-268">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="308c4-268">**Default bindings:**</span></span>
 
 ```json
 // In settings.json
@@ -362,31 +372,31 @@ ___
 { "command": { "action": "splitPane", "split": "vertical"}, "keys": "alt+shift+plus" }
 ```
 
-#### <a name="actions"></a><span data-ttu-id="b3fcc-259">Azioni</span><span class="sxs-lookup"><span data-stu-id="b3fcc-259">Actions</span></span>
+#### <a name="actions"></a><span data-ttu-id="308c4-269">Azioni</span><span class="sxs-lookup"><span data-stu-id="308c4-269">Actions</span></span>
 
-| <span data-ttu-id="b3fcc-260">Nome</span><span class="sxs-lookup"><span data-stu-id="b3fcc-260">Name</span></span> | <span data-ttu-id="b3fcc-261">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="b3fcc-261">Necessity</span></span> | <span data-ttu-id="b3fcc-262">Tipo accettato</span><span class="sxs-lookup"><span data-stu-id="b3fcc-262">Accepts</span></span> | <span data-ttu-id="b3fcc-263">Description</span><span class="sxs-lookup"><span data-stu-id="b3fcc-263">Description</span></span> |
+| <span data-ttu-id="308c4-270">Nome</span><span class="sxs-lookup"><span data-stu-id="308c4-270">Name</span></span> | <span data-ttu-id="308c4-271">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="308c4-271">Necessity</span></span> | <span data-ttu-id="308c4-272">Tipo accettato</span><span class="sxs-lookup"><span data-stu-id="308c4-272">Accepts</span></span> | <span data-ttu-id="308c4-273">Description</span><span class="sxs-lookup"><span data-stu-id="308c4-273">Description</span></span> |
 | ---- | --------- | ------- | ----------- |
-| `split` | <span data-ttu-id="b3fcc-264">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="b3fcc-264">Required</span></span> | <span data-ttu-id="b3fcc-265">`"vertical"`, `"horizontal"`, `"auto"`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-265">`"vertical"`, `"horizontal"`, `"auto"`</span></span> | <span data-ttu-id="b3fcc-266">Modalità di divisione del riquadro.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-266">How the pane will split.</span></span> <span data-ttu-id="b3fcc-267">Con `"auto"` il riquadro verrà diviso nella direzione che offre l'area con la superficie più estesa.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-267">`"auto"` will split in the direction that provides the most surface area.</span></span> |
-| `commandLine` | <span data-ttu-id="b3fcc-268">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="b3fcc-268">Optional</span></span> | <span data-ttu-id="b3fcc-269">Nome del file eseguibile in formato stringa</span><span class="sxs-lookup"><span data-stu-id="b3fcc-269">Executable file name as a string</span></span> | <span data-ttu-id="b3fcc-270">Esegue l'eseguibile all'interno del riquadro.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-270">Executable run within the pane.</span></span> |
-| `startingDirectory` | <span data-ttu-id="b3fcc-271">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="b3fcc-271">Optional</span></span> | <span data-ttu-id="b3fcc-272">Percorso della cartella in formato stringa</span><span class="sxs-lookup"><span data-stu-id="b3fcc-272">Folder location as a string</span></span> | <span data-ttu-id="b3fcc-273">Directory in cui verrà aperto il riquadro.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-273">Directory in which the pane will open.</span></span> |
-| `tabTitle` | <span data-ttu-id="b3fcc-274">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="b3fcc-274">Optional</span></span> | <span data-ttu-id="b3fcc-275">String</span><span class="sxs-lookup"><span data-stu-id="b3fcc-275">String</span></span> | <span data-ttu-id="b3fcc-276">Titolo della scheda quando lo stato attivo si trova nel nuovo riquadro.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-276">Title of the tab when the new pane is focused.</span></span> |
-| `index` | <span data-ttu-id="b3fcc-277">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="b3fcc-277">Optional</span></span> | <span data-ttu-id="b3fcc-278">Intero</span><span class="sxs-lookup"><span data-stu-id="b3fcc-278">Integer</span></span> | <span data-ttu-id="b3fcc-279">Profilo che verrà aperto in base alla relativa posizione nel menu a discesa (a partire da 0).</span><span class="sxs-lookup"><span data-stu-id="b3fcc-279">Profile that will open based on its position in the dropdown (starting at 0).</span></span> |
-| `profile` | <span data-ttu-id="b3fcc-280">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="b3fcc-280">Optional</span></span> | <span data-ttu-id="b3fcc-281">Nome o GUID del profilo in formato stringa</span><span class="sxs-lookup"><span data-stu-id="b3fcc-281">Profile's name or GUID as a string</span></span> | <span data-ttu-id="b3fcc-282">Profilo che verrà aperto in base al relativo nome o GUID.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-282">Profile that will open based on its GUID or name.</span></span> |
-| `splitMode` | <span data-ttu-id="b3fcc-283">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="b3fcc-283">Optional</span></span> | `"duplicate"` | <span data-ttu-id="b3fcc-284">Controlla la modalità di divisione del riquadro.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-284">Controls how the pane splits.</span></span> <span data-ttu-id="b3fcc-285">Accetta solo `"duplicate"`, con cui il profilo del riquadro con lo stato attivo viene duplicato in un nuovo riquadro.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-285">Only accepts `"duplicate"`, which will duplicate the focused pane's profile into a new pane.</span></span> |
+| `split` | <span data-ttu-id="308c4-274">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="308c4-274">Required</span></span> | <span data-ttu-id="308c4-275">`"vertical"`, `"horizontal"`, `"auto"`</span><span class="sxs-lookup"><span data-stu-id="308c4-275">`"vertical"`, `"horizontal"`, `"auto"`</span></span> | <span data-ttu-id="308c4-276">Modalità di divisione del riquadro.</span><span class="sxs-lookup"><span data-stu-id="308c4-276">How the pane will split.</span></span> <span data-ttu-id="308c4-277">Con `"auto"` il riquadro verrà diviso nella direzione che offre l'area con la superficie più estesa.</span><span class="sxs-lookup"><span data-stu-id="308c4-277">`"auto"` will split in the direction that provides the most surface area.</span></span> |
+| `commandLine` | <span data-ttu-id="308c4-278">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="308c4-278">Optional</span></span> | <span data-ttu-id="308c4-279">Nome del file eseguibile in formato stringa</span><span class="sxs-lookup"><span data-stu-id="308c4-279">Executable file name as a string</span></span> | <span data-ttu-id="308c4-280">Esegue l'eseguibile all'interno del riquadro.</span><span class="sxs-lookup"><span data-stu-id="308c4-280">Executable run within the pane.</span></span> |
+| `startingDirectory` | <span data-ttu-id="308c4-281">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="308c4-281">Optional</span></span> | <span data-ttu-id="308c4-282">Percorso della cartella in formato stringa</span><span class="sxs-lookup"><span data-stu-id="308c4-282">Folder location as a string</span></span> | <span data-ttu-id="308c4-283">Directory in cui verrà aperto il riquadro.</span><span class="sxs-lookup"><span data-stu-id="308c4-283">Directory in which the pane will open.</span></span> |
+| `tabTitle` | <span data-ttu-id="308c4-284">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="308c4-284">Optional</span></span> | <span data-ttu-id="308c4-285">String</span><span class="sxs-lookup"><span data-stu-id="308c4-285">String</span></span> | <span data-ttu-id="308c4-286">Titolo della scheda quando lo stato attivo si trova nel nuovo riquadro.</span><span class="sxs-lookup"><span data-stu-id="308c4-286">Title of the tab when the new pane is focused.</span></span> |
+| `index` | <span data-ttu-id="308c4-287">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="308c4-287">Optional</span></span> | <span data-ttu-id="308c4-288">Intero</span><span class="sxs-lookup"><span data-stu-id="308c4-288">Integer</span></span> | <span data-ttu-id="308c4-289">Profilo che verrà aperto in base alla relativa posizione nel menu a discesa (a partire da 0).</span><span class="sxs-lookup"><span data-stu-id="308c4-289">Profile that will open based on its position in the dropdown (starting at 0).</span></span> |
+| `profile` | <span data-ttu-id="308c4-290">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="308c4-290">Optional</span></span> | <span data-ttu-id="308c4-291">Nome o GUID del profilo in formato stringa</span><span class="sxs-lookup"><span data-stu-id="308c4-291">Profile's name or GUID as a string</span></span> | <span data-ttu-id="308c4-292">Profilo che verrà aperto in base al relativo nome o GUID.</span><span class="sxs-lookup"><span data-stu-id="308c4-292">Profile that will open based on its GUID or name.</span></span> |
+| `splitMode` | <span data-ttu-id="308c4-293">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="308c4-293">Optional</span></span> | `"duplicate"` | <span data-ttu-id="308c4-294">Controlla la modalità di divisione del riquadro.</span><span class="sxs-lookup"><span data-stu-id="308c4-294">Controls how the pane splits.</span></span> <span data-ttu-id="308c4-295">Accetta solo `"duplicate"`, con cui il profilo del riquadro con lo stato attivo viene duplicato in un nuovo riquadro.</span><span class="sxs-lookup"><span data-stu-id="308c4-295">Only accepts `"duplicate"`, which will duplicate the focused pane's profile into a new pane.</span></span> |
 
 <br />
 
 ___
 
-## <a name="clipboard-integration-commands"></a><span data-ttu-id="b3fcc-286">Comandi di integrazione degli Appunti</span><span class="sxs-lookup"><span data-stu-id="b3fcc-286">Clipboard integration commands</span></span>
+## <a name="clipboard-integration-commands"></a><span data-ttu-id="308c4-296">Comandi di integrazione degli Appunti</span><span class="sxs-lookup"><span data-stu-id="308c4-296">Clipboard integration commands</span></span>
 
-### <a name="copy"></a><span data-ttu-id="b3fcc-287">Copia</span><span class="sxs-lookup"><span data-stu-id="b3fcc-287">Copy</span></span>
+### <a name="copy"></a><span data-ttu-id="308c4-297">Copia</span><span class="sxs-lookup"><span data-stu-id="308c4-297">Copy</span></span>
 
-<span data-ttu-id="b3fcc-288">Copia il contenuto del terminale selezionato negli Appunti.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-288">This copies the selected terminal content to your clipboard.</span></span>
+<span data-ttu-id="308c4-298">Copia il contenuto del terminale selezionato negli Appunti.</span><span class="sxs-lookup"><span data-stu-id="308c4-298">This copies the selected terminal content to your clipboard.</span></span>
 
-<span data-ttu-id="b3fcc-289">**Nome del comando:** `copy`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-289">**Command name:** `copy`</span></span>
+<span data-ttu-id="308c4-299">**Nome del comando:** `copy`</span><span class="sxs-lookup"><span data-stu-id="308c4-299">**Command name:** `copy`</span></span>
 
-<span data-ttu-id="b3fcc-290">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-290">**Default bindings:**</span></span>
+<span data-ttu-id="308c4-300">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="308c4-300">**Default bindings:**</span></span>
 
 ```json
 // In settings.json
@@ -397,19 +407,19 @@ ___
 { "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+insert" }
 ```
 
-#### <a name="clipboard-actions"></a><span data-ttu-id="b3fcc-291">Azioni degli Appunti</span><span class="sxs-lookup"><span data-stu-id="b3fcc-291">Clipboard Actions</span></span>
+#### <a name="clipboard-actions"></a><span data-ttu-id="308c4-301">Azioni degli Appunti</span><span class="sxs-lookup"><span data-stu-id="308c4-301">Clipboard Actions</span></span>
 
-| <span data-ttu-id="b3fcc-292">Nome</span><span class="sxs-lookup"><span data-stu-id="b3fcc-292">Name</span></span> | <span data-ttu-id="b3fcc-293">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="b3fcc-293">Necessity</span></span> | <span data-ttu-id="b3fcc-294">Tipo accettato</span><span class="sxs-lookup"><span data-stu-id="b3fcc-294">Accepts</span></span> | <span data-ttu-id="b3fcc-295">Description</span><span class="sxs-lookup"><span data-stu-id="b3fcc-295">Description</span></span> |
+| <span data-ttu-id="308c4-302">Nome</span><span class="sxs-lookup"><span data-stu-id="308c4-302">Name</span></span> | <span data-ttu-id="308c4-303">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="308c4-303">Necessity</span></span> | <span data-ttu-id="308c4-304">Tipo accettato</span><span class="sxs-lookup"><span data-stu-id="308c4-304">Accepts</span></span> | <span data-ttu-id="308c4-305">Description</span><span class="sxs-lookup"><span data-stu-id="308c4-305">Description</span></span> |
 | ---- | --------- | ------- | ----------- |
-| `singleLine` | <span data-ttu-id="b3fcc-296">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="b3fcc-296">Optional</span></span> | <span data-ttu-id="b3fcc-297">`true`, `false`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-297">`true`, `false`</span></span> | <span data-ttu-id="b3fcc-298">Quando è `true`, il contenuto copiato verrà copiato come una riga singola.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-298">When `true`, the copied content will be copied as a single line.</span></span> <span data-ttu-id="b3fcc-299">Quando è `false`, i caratteri di nuova riga del testo selezionato vengono mantenuti.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-299">When `false`, newlines persist from the selected text.</span></span> |
+| `singleLine` | <span data-ttu-id="308c4-306">Facoltativo</span><span class="sxs-lookup"><span data-stu-id="308c4-306">Optional</span></span> | <span data-ttu-id="308c4-307">`true`, `false`</span><span class="sxs-lookup"><span data-stu-id="308c4-307">`true`, `false`</span></span> | <span data-ttu-id="308c4-308">Quando è `true`, il contenuto copiato verrà copiato come una riga singola.</span><span class="sxs-lookup"><span data-stu-id="308c4-308">When `true`, the copied content will be copied as a single line.</span></span> <span data-ttu-id="308c4-309">Quando è `false`, i caratteri di nuova riga del testo selezionato vengono mantenuti.</span><span class="sxs-lookup"><span data-stu-id="308c4-309">When `false`, newlines persist from the selected text.</span></span> |
 
-### <a name="paste"></a><span data-ttu-id="b3fcc-300">Incolla</span><span class="sxs-lookup"><span data-stu-id="b3fcc-300">Paste</span></span>
+### <a name="paste"></a><span data-ttu-id="308c4-310">Incolla</span><span class="sxs-lookup"><span data-stu-id="308c4-310">Paste</span></span>
 
-<span data-ttu-id="b3fcc-301">Inserisce il contenuto copiato negli Appunti.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-301">This inserts the content that was copied onto the clipboard.</span></span>
+<span data-ttu-id="308c4-311">Inserisce il contenuto copiato negli Appunti.</span><span class="sxs-lookup"><span data-stu-id="308c4-311">This inserts the content that was copied onto the clipboard.</span></span>
 
-<span data-ttu-id="b3fcc-302">**Nome del comando:** `paste`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-302">**Command name:** `paste`</span></span>
+<span data-ttu-id="308c4-312">**Nome del comando:** `paste`</span><span class="sxs-lookup"><span data-stu-id="308c4-312">**Command name:** `paste`</span></span>
 
-<span data-ttu-id="b3fcc-303">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-303">**Default bindings:**</span></span>
+<span data-ttu-id="308c4-313">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="308c4-313">**Default bindings:**</span></span>
 
 ```json
 // In settings.json
@@ -424,51 +434,51 @@ ___
 
 ___
 
-## <a name="scrollback-commands"></a><span data-ttu-id="b3fcc-304">Comandi di scorrimento</span><span class="sxs-lookup"><span data-stu-id="b3fcc-304">Scrollback commands</span></span>
+## <a name="scrollback-commands"></a><span data-ttu-id="308c4-314">Comandi di scorrimento</span><span class="sxs-lookup"><span data-stu-id="308c4-314">Scrollback commands</span></span>
 
-### <a name="scroll-up"></a><span data-ttu-id="b3fcc-305">Scorri verso l'alto</span><span class="sxs-lookup"><span data-stu-id="b3fcc-305">Scroll up</span></span>
+### <a name="scroll-up"></a><span data-ttu-id="308c4-315">Scorri verso l'alto</span><span class="sxs-lookup"><span data-stu-id="308c4-315">Scroll up</span></span>
 
-<span data-ttu-id="b3fcc-306">Scorre lo schermo verso l'alto.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-306">This scrolls the screen up.</span></span>
+<span data-ttu-id="308c4-316">Scorre lo schermo verso l'alto.</span><span class="sxs-lookup"><span data-stu-id="308c4-316">This scrolls the screen up.</span></span>
 
-<span data-ttu-id="b3fcc-307">**Nome del comando:** `scrollUp`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-307">**Command name:** `scrollUp`</span></span>
+<span data-ttu-id="308c4-317">**Nome del comando:** `scrollUp`</span><span class="sxs-lookup"><span data-stu-id="308c4-317">**Command name:** `scrollUp`</span></span>
 
-<span data-ttu-id="b3fcc-308">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-308">**Default binding:**</span></span>
+<span data-ttu-id="308c4-318">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="308c4-318">**Default binding:**</span></span>
 
 ```json
 { "command": "scrollUp", "keys": "ctrl+shift+up" }
 ```
 
-### <a name="scroll-down"></a><span data-ttu-id="b3fcc-309">Scorri verso il basso</span><span class="sxs-lookup"><span data-stu-id="b3fcc-309">Scroll down</span></span>
+### <a name="scroll-down"></a><span data-ttu-id="308c4-319">Scorri verso il basso</span><span class="sxs-lookup"><span data-stu-id="308c4-319">Scroll down</span></span>
 
-<span data-ttu-id="b3fcc-310">Scorre lo schermo verso il basso.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-310">This scrolls the screen down.</span></span>
+<span data-ttu-id="308c4-320">Scorre lo schermo verso il basso.</span><span class="sxs-lookup"><span data-stu-id="308c4-320">This scrolls the screen down.</span></span>
 
-<span data-ttu-id="b3fcc-311">**Nome del comando:** `scrollDown`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-311">**Command name:** `scrollDown`</span></span>
+<span data-ttu-id="308c4-321">**Nome del comando:** `scrollDown`</span><span class="sxs-lookup"><span data-stu-id="308c4-321">**Command name:** `scrollDown`</span></span>
 
-<span data-ttu-id="b3fcc-312">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-312">**Default binding:**</span></span>
+<span data-ttu-id="308c4-322">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="308c4-322">**Default binding:**</span></span>
 
 ```json
 { "command": "scrollDown", "keys": "ctrl+shift+down" }
 ```
 
-### <a name="scroll-up-a-whole-page"></a><span data-ttu-id="b3fcc-313">Scorri verso l'alto di una pagina intera</span><span class="sxs-lookup"><span data-stu-id="b3fcc-313">Scroll up a whole page</span></span>
+### <a name="scroll-up-a-whole-page"></a><span data-ttu-id="308c4-323">Scorri verso l'alto di una pagina intera</span><span class="sxs-lookup"><span data-stu-id="308c4-323">Scroll up a whole page</span></span>
 
-<span data-ttu-id="b3fcc-314">Scorre lo schermo verso l'alto di una pagina intera, che corrisponde all'altezza della finestra.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-314">This scrolls the screen up by a whole page, which is the height of the window.</span></span>
+<span data-ttu-id="308c4-324">Scorre lo schermo verso l'alto di una pagina intera, che corrisponde all'altezza della finestra.</span><span class="sxs-lookup"><span data-stu-id="308c4-324">This scrolls the screen up by a whole page, which is the height of the window.</span></span>
 
-<span data-ttu-id="b3fcc-315">**Nome del comando:** `scrollUpPage`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-315">**Command name:** `scrollUpPage`</span></span>
+<span data-ttu-id="308c4-325">**Nome del comando:** `scrollUpPage`</span><span class="sxs-lookup"><span data-stu-id="308c4-325">**Command name:** `scrollUpPage`</span></span>
 
-<span data-ttu-id="b3fcc-316">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-316">**Default binding:**</span></span>
+<span data-ttu-id="308c4-326">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="308c4-326">**Default binding:**</span></span>
 
 ```json
 { "command": "scrollUpPage", "keys": "ctrl+shift+pgup" }
 ```
 
-### <a name="scroll-down-a-whole-page"></a><span data-ttu-id="b3fcc-317">Scorri verso il basso di una pagina intera</span><span class="sxs-lookup"><span data-stu-id="b3fcc-317">Scroll down a whole page</span></span>
+### <a name="scroll-down-a-whole-page"></a><span data-ttu-id="308c4-327">Scorri verso il basso di una pagina intera</span><span class="sxs-lookup"><span data-stu-id="308c4-327">Scroll down a whole page</span></span>
 
-<span data-ttu-id="b3fcc-318">Scorre lo schermo verso il basso di una pagina intera, che corrisponde all'altezza della finestra.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-318">This scrolls the screen down by a whole page, which is the height of the window.</span></span>
+<span data-ttu-id="308c4-328">Scorre lo schermo verso il basso di una pagina intera, che corrisponde all'altezza della finestra.</span><span class="sxs-lookup"><span data-stu-id="308c4-328">This scrolls the screen down by a whole page, which is the height of the window.</span></span>
 
-<span data-ttu-id="b3fcc-319">**Nome del comando:** `scrollDownPage`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-319">**Command name:** `scrollDownPage`</span></span>
+<span data-ttu-id="308c4-329">**Nome del comando:** `scrollDownPage`</span><span class="sxs-lookup"><span data-stu-id="308c4-329">**Command name:** `scrollDownPage`</span></span>
 
-<span data-ttu-id="b3fcc-320">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-320">**Default binding:**</span></span>
+<span data-ttu-id="308c4-330">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="308c4-330">**Default binding:**</span></span>
 
 ```json
 { "command": "scrollDownPage", "keys": "ctrl+shift+pgdn" }
@@ -478,34 +488,34 @@ ___
 
 ___
 
-## <a name="visual-adjustment-commands"></a><span data-ttu-id="b3fcc-321">Comandi di regolazione della visualizzazione</span><span class="sxs-lookup"><span data-stu-id="b3fcc-321">Visual adjustment commands</span></span>
+## <a name="visual-adjustment-commands"></a><span data-ttu-id="308c4-331">Comandi di regolazione della visualizzazione</span><span class="sxs-lookup"><span data-stu-id="308c4-331">Visual adjustment commands</span></span>
 
-### <a name="adjust-font-size"></a><span data-ttu-id="b3fcc-322">Regola dimensioni caratteri</span><span class="sxs-lookup"><span data-stu-id="b3fcc-322">Adjust font size</span></span>
+### <a name="adjust-font-size"></a><span data-ttu-id="308c4-332">Regola dimensioni caratteri</span><span class="sxs-lookup"><span data-stu-id="308c4-332">Adjust font size</span></span>
 
-<span data-ttu-id="b3fcc-323">Modifica le dimensioni del testo in base al numero di punti specificato.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-323">This changes the text size by a specified point amount.</span></span>
+<span data-ttu-id="308c4-333">Modifica le dimensioni del testo in base al numero di punti specificato.</span><span class="sxs-lookup"><span data-stu-id="308c4-333">This changes the text size by a specified point amount.</span></span>
 
-<span data-ttu-id="b3fcc-324">**Nome del comando:** `adjustFontSize`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-324">**Command name:** `adjustFontSize`</span></span>
+<span data-ttu-id="308c4-334">**Nome del comando:** `adjustFontSize`</span><span class="sxs-lookup"><span data-stu-id="308c4-334">**Command name:** `adjustFontSize`</span></span>
 
-<span data-ttu-id="b3fcc-325">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-325">**Default bindings:**</span></span>
+<span data-ttu-id="308c4-335">**Associazioni predefinite:**</span><span class="sxs-lookup"><span data-stu-id="308c4-335">**Default bindings:**</span></span>
 
 ```json
 { "command": { "action": "adjustFontSize", "delta": 1 }, "keys": "ctrl+=" },
 { "command": { "action": "adjustFontSize", "delta": -1 }, "keys": "ctrl+-" }
 ```
 
-#### <a name="actions"></a><span data-ttu-id="b3fcc-326">Azioni</span><span class="sxs-lookup"><span data-stu-id="b3fcc-326">Actions</span></span>
+#### <a name="actions"></a><span data-ttu-id="308c4-336">Azioni</span><span class="sxs-lookup"><span data-stu-id="308c4-336">Actions</span></span>
 
-| <span data-ttu-id="b3fcc-327">Nome</span><span class="sxs-lookup"><span data-stu-id="b3fcc-327">Name</span></span> | <span data-ttu-id="b3fcc-328">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="b3fcc-328">Necessity</span></span> | <span data-ttu-id="b3fcc-329">Tipo accettato</span><span class="sxs-lookup"><span data-stu-id="b3fcc-329">Accepts</span></span> | <span data-ttu-id="b3fcc-330">Description</span><span class="sxs-lookup"><span data-stu-id="b3fcc-330">Description</span></span> |
+| <span data-ttu-id="308c4-337">Nome</span><span class="sxs-lookup"><span data-stu-id="308c4-337">Name</span></span> | <span data-ttu-id="308c4-338">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="308c4-338">Necessity</span></span> | <span data-ttu-id="308c4-339">Tipo accettato</span><span class="sxs-lookup"><span data-stu-id="308c4-339">Accepts</span></span> | <span data-ttu-id="308c4-340">Description</span><span class="sxs-lookup"><span data-stu-id="308c4-340">Description</span></span> |
 | ---- | --------- | ------- | ----------- |
-| `delta` | <span data-ttu-id="b3fcc-331">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="b3fcc-331">Required</span></span> | <span data-ttu-id="b3fcc-332">Intero</span><span class="sxs-lookup"><span data-stu-id="b3fcc-332">Integer</span></span> | <span data-ttu-id="b3fcc-333">Modifiche applicate alle dimensioni per ogni chiamata del comando.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-333">Amount of size change per command invocation.</span></span> |
+| `delta` | <span data-ttu-id="308c4-341">Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="308c4-341">Required</span></span> | <span data-ttu-id="308c4-342">Intero</span><span class="sxs-lookup"><span data-stu-id="308c4-342">Integer</span></span> | <span data-ttu-id="308c4-343">Modifiche applicate alle dimensioni per ogni chiamata del comando.</span><span class="sxs-lookup"><span data-stu-id="308c4-343">Amount of size change per command invocation.</span></span> |
 
-### <a name="reset-font-size"></a><span data-ttu-id="b3fcc-334">Reimposta dimensioni del carattere</span><span class="sxs-lookup"><span data-stu-id="b3fcc-334">Reset font size</span></span>
+### <a name="reset-font-size"></a><span data-ttu-id="308c4-344">Reimposta dimensioni del carattere</span><span class="sxs-lookup"><span data-stu-id="308c4-344">Reset font size</span></span>
 
-<span data-ttu-id="b3fcc-335">Reimposta le dimensioni del testo in base al valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-335">This resets the text size to the default value.</span></span>
+<span data-ttu-id="308c4-345">Reimposta le dimensioni del testo in base al valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="308c4-345">This resets the text size to the default value.</span></span>
 
-<span data-ttu-id="b3fcc-336">**Nome del comando:** `resetFontSize`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-336">**Command name:** `resetFontSize`</span></span>
+<span data-ttu-id="308c4-346">**Nome del comando:** `resetFontSize`</span><span class="sxs-lookup"><span data-stu-id="308c4-346">**Command name:** `resetFontSize`</span></span>
 
-<span data-ttu-id="b3fcc-337">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="b3fcc-337">**Default binding:**</span></span>
+<span data-ttu-id="308c4-347">**Associazione predefinita:**</span><span class="sxs-lookup"><span data-stu-id="308c4-347">**Default binding:**</span></span>
 
 ```json
 { "command": "resetFontSize", "keys": "ctrl+0" }
@@ -515,8 +525,8 @@ ___
 
 ___
 
-## <a name="unbind-keys"></a><span data-ttu-id="b3fcc-338">Disassocia tasti</span><span class="sxs-lookup"><span data-stu-id="b3fcc-338">Unbind keys</span></span>
+## <a name="unbind-keys"></a><span data-ttu-id="308c4-348">Disassocia tasti</span><span class="sxs-lookup"><span data-stu-id="308c4-348">Unbind keys</span></span>
 
-<span data-ttu-id="b3fcc-339">Annulla l'associazione dei tasti per tutti i comandi.</span><span class="sxs-lookup"><span data-stu-id="b3fcc-339">This unbinds the associated keys from any command.</span></span>
+<span data-ttu-id="308c4-349">Annulla l'associazione dei tasti per tutti i comandi.</span><span class="sxs-lookup"><span data-stu-id="308c4-349">This unbinds the associated keys from any command.</span></span>
 
-<span data-ttu-id="b3fcc-340">**Nome del comando:** `unbound`</span><span class="sxs-lookup"><span data-stu-id="b3fcc-340">**Command name:** `unbound`</span></span>
+<span data-ttu-id="308c4-350">**Nome del comando:** `unbound`</span><span class="sxs-lookup"><span data-stu-id="308c4-350">**Command name:** `unbound`</span></span>
