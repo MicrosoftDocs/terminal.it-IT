@@ -7,12 +7,12 @@ ms.date: 05/19/2020
 ms.topic: overview
 ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: ab29130e34e6d3adbda37a002a03383211d27bce
-ms.sourcegitcommit: a77ad8aec5bbeba1e58a92c49dc2ebd67a426ae7
+ms.openlocfilehash: abc0397c3f26da92980377aac2df466fe1bf190e
+ms.sourcegitcommit: d8e23557224bc50a82a36dc80ac68b9d11dfdde9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83866363"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84720117"
 ---
 # <a name="what-is-windows-terminal"></a>Che cos'è Terminale Windows?
 
