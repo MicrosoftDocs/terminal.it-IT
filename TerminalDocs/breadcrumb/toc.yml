@@ -1,3 +1,11 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Windows
+  tocHref: /windows/
+  topicHref: /windows/
+  items:
+    - name: Ambiente di sviluppo
+      tocHref: /windows/dev-environment/overview
+      topicHref: /windows/dev-environment/overview
+      items:
+        - name: Terminale Windows
+          tocHref: /windows/terminal/
+          topicHref: /windows/terminal/
