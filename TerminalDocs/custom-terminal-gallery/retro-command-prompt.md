@@ -6,16 +6,16 @@ ms.author: cinnamon
 ms.date: 05/19/2020
 ms.topic: sample
 ms.service: terminal
-ms.openlocfilehash: 877f849dd33666a1825bee2ed9da29a8b2341517
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: 4eb110034784a9d48c5419826081c8d7c937efee
+ms.sourcegitcommit: a489b75e14e2c123bf6b4ac2a15ff85b515564be
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83416526"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83553143"
 ---
-# <a name="retro-command-prompt-in-windows-terminal"></a><span data-ttu-id="ad145-103">Prompt dei comandi retrò nel terminale di Windows</span><span class="sxs-lookup"><span data-stu-id="ad145-103">Retro Command Prompt in Windows Terminal</span></span>
+# <a name="retro-command-prompt-in-windows-terminal"></a><span data-ttu-id="796d1-103">Prompt dei comandi retrò nel terminale di Windows</span><span class="sxs-lookup"><span data-stu-id="796d1-103">Retro Command Prompt in Windows Terminal</span></span>
 
-<span data-ttu-id="ad145-104">Il prompt usa il `PxPlus IBM VGA8` tipo di carattere, che non è incluso nel terminale di Windows.</span><span class="sxs-lookup"><span data-stu-id="ad145-104">The prompt is using the `PxPlus IBM VGA8` font, which is not included in the Windows Terminal.</span></span>
+<span data-ttu-id="796d1-104">Il prompt usa il `PxPlus IBM VGA8` tipo di carattere, che non è incluso nel terminale di Windows.</span><span class="sxs-lookup"><span data-stu-id="796d1-104">The prompt is using the `PxPlus IBM VGA8` font, which is not included in Windows Terminal.</span></span>
 
 ![Prompt dei comandi retrò del terminale di Windows](./../images/retro-command-prompt.png)
 
