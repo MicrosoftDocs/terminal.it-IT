@@ -16,12 +16,14 @@
           href: customize-settings/key-bindings.md
     - name: Argomenti della riga di comando
       href: command-line-arguments.md
-    - name: Profili dinamici
-      href: dynamic-profiles.md
+    - name: Riquadro comandi
+      href: command-palette.md
     - name: Ricerca
       href: search.md
     - name: Riquadri
       href: panes.md
+    - name: Profili dinamici
+      href: dynamic-profiles.md
     - name: Cascadia Code
       href: cascadia-code.md
     - name: Consigli e suggerimenti
