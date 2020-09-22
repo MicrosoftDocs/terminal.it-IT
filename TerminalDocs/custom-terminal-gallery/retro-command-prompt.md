@@ -5,13 +5,12 @@ author: cinnamon-msft
 ms.author: cinnamon
 ms.date: 05/19/2020
 ms.topic: sample
-ms.service: terminal
-ms.openlocfilehash: 4eb110034784a9d48c5419826081c8d7c937efee
-ms.sourcegitcommit: a489b75e14e2c123bf6b4ac2a15ff85b515564be
+ms.openlocfilehash: 821a3e367e57fca6a1f7fd7fd4911f55e888143e
+ms.sourcegitcommit: 8e0901b83a8cc437f090fe58688b86acb73f3cb3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83553143"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90988647"
 ---
 # <a name="retro-command-prompt-in-windows-terminal"></a>Prompt dei comandi retrò nel terminale di Windows
 
