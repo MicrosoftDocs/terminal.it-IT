@@ -5,20 +5,19 @@ author: cinnamon-msft
 ms.author: cinnamon
 ms.date: 05/19/2020
 ms.topic: sample
-ms.service: terminal
-ms.openlocfilehash: c6fa0ef042e48a151f0a29b557997f2bbed90495
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: a91f4d969468fa95e94aed19c0a83dc6aeaa9b1c
+ms.sourcegitcommit: 8e0901b83a8cc437f090fe58688b86acb73f3cb3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83416536"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90988695"
 ---
-# <a name="frosted-glass-theme-in-windows-terminal"></a><span data-ttu-id="d9152-103">Tema vetro smerigliato nel terminale di Windows</span><span class="sxs-lookup"><span data-stu-id="d9152-103">Frosted Glass Theme in Windows Terminal</span></span>
+# <a name="frosted-glass-theme-in-windows-terminal"></a><span data-ttu-id="4408a-103">Tema vetro smerigliato nel terminale di Windows</span><span class="sxs-lookup"><span data-stu-id="4408a-103">Frosted Glass Theme in Windows Terminal</span></span>
 
-<span data-ttu-id="d9152-104">Il prompt viene applicato allo stile tramite Powerline e usa il `Cascadia Code PL` tipo di carattere, che può essere scaricato dalla [pagina delle versioni di GitHub di Cascadia code](https://github.com/microsoft/cascadia-code/releases).</span><span class="sxs-lookup"><span data-stu-id="d9152-104">The prompt is styled using Powerline and is using the `Cascadia Code PL` font, which can be downloaded from the [Cascadia Code GitHub releases page](https://github.com/microsoft/cascadia-code/releases).</span></span>
+<span data-ttu-id="4408a-104">Il prompt viene applicato allo stile tramite Powerline e usa il `Cascadia Code PL` tipo di carattere, che può essere scaricato dalla [pagina delle versioni di GitHub di Cascadia code](https://github.com/microsoft/cascadia-code/releases).</span><span class="sxs-lookup"><span data-stu-id="4408a-104">The prompt is styled using Powerline and is using the `Cascadia Code PL` font, which can be downloaded from the [Cascadia Code GitHub releases page](https://github.com/microsoft/cascadia-code/releases).</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="d9152-105">Informazioni su come configurare Powerline</span><span class="sxs-lookup"><span data-stu-id="d9152-105">Learn how to set up Powerline</span></span>](./../tutorials/powerline-setup.md)
+> [<span data-ttu-id="4408a-105">Informazioni su come configurare Powerline</span><span class="sxs-lookup"><span data-stu-id="4408a-105">Learn how to set up Powerline</span></span>](./../tutorials/powerline-setup.md)
 
 ![Tema vetro smerigliato terminale Windows](./../images/frosted-glass-theme.png)
 

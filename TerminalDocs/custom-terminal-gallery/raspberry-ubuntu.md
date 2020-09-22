@@ -5,15 +5,14 @@ author: cinnamon-msft
 ms.author: cinnamon
 ms.date: 05/19/2020
 ms.topic: sample
-ms.service: terminal
-ms.openlocfilehash: e3443256c196484028ce85bd4fa0d045a3a8973a
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
+ms.openlocfilehash: 9e1c315b4da3729e37edca409de0865d3e7dfdb1
+ms.sourcegitcommit: 8e0901b83a8cc437f090fe58688b86acb73f3cb3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83416496"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90988646"
 ---
-# <a name="raspberry-ubuntu-in-windows-terminal"></a><span data-ttu-id="eef90-103">Raspberry Ubuntu nel terminale Windows</span><span class="sxs-lookup"><span data-stu-id="eef90-103">Raspberry Ubuntu in Windows Terminal</span></span>
+# <a name="raspberry-ubuntu-in-windows-terminal"></a><span data-ttu-id="486c3-103">Raspberry Ubuntu nel terminale Windows</span><span class="sxs-lookup"><span data-stu-id="486c3-103">Raspberry Ubuntu in Windows Terminal</span></span>
 
 ![Windows Terminal Raspberry Ubuntu](./../images/raspberry-ubuntu.png)
 
