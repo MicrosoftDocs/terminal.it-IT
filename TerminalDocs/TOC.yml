@@ -12,8 +12,8 @@
           href: customize-settings/profile-settings.md
         - name: Combinazioni di colori
           href: customize-settings/color-schemes.md
-        - name: Combinazioni di tasti
-          href: customize-settings/key-bindings.md
+        - name: Azioni
+          href: customize-settings/actions.md
     - name: Argomenti della riga di comando
       href: command-line-arguments.md
     - name: Riquadro comandi
@@ -38,6 +38,8 @@
           href: tutorials/tab-title.md
     - name: Raccolta di terminali personalizzati
       items:
+        - name: Guida ai terminali personalizzati
+          href: custom-terminal-gallery/custom-schemes.md
         - name: Powerline in PowerShell
           href: custom-terminal-gallery/powerline-in-powershell.md
         - name: Raspberry Ubuntu

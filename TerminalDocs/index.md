@@ -3,20 +3,19 @@ title: Panoramica di Terminale Windows
 description: Informazioni su Terminale Windows e su come può migliorare il flusso di lavoro della riga di comando.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/19/2020
+ms.date: 09/22/2020
 ms.topic: overview
-ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: abc0397c3f26da92980377aac2df466fe1bf190e
-ms.sourcegitcommit: d8e23557224bc50a82a36dc80ac68b9d11dfdde9
+ms.openlocfilehash: 568f62736635beb29ff1a557bf3b3130f29c0910
+ms.sourcegitcommit: 8e0901b83a8cc437f090fe58688b86acb73f3cb3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84720117"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90988603"
 ---
 # <a name="what-is-windows-terminal"></a>Che cos'è Terminale Windows?
 
-Terminale Windows è un'applicazione di terminale moderna destinata agli utenti di strumenti da riga di comando, come il prompt dei comandi, PowerShell e il sottosistema Windows per Linux (WSL, Windows Subsystem for Linux). Le principali funzionalità includono più schede e riquadri, il supporto per i caratteri Unicode e UTF-8, un motore di rendering del testo con accelerazione della GPU e la possibilità di personalizzare temi, testo, colori, sfondo e combinazioni di tasti di scelta rapida.
+Terminale Windows è un'applicazione di terminale moderna destinata agli utenti di strumenti da riga di comando, come il prompt dei comandi, PowerShell e il sottosistema Windows per Linux (WSL, Windows Subsystem for Linux). Le principali funzionalità includono più schede e riquadri, il supporto per i caratteri Unicode e UTF-8, un motore di rendering del testo con accelerazione della GPU e la possibilità di personalizzare temi, testo, colori, sfondo e scelte rapide.
 
 ![Screenshot di Terminale Windows](./images/overview.png)
 
@@ -31,13 +30,13 @@ All'interno di Terminale Windows puoi eseguire qualsiasi applicazione dotata di 
 
 Puoi configurare Terminale Windows con un'ampia varietà di combinazioni di colori e impostazioni. Per informazioni su come creare una combinazione di colori personalizzati, vedi la [pagina Combinazioni di colori](./customize-settings/color-schemes.md). Puoi anche trovare configurazioni personalizzate del terminale nella [raccolta di terminali personalizzati](./custom-terminal-gallery/powerline-in-powershell.md).
 
-## <a name="custom-key-bindings"></a>Combinazioni di tasti personalizzate
+## <a name="custom-actions"></a>Azioni personalizzate
 
-In Terminale Windows puoi usare un'ampia varietà di combinazioni di tasti personalizzate in base alle tue preferenze. Se una specifica scelta rapida da tastiera non soddisfa le tue esigenze, puoi cambiarla come preferisci.
+In Terminale Windows è possibile usare un'ampia varietà di comandi personalizzati in base alle preferenze personali. Se una specifica scelta rapida da tastiera non soddisfa le tue esigenze, puoi cambiarla come preferisci.
 
-Ad esempio, la combinazione predefinita di tasti di scelta rapida per la copia di testo dalla riga di comando è <kbd>CTRL+MAIUSC+C</kbd>. Puoi sostituirla con <kbd>CTRL+1</kbd> o con qualsiasi altra combinazione a scelta. Per aprire una nuova scheda, la combinazione predefinita di tasti di scelta rapida è <kbd>CTRL+MAIUSC+T</kbd>, ma puoi scegliere di sostituirla con <kbd>CTRL+2</kbd>. La combinazione predefinita di tasti di scelta rapida per passare tra le schede aperte è <kbd>CTRL+TAB</kbd>, ma puoi sostituirla con <kbd>CTRL+-</kbd> e usarla per creare invece una nuova scheda.
+Ad esempio, la combinazione predefinita di tasti di scelta rapida per copiare testo dalla riga di comando è <kbd>CTRL+MAIUSC+C</kbd>. Puoi sostituirla con <kbd>CTRL+1</kbd> o con qualsiasi altra combinazione a scelta. Per aprire una nuova scheda, la combinazione predefinita di tasti di scelta rapida è <kbd>CTRL+T</kbd>, ma puoi scegliere di sostituirla con <kbd>CTRL+2</kbd>. La combinazione predefinita di tasti di scelta rapida per passare tra le schede aperte è <kbd>CTRL+TAB</kbd>, ma puoi sostituirla con <kbd>CTRL+-</kbd> e usarla per creare invece una nuova scheda.
 
-Per informazioni sulla personalizzazione delle combinazioni di tasti, vedi la [pagina Combinazioni di tasti](./customize-settings/key-bindings.md).
+Per informazioni sulla personalizzazione dei tasti di scelta rapida, vedere la [pagina Azioni](./customize-settings/actions.md).
 
 ## <a name="unicode-and-utf-8-character-support"></a>Supporto di caratteri Unicode e UTF-8
 
