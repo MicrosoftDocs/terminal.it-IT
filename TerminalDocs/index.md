@@ -6,12 +6,12 @@ ms.author: cinnamon
 ms.date: 09/22/2020
 ms.topic: overview
 ms.localizationpriority: high
-ms.openlocfilehash: 568f62736635beb29ff1a557bf3b3130f29c0910
-ms.sourcegitcommit: 8e0901b83a8cc437f090fe58688b86acb73f3cb3
+ms.openlocfilehash: 7de6f7f2286424958b4035e049cf90a97ff5211a
+ms.sourcegitcommit: 9a2f9d152f65cdc8106fb9aad7fa69b01f3d05db
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90988603"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520306"
 ---
 # <a name="what-is-windows-terminal"></a>Che cos'è Terminale Windows?
 
@@ -56,7 +56,7 @@ Per avviare Terminale Windows in una specifica configurazione, puoi usare gli ar
 
 Ad esempio, per aprire Terminale Windows da PowerShell con tre riquadri, di cui quello a sinistra esegue un profilo del prompt dei comandi e quello a destra è diviso tra PowerShell e il profilo predefinito che esegue WSL, immetti:
 
-```bash
+```powershell
 wt -p "Command Prompt" `; split-pane -p "Windows PowerShell" `; split-pane -H wsl.exe
 ```
 
