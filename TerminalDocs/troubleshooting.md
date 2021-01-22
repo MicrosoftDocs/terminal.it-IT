@@ -3,16 +3,15 @@ title: Risoluzione dei problemi di Terminale Windows
 description: Informazioni sulle correzioni per i problemi comuni di Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/19/2020
+ms.date: 11/11/2020
 ms.topic: overview
-ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: ce2fe1e2efb26fe413b23a4e7ab08dcf0e0ed8dc
-ms.sourcegitcommit: d8e23557224bc50a82a36dc80ac68b9d11dfdde9
-ms.translationtype: HT
+ms.openlocfilehash: 105b2fb5b93fccf17b4bceeab33baa74affc6686
+ms.sourcegitcommit: 9a2f9d152f65cdc8106fb9aad7fa69b01f3d05db
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84720077"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520296"
 ---
 # <a name="troubleshooting-in-windows-terminal"></a>Risoluzione dei problemi di Terminale Windows
 
@@ -30,7 +29,7 @@ Ad esempio, l'impostazione seguente avvierà la distribuzione "Ubuntu-18.04" nel
 {
     "name": "Ubuntu-18.04",
     "commandline" : "wsl -d Ubuntu-18.04",
-    "startingDirectory" : "//wsl$/Ubuntu-18.04/home/<Your Ubuntu Username>",
+    "startingDirectory" : "//wsl$/Ubuntu-18.04/home/<Your Ubuntu Username>"
 }
 ```
 
@@ -70,8 +69,62 @@ Se vuoi disabilitare questa funzionalità per il corretto funzionamento di `Ctrl
 
 Imposta l'opzione 'Cambia layout di tastiera' su 'Non assegnato' (o su una combinazione senza <kbd>CTRL+MAIUSC</kbd>), quindi seleziona **OK** e poi **Applica**. La combinazione di tasti <kbd>CTRL+MAIUSC+0</kbd> dovrebbe ora funzionare e viene passata al terminale.
 
-Se al contrario usi questa funzionalità di tasti di scelta rapida per più lingue di input, puoi [configurare combinazioni di tasti personalizzate](./customize-settings/key-bindings.md) nel file settings.json.
+Se al contrario usi questa funzionalità di tasti di scelta rapida per più lingue di input, puoi [configurare combinazioni di tasti personalizzate](./customize-settings/actions.md) nel file settings.json.
 
 ## <a name="the-text-is-blurry"></a>Il testo è sfocato
 
 Alcuni driver video e combinazioni di hardware non gestiscono lo scorrimento e/o le aree modificate senza sfocare i dati del frame precedente. Per ovviare a questo problema, è possibile aggiungere una combinazione di [queste impostazioni di rendering globali](./customize-settings/global-settings.md#rendering-settings) per ridurre la pressione esercitata sull'hardware dal renderer di testo del terminale.
+
+## <a name="my-colors-look-strange-there-are-black-bars-on-my-screen"></a>I miei colori hanno un aspetto strano. Sono presenti barre nere sullo schermo.
+
+> [!IMPORTANT]
+> Si applica solo alla versione 1.2 + del terminale di Windows. Se si verificano problemi di colore nel terminale di Windows 1,0 o 1,1 o problemi che non vengono acquisiti qui, inviare un bug.
+
+Windows Terminal 1,2 e versioni successive hanno migliorato la conoscenza di determinate impostazioni dei colori dell'applicazione. Grazie a questa migliore comprensione, è stato possibile rimuovere una serie di blocchi di compatibilità che hanno comportato un'esperienza utente insufficiente. Sfortunatamente, c'è un numero ridotto di applicazioni che possono riscontrare problemi.
+
+Questo elemento di risoluzione dei problemi verrà mantenuto aggiornato con l'elenco dei problemi noti e delle relative soluzioni alternative.
+
+### <a name="black-lines-in-powershell-51-6x-70"></a>Righe nere in PowerShell (5,1, 6. x, 7,0)
+
+Quando il terminale è associato alla libreria di modifica della riga di PowerShell [PSReadline](https://www.powershellgallery.com/packages/PSReadLine), può creare linee nere sullo schermo. Queste aree non colorate si estendono sullo schermo oltre la richiesta, ovunque ci siano parametri del comando, stringhe o operatori.
+
+PSReadline versione **2.0.3** è stata rilasciata e contiene una correzione per questo problema. Se si usa la versione provvisoria di PSReadline, si noti che una correzione non è ancora disponibile.
+
+Per eseguire l'aggiornamento alla versione più recente di PSReadline, eseguire il comando seguente:
+
+```powershell
+Update-Module PSReadline
+```
+
+## <a name="why-are-my-emojis-not-appearing-as-icons-in-the-jumplist"></a>Perché i emoji non vengono visualizzati come icone in JumpList?
+
+Solo le immagini collegate da un percorso di file possono essere sottoposte a rendering come icone del profilo nell'oggetto JumpList. Emoji non sono supportati per le icone JumpList.
+
+## <a name="technical-notes"></a>Note tecniche
+
+Le applicazioni che usano la [ `GetConsoleScreenBufferInfo` famiglia di API](https://docs.microsoft.com/windows/console/getconsolescreenbufferinfoex) per recuperare i colori della console attiva in formato Win32 e quindi provare a trasformarle in sequenze VT multipiattaforma (ad esempio, trasformando `BACKGROUND_RED` in `\x1b[41m` ) potrebbero interferire con la capacità del terminale di rilevare il colore di sfondo che l'applicazione sta tentando di usare.
+
+Gli sviluppatori di applicazioni sono invitati a scegliere le funzioni dell'API Windows _o_ le sequenze VT per la regolazione dei colori senza provare a combinarli.
+
+### <a name="keyboard-service-warning"></a>Avviso servizio tastiera
+
+A partire da Windows Terminal 1,5, il terminale visualizzerà un avviso se la tastiera touch e il servizio pannello grafia sono disabilitati. Questo servizio è necessario per il sistema operativo per indirizzare correttamente gli eventi di input all'applicazione Terminal (così come molte altre applicazioni in Windows). Se viene visualizzato questo avviso, è possibile eseguire la procedura seguente per abilitare nuovamente il servizio:
+1. Nella finestra di dialogo Esegui eseguire `services.msc`
+
+  ![Services. msc nella finestra di dialogo Esegui](https://user-images.githubusercontent.com/18356694/97891741-c81eed00-1cf4-11eb-9d48-7b94fede5294.png)
+
+2. Trovare il servizio "Touch Keyboard and grafia Panel Service"
+
+  ![Toccare tastiera e servizio pannello grafia in Services. msc](https://user-images.githubusercontent.com/18356694/97891813-e1279e00-1cf4-11eb-91c8-69a5c6da6c3d.png)
+
+3. Apre "Properties" per questo servizio
+
+  ![Proprietà del servizio](https://user-images.githubusercontent.com/18356694/97891923-03212080-1cf5-11eb-90cc-821a4fbf16ba.png)
+
+4. Modificare il "tipo di avvio" in "automatico"
+
+  ![tipo di avvio del servizio](https://user-images.githubusercontent.com/18356694/97892043-25b33980-1cf5-11eb-8833-a2e65a306a79.png)
+
+5. Fare clic su "OK" e riavviare il computer.
+
+Dopo il riavvio del computer, il servizio dovrebbe avviarsi automaticamente e la finestra di dialogo non dovrebbe più essere visualizzata.

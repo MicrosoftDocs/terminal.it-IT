@@ -3,17 +3,16 @@ title: Nuovi argomenti del terminale in Terminale Windows
 description: Nuovi argomenti del terminale in Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/19/2020
+ms.date: 08/26/2020
 ms.topic: include
-ms.service: terminal
-ms.openlocfilehash: 4430124e3f9319e79cbf7b097d8743543c1d52a6
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
-ms.translationtype: HT
+ms.openlocfilehash: e88bb61f2e832f2671ad3a743a3c541e39816bd9
+ms.sourcegitcommit: 8e0901b83a8cc437f090fe58688b86acb73f3cb3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83416316"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90988530"
 ---
-# <a name="new-terminal-arguments-in-the-windows-terminal"></a>Nuovi argomenti del terminale in Terminale Windows
+### <a name="new-terminal-arguments"></a>Nuovi argomenti del terminale
 
 Quando apri un nuovo riquadro o una nuova scheda con una combinazione di tasti, puoi specificare quale profilo usare includendo il relativo nome, il GUID o l'indice. Se non lo specifichi, verrà usato il profilo predefinito. A questo scopo, aggiungi `profile` o `index` come argomento a una combinazione di tasti `splitPane` o `newTab`. Tieni presente che l'indicizzazione inizia da 0.
 

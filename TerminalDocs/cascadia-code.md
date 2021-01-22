@@ -5,13 +5,12 @@ author: cinnamon-msft
 ms.author: cinnamon
 ms.date: 05/19/2020
 ms.topic: overview
-ms.service: terminal
-ms.openlocfilehash: c2d9b8461c168639f1453050e18f0650afb738fb
-ms.sourcegitcommit: d8e23557224bc50a82a36dc80ac68b9d11dfdde9
-ms.translationtype: HT
+ms.openlocfilehash: 6b442d14c67dd356d47952aab9e00603291a8c4f
+ms.sourcegitcommit: 8e0901b83a8cc437f090fe58688b86acb73f3cb3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84720097"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90988737"
 ---
 # <a name="cascadia-code"></a>Cascadia Code
 

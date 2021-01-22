@@ -3,15 +3,14 @@ title: Argomenti della riga di comando di Terminale Windows
 description: Informazioni su come creare argomenti della riga di comando per Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 06/18/2020
+ms.date: 11/11/2020
 ms.topic: how-to
-ms.service: terminal
-ms.openlocfilehash: d40b0527bab94289457cf8c8a88931f4df943496
-ms.sourcegitcommit: 91a802863cd0730d2e364377ffe44f819a66ff2a
-ms.translationtype: HT
+ms.openlocfilehash: 04eefd4f62b71987ce785f03f005ae7025e8949b
+ms.sourcegitcommit: 9a2f9d152f65cdc8106fb9aad7fa69b01f3d05db
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84994378"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520316"
 ---
 # <a name="using-command-line-arguments-for-windows-terminal"></a>Uso degli argomenti della riga di comando per Terminale Windows
 
@@ -41,18 +40,19 @@ Di seguito è riportato l'elenco completo di opzioni e comandi supportati per la
 | `--help`, `-h`, `-?`, `/?` | Visualizza il messaggio della Guida. |
 | `--maximized`, `-M` | Avvia il terminale ingrandito. |
 | `--fullscreen`, `-F` | Avvia il terminale a schermo intero. |
+| `--focus`, `-f` | Avvia il terminale in modalità messa a fuoco. Può essere combinato con `maximized` . |
 
 > [!IMPORTANT]
-> `--maximized`, `-M` e `--fullscreen`, `-F` sono disponibili solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
+> I `--focus` `-f` flag e sono disponibili solo in [Windows Terminal Preview](https://aka.ms/terminal-preview/).
 
-| Comando | Parametri | Description |
+| Comando | Parametri | Descrizione |
 | ------- | ---------- | ----------- |
-| `new-tab` | `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline`, `--title` | Crea una nuova scheda. |
-| `split-pane` | `-H, --horizontal`, `-V, --vertical`, `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline`, `--title` | Divide un nuovo riquadro. |
-| `focus-tab` | `--target, -t tab-index` | Imposta lo stato attivo su una specifica scheda. |
+| `new-tab`, `nt` | `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline`, `--title` | Crea una nuova scheda. |
+| `split-pane`, `sp` | `-H, --horizontal`, `-V, --vertical`, `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline`, `--title` | Divide un nuovo riquadro. |
+| `focus-tab`, `ft` | `--target, -t tab-index` | Imposta lo stato attivo su una specifica scheda. |
 
-> [!IMPORTANT]
-> `--title` è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
+> [!NOTE]
+> Quando si apre il terminale di Windows da cmd (prompt dei comandi), se si vogliono usare le impostazioni del profilo "cmd" personalizzate, sarà necessario usare il comando `wt -p cmd` . In caso contrario, per eseguire le impostazioni *predefinite* del profilo, è sufficiente usare `wt cmd` .
 
 ## <a name="command-line-argument-examples"></a>Esempi di argomenti della riga di comando
 
@@ -166,10 +166,10 @@ PowerShell usa un punto e virgola (;) per delimitare le istruzioni. Per interpre
 #### <a name="linux"></a>[Linux](#tab/linux)
 
 ```bash
-cmd.exe /c "wt.exe" -p "Command Prompt" \; new-tab -p "Windows Powershell"
+cmd.exe /c "wt.exe" -p "Command Prompt" \; new-tab -p "Windows PowerShell"
 ```
 
-Gli alias di esecuzione non funzionano nelle distribuzioni WSL. Se vuoi usare wt.exe dalla riga di comando WSL, puoi generarlo direttamente da CMD eseguendo `cmd.exe`. L'opzione `/c` indica a CMD di terminare dopo l'esecuzione e i caratteri `\;` (barra + punto e virgola) separano i comandi.
+Gli alias di esecuzione non funzionano nelle distribuzioni WSL. Se vuoi usare wt.exe dalla riga di comando WSL, puoi generarlo direttamente da CMD eseguendo `cmd.exe`. L' `/c` opzione indica a cmd di terminare dopo l'esecuzione e la `\;` barra rovesciata + punto e virgola separa i comandi.
 
 ---
 <!-- End tab selectors.  -->
@@ -199,14 +199,44 @@ PowerShell usa un punto e virgola (;) per delimitare le istruzioni. Per interpre
 cmd.exe /c "wt.exe" -p "Command Prompt" \; split-pane -p "Windows PowerShell" \; split-pane -H wsl.exe
 ```
 
-Gli alias di esecuzione non funzionano nelle distribuzioni WSL. Se vuoi usare wt.exe dalla riga di comando WSL, puoi generarlo direttamente da CMD eseguendo `cmd.exe`. L'opzione `/c` indica a CMD di terminare dopo l'esecuzione e i caratteri `\;` (barra + punto e virgola) separano i comandi.
+Gli alias di esecuzione non funzionano nelle distribuzioni WSL. Se vuoi usare wt.exe dalla riga di comando WSL, puoi generarlo direttamente da CMD eseguendo `cmd.exe`. L' `/c` opzione indica a cmd di terminare dopo l'esecuzione e la `\;` barra rovesciata + punto e virgola separa i comandi.
 
 ---
 <!-- End tab selectors.  -->
 
 Il flag `-H` (o `--horizontal`) indica che i riquadri devono essere divisi orizzontalmente. Il flag `-V` (o `--vertical`) indica che i riquadri devono essere divisi verticalmente.
 
-### <a name="tab-title-preview"></a>Titolo della scheda ([anteprima](https://aka.ms/terminal-preview/))
+### <a name="multiple-tabs-and-panes"></a>Più schede e riquadri
+
+I `new-tab` `split-pane` comandi e possono essere sequenziati per ottenere più schede, ognuna con riquadri suddivisi. Per aprire una nuova istanza di Terminal con due schede, ognuna con due riquadri che eseguono un prompt dei comandi e una riga di comando di WSL, con ogni scheda in una directory diversa, immettere:
+
+<!-- Start tab selectors. -->
+#### <a name="command-prompt"></a>[Prompt dei comandi](#tab/windows)
+
+```bash
+wt -p "Command Prompt" ; split-pane -V wsl.exe ; new-tab -d c:\ ; split-pane -H -d c:\ wsl.exe
+```
+
+#### <a name="powershell"></a>[PowerShell](#tab/powershell)
+
+```powershell
+wt -p "Command Prompt" `; split-pane -V wsl.exe `; new-tab -d c:\ `; split-pane -H -d c:\ wsl.exe
+```
+
+PowerShell usa un punto e virgola (;) per delimitare le istruzioni. Per interpretare un punto e virgola ; come delimitatore di comandi per gli argomenti della riga di comando wt, è necessario usare i caratteri di escape del punto e virgola con accenti gravi. PowerShell include anche l'operatore di interruzione analisi (--%), che indica di arrestare l'interpretazione di qualsiasi stringa dopo tale operatore e di passarla esattamente così come è.
+
+#### <a name="linux"></a>[Linux](#tab/linux)
+
+```bash
+cmd.exe /c "wt.exe" -p "Command Prompt" \; split-pane -V wsl.exe \; new-tab -d c:\\ \; split-pane -H -d c:\\ wsl.exe
+```
+
+Gli alias di esecuzione non funzionano nelle distribuzioni WSL. Se vuoi usare wt.exe dalla riga di comando WSL, puoi generarlo direttamente da CMD eseguendo `cmd.exe`. L' `/c` opzione indica a cmd di terminare dopo l'esecuzione e la `\;` barra rovesciata + punto e virgola separa i comandi.  Si noti che per specificare una directory di Windows come directory iniziale per il `wsl.exe` quale sono necessarie due barre rovesciate `\\` .
+
+---
+<!-- End tab selectors.  -->
+
+### <a name="tab-title"></a>Titolo scheda
 
 Per aprire una nuova istanza del terminale con titoli di schede personalizzati, usare l'argomento `--title`. Per impostare il titolo di ogni scheda all'apertura di due schede, immettere:
 
@@ -234,9 +264,6 @@ Gli alias di esecuzione non funzionano nelle distribuzioni WSL. Se vuoi usare wt
 ---
 <!-- End tab selectors.  -->
 
-> [!IMPORTANT]
-> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
-
 ### <a name="tab-focus"></a>Stato attivo della scheda
 
 Per aprire una nuova istanza del terminale con lo stato attivo su una specifica scheda, usa il flag `-t` (o `--target`), insieme al numero dell'indice di tabulazione. Per aprire il profilo predefinito nella prima scheda e il profilo "Ubuntu-18.04" con lo stato attivo nella seconda scheda (`-t 1`), immetti:
@@ -260,7 +287,7 @@ wt `; new-tab -p "Ubuntu-18.04" `; focus-tab -t 1
 cmd.exe /c "wt.exe" \; new-tab -p "Ubuntu-18.04" \; focus-tab -t 1
 ```
 
-Gli alias di esecuzione non funzionano nelle distribuzioni WSL. Se vuoi usare wt.exe dalla riga di comando WSL, puoi generarlo direttamente da CMD eseguendo `cmd.exe`. L'opzione `/c` indica a CMD di terminare dopo l'esecuzione e i caratteri `\;` (barra + punto e virgola) separano i comandi.
+Gli alias di esecuzione non funzionano nelle distribuzioni WSL. Se vuoi usare wt.exe dalla riga di comando WSL, puoi generarlo direttamente da CMD eseguendo `cmd.exe`. L' `/c` opzione indica a cmd di terminare dopo l'esecuzione e la `\;` barra rovesciata + punto e virgola separa i comandi.
 
 ---
 <!-- End tab selectors.  -->

@@ -3,15 +3,14 @@ title: Riquadri di Terminale Windows
 description: Informazioni su come dividere i riquadri in Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 06/18/2020
+ms.date: 09/22/2020
 ms.topic: how-to
-ms.service: terminal
-ms.openlocfilehash: 0e2d7a50e1a3c933f7ab2d98bda5be6b8ee44e7e
-ms.sourcegitcommit: 91a802863cd0730d2e364377ffe44f819a66ff2a
-ms.translationtype: HT
+ms.openlocfilehash: 07badec2c42ace043544ae539c4b586a3c5f08d9
+ms.sourcegitcommit: 8e0901b83a8cc437f090fe58688b86acb73f3cb3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84994333"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90988541"
 ---
 # <a name="panes-in-windows-terminal"></a>Riquadri in Terminale Windows
 
@@ -21,31 +20,28 @@ I riquadri offrono la possibilità di eseguire più applicazioni da riga di coma
 
 ### <a name="using-the-keyboard"></a>Uso della tastiera
 
-In Terminale Windows è possibile creare un nuovo riquadro verticale o orizzontale. La divisione in verticale apre un nuovo riquadro a destra di quello con lo stato attivo, mentre la divisione in orizzontale ne apre uno nuovo sotto quello con lo stato attivo. Per creare un nuovo riquadro verticale del profilo predefinito, premi <kbd>ALT+MAIUSC++</kbd>. Per creare un riquadro orizzontale del profilo predefinito, premi <kbd>ALT+MAIUSC+-</kbd>.
+In Terminale Windows è possibile creare un nuovo riquadro verticale o orizzontale. La divisione in verticale apre un nuovo riquadro a destra di quello con lo stato attivo, mentre la divisione in orizzontale ne apre uno nuovo sotto quello con lo stato attivo. Per creare un nuovo riquadro verticale del profilo predefinito, è possibile premere la combinazione di tasti <kbd>ALT</kbd> + <kbd>MAIUSC</kbd> + <kbd>=</kbd> . Per un riquadro orizzontale del profilo predefinito, è possibile utilizzare <kbd>ALT</kbd> + <kbd>MAIUSC</kbd> + <kbd>-</kbd> .
 
 ![Creazione di riquadri di Terminale Windows](./images/open-panes.gif)
 _Configurazione: [Raspberry Ubuntu](./custom-terminal-gallery/raspberry-ubuntu.md)_
 
-Per cambiare queste combinazioni di tasti, puoi crearne altre usando l'azione `splitPane` e i valori `vertical` o `horizontal` per la proprietà `split` nel file profiles.json. Per avere un unico riquadro con la quantità massima di area disponibile, imposta `split` su `auto`. Per altre informazioni, vedi la [pagina sulle combinazioni di tasti](./customize-settings/key-bindings.md).
+Se si desidera modificare questi tasti di scelta, è possibile crearne di nuovi utilizzando l' `splitPane` azione e `vertical` `horizontal` i valori, o `auto` per la `split` proprietà nel profiles.jssu file. Il `auto` Metodo sceglierà la direzione che fornisce i riquadri al quadrato. Per ulteriori informazioni sui tasti di scelta, visitare la [pagina azioni](./customize-settings/actions.md).
 
 ```json
-{ "command": { "action": "splitPane", "split": "vertical" }, "keys": "alt+shift+plus" },
+{ "command": { "action": "splitPane", "split": "vertical" }, "keys": "alt+shift+=" },
 { "command": { "action": "splitPane", "split": "horizontal" }, "keys": "alt+shift+-" },
-{ "command": { "action": "splitPane", "split": "auto" }, "keys": "alt+shift+|" }
+{ "command": { "action": "splitPane", "split": "auto" }, "keys": "alt+shift+d" }
 ```
 
-### <a name="using-the-dropdown-menu-preview"></a>Uso del menu a discesa ([anteprima](https://aka.ms/terminal-preview/))
+### <a name="using-the-new-tab-button-and-dropdown-menu"></a>Utilizzando il pulsante nuova scheda e il menu a discesa
 
-Per aprire un nuovo riquadro tramite il menu a discesa, tenere premuto <kbd>ALT</kbd> e fare clic sul profilo desiderato. In questo modo la finestra o il riquadro attivo viene diviso in modalità `auto` in un nuovo riquadro del profilo selezionato. La divisione in modalità `auto` viene applicata nella direzione con il bordo più lungo per creare un riquadro.
+Se si vuole aprire un nuovo riquadro del profilo predefinito, è possibile mantenere il tasto <kbd>ALT</kbd> e fare clic sul pulsante nuova scheda. Per aprire un nuovo riquadro tramite il menu a discesa, tenere premuto <kbd>ALT</kbd> e fare clic sul profilo desiderato. Entrambe queste opzioni `auto` suddivideranno la finestra o il riquadro attivo in un nuovo riquadro del profilo selezionato. La divisione in modalità `auto` viene applicata nella direzione con il bordo più lungo per creare un riquadro.
 
 ![Riquadro a discesa di Terminale Windows](./images/alt-click-pane.gif)
 
-> [!IMPORTANT]
-> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
-
 ## <a name="switching-between-panes"></a>Passaggio tra riquadri
 
-Il terminale ti consente di spostarti tra i riquadri usando la tastiera. Se tieni premuto <kbd>ALT</kbd>, puoi usare i tasti di direzione per spostare lo stato attivo tra i riquadri. Il riquadro con lo stato attivo è identificabile dal colore in risalto del bordo che lo circonda. Questo colore è configurato nelle impostazioni dei colori di Windows.
+Il terminale ti consente di spostarti tra i riquadri usando la tastiera. Se si tiene premuto il tasto <kbd>ALT</kbd> , è possibile usare i tasti di direzione per spostare lo stato attivo tra i riquadri. Il riquadro con lo stato attivo è identificabile dal colore in risalto del bordo che lo circonda. Questo colore è configurato nelle impostazioni dei colori di Windows.
 
 ![Passaggio tra i riquadri di Terminale Windows](./images/navigate-panes.gif)
 
@@ -60,9 +56,9 @@ Puoi personalizzare questa impostazione aggiungendo combinazioni di tasti per il
 
 ## <a name="resizing-a-pane"></a>Ridimensionamento di un riquadro
 
-Per modificare le dimensioni dei riquadri, tieni premuto <kbd>ALT+MAIUSC</kbd> e usa i tasti di direzione per ridimensionare il riquadro con lo stato attivo.
+È possibile modificare le dimensioni dei riquadri tenendo premuto <kbd>ALT</kbd> + <kbd>MAIUSC</kbd> e utilizzando i tasti di direzione per ridimensionare il riquadro con lo stato attivo.
 
-![Creazione di riquadri di Terminale Windows](./images/resize-panes.gif)
+![Riquadro di ridimensionamento del terminale di Windows](./images/resize-panes.gif)
 
 Per personalizzare questa combinazione di tasti, puoi aggiungerne altre usando l'azione `resizePane` e impostando `direction` su `down`, `left`, `right` o `up`.
 
@@ -75,7 +71,7 @@ Per personalizzare questa combinazione di tasti, puoi aggiungerne altre usando l
 
 ## <a name="closing-a-pane"></a>Chiusura di un riquadro
 
-Per chiudere il riquadro con lo stato attivo, premi <kbd>CTRL+MAIUSC+W</kbd>. Se è aperto un solo riquadro, <kbd>CTRL+MAIUSC+W</kbd> chiuderà la scheda. Come sempre, chiudendo l'ultima scheda si chiuderà la finestra.
+È possibile chiudere il riquadro con lo stato attivo digitando <kbd>CTRL</kbd> + <kbd>MAIUSC</kbd> + <kbd>W</kbd>. Se è presente un solo riquadro, <kbd>CTRL</kbd> + <kbd>MAIUSC</kbd> + <kbd>W</kbd> chiuderà la scheda. Come sempre, chiudendo l'ultima scheda si chiude la finestra.
 
 ![Chiusura dei riquadri di Terminale Windows](./images/close-panes.gif)
 
@@ -100,7 +96,5 @@ A questo scopo, aggiungi la proprietà `splitMode` con `duplicate` come valore a
 ```json
 { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" }
 ```
-
-### <a name="new-terminal-arguments"></a>Nuovi argomenti del terminale
 
 [!INCLUDE [new-terminal-arguments](./new-terminal-arguments.md)]

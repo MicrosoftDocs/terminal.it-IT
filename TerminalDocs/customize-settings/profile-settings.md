@@ -3,16 +3,15 @@ title: Terminale Windows - Impostazioni del profilo
 description: Informazioni su come personalizzare i singoli profili in Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 06/18/2020
+ms.date: 11/11/2020
 ms.topic: how-to
-ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: ad7121f9cd6583562c03bf0e35d2928f46fe5d91
-ms.sourcegitcommit: 91a802863cd0730d2e364377ffe44f819a66ff2a
-ms.translationtype: HT
+ms.openlocfilehash: 8715cc5af89784d1d58d408bdeb969e187f1a295
+ms.sourcegitcommit: 9a2f9d152f65cdc8106fb9aad7fa69b01f3d05db
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84994385"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520280"
 ---
 # <a name="profile-settings-in-windows-terminal"></a>Impostazioni del profilo in Terminale Windows
 
@@ -82,8 +81,18 @@ Directory in cui viene avviata la shell quando viene caricata.
 <br />
 
 > [!NOTE]
-> Quando si imposta la directory iniziale in cui si aprono le distribuzioni WSL installate, è consigliabile usare il formato "startingDirectory": "//wsl$/<distro name>", sostituendo il segnaposto con il nome della distribuzione. Ad esempio, "startingDirectory": "//wsl$/Ubuntu-20.04".
+> Quando si imposta la directory iniziale a cui si aprono le distribuzioni WSL installate, è necessario usare il formato seguente: `"startingDirectory": "\\\\wsl$\\DISTRO NAME\\home\\USERNAME"` , sostituendo con il nome della distribuzione. Ad esempio: `"startingDirectory": "\\\\wsl$\\Ubuntu-20.04\\home\\user1"`.
 
+> [!NOTE]
+> L'omissione del valore startingDirectory in un profilo comporta...
+</br>
+.. Se si esegue il terminale di Windows dal menu Start: C:\Windows\System32
+</br>
+.. Se si esegue wt.exe dal menu Start: C:\Windows\System32
+</br>
+.. Se si esegue wt.exe da Win + R:% USERPROFILE%
+</br>
+.. Se si esegue wt.exe dalla barra degli indirizzi di Explorer, ovvero qualunque sia la cartella esaminata.
 ___
 
 ## <a name="dropdown-settings"></a>Impostazioni per il menu a discesa
@@ -103,13 +112,13 @@ Nome del profilo che verrà visualizzato nel menu a discesa. Questo valore viene
 
 ### <a name="icon"></a>Icona
 
-Consente di impostare l'icona visualizzata all'interno della scheda e nel menu a discesa.
+Questa operazione consente di impostare l'icona visualizzata all'interno della scheda, del menu a discesa, di JumpList e dello switcher di tabulazione.
 
 **Nome della proprietà:** `icon`
 
 **Obbligatoria:** Facoltativo
 
-**Accetta:** percorso del file in formato stringa
+**Accetta:** Percorso del file sotto forma di stringa o emoji
 
 ### <a name="hide-a-profile-from-the-dropdown"></a>Nascondi un profilo nell'elenco a discesa
 
@@ -179,7 +188,7 @@ Consente di impostare le dimensioni del carattere del profilo in punti.
 
 **Valore predefinito:** `12`
 
-### <a name="font-weight-preview"></a>Spessore dei caratteri ([anteprima](https://aka.ms/terminal-preview/))
+### <a name="font-weight"></a>Peso carattere
 
 Questa proprietà imposta lo spessore (tratti sottili o spessi) per il tipo di carattere del profilo.
 
@@ -191,20 +200,17 @@ Questa proprietà imposta lo spessore (tratti sottili o spessi) per il tipo di c
 
 **Valore predefinito:** `"normal"`
 
-> [!IMPORTANT]
-> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
-
 ### <a name="padding"></a>Spaziatura interna
 
 :::row:::
 :::column span="":::
-Consente di impostare la spaziatura intorno al testo all'interno della finestra. Vengono accettati tre diversi formati: `"#"` imposta la stessa spaziatura interna su tutti i lati, `"#, #"` imposta la stessa spaziatura interna per left-right e top-bottom, mentre `"#, #, #, #"` imposta la spaziatura interna singolarmente per left, top, right e bottom.
+Consente di impostare la spaziatura intorno al testo all'interno della finestra. Questo accetta tre formati diversi: `"#"` e imposta `#` la stessa spaziatura interna per tutti i lati, `"#, #"` imposta la stessa spaziatura interna per Left-Right e top-bottom e `"#, #, #, #"` imposta la spaziatura interna singolarmente per left, top, Right e Bottom.
 
 **Nome della proprietà:** `padding`
 
 **Obbligatoria:** Facoltativo
 
-**Accetta:** valori nei formati stringa seguenti: `"#"`, `"#, #"`, `"#, #, #, #"`
+**Accetta:** Valori come stringa nei formati seguenti: `"#"` , `"#, #"` `"#, #, #, #"` o valore come Integer: `#`
 
 **Valore predefinito:** `"8, 8, 8, 8"`
 
@@ -273,7 +279,7 @@ ___
 
 ## <a name="keyboard-settings"></a>Impostazioni da tastiera
 
-### <a name="altgr-aliasing-preview"></a>Aliasing di ALTGR ([anteprima](https://aka.ms/terminal-preview/))
+### <a name="altgr-aliasing"></a>Aliasing AltGr
 
 Questa proprietà consente di controllare se Terminale Windows considererà <kbd>CTRL+ALT</kbd> come alias di <kbd>ALTGR</kbd>.
 
@@ -284,9 +290,6 @@ Questa proprietà consente di controllare se Terminale Windows considererà <kbd
 **Accetta:** `true`, `false`
 
 **Valore predefinito:** `true`
-
-> [!IMPORTANT]
-> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
 
 <br />
 
@@ -305,6 +308,16 @@ Nome della combinazione colori usata nel profilo. Le combinazioni colori sono de
 **Accetta:** nome della combinazione colori in formato stringa
 
 **Valore predefinito:** `"Campbell"`
+
+### <a name="tab-color"></a>Colore delle schede
+
+Viene impostato il colore della scheda del profilo. Se si utilizza la selezione colori scheda, questo colore verrà ignorato.
+
+**Nome della proprietà:** `tabColor`
+
+**Obbligatoria:** Facoltativo
+
+**Accetta:** colore in formato stringa esadecimale: `"#rgb"` o `"#rrggbb"`
 
 ### <a name="foreground-color"></a>Colore primo piano
 
@@ -392,13 +405,16 @@ ___
 
 ### <a name="setting-the-background-image"></a>Impostazione dell'immagine di sfondo
 
-Consente di impostare il percorso del file dell'immagine da tracciare sullo sfondo della finestra. L'immagine di sfondo può essere un file con estensione jpg, png o gif.
+Consente di impostare il percorso del file dell'immagine da tracciare sullo sfondo della finestra. L'immagine di sfondo può essere un file con estensione jpg, png o gif. `"desktopWallpaper"` imposta l'immagine di sfondo sullo sfondo del desktop.
 
 **Nome della proprietà:** `backgroundImage`
 
 **Obbligatoria:** Facoltativo
 
-**Accetta:** percorso del file in formato stringa
+**Accetta:** Percorso del file sotto forma di stringa o `"desktopWallpaper"`
+
+> [!IMPORTANT]
+> L'impostazione `"desktopWallpaper"` è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview).
 
 ### <a name="background-image-stretch-mode"></a>Modalità di estensione dell'immagine di sfondo
 
@@ -516,6 +532,25 @@ Consente di impostare la reazione del profilo alla chiusura o a un errore all'av
 **Accetta:** `"graceful"`, `"always"`, `"never"`, `true`, `false`
 
 **Valore predefinito:** `"graceful"`
+
+<br />
+
+___
+
+## <a name="bell-settings-preview"></a>Impostazioni campanello ([Anteprima](https://aka.ms/terminal-preview))
+
+Controlla cosa accade quando l'applicazione emette un carattere BEL. Quando è impostato su `"audible"` , il terminale risuonerà un suono. Quando è impostato su `"none"` , non viene eseguita alcuna operazione.
+
+**Nome della proprietà:** `bellStyle`
+
+**Obbligatoria:** Facoltativo
+
+**Accetta:** `"audible"`, `"none"`
+
+**Valore predefinito:** `"audible"`
+
+> [!IMPORTANT]
+> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
 
 <br />
 

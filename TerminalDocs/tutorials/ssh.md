@@ -5,13 +5,12 @@ author: cinnamon-msft
 ms.author: cinnamon
 ms.date: 05/19/2020
 ms.topic: tutorial
-ms.service: terminal
-ms.openlocfilehash: 02f4704b81cd0d287c207f0138ef27c537929711
-ms.sourcegitcommit: bae07a8dd2010a95de4d53b1465abe226e4ad18e
-ms.translationtype: HT
+ms.openlocfilehash: 7d3f4de1420446cfca60f91eaa8a092c8f5b1cd4
+ms.sourcegitcommit: 8e0901b83a8cc437f090fe58688b86acb73f3cb3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856339"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90988776"
 ---
 # <a name="tutorial-ssh-in-windows-terminal"></a>Esercitazione: SSH in Terminale Windows
 

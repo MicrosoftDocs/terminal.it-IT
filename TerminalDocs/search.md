@@ -3,15 +3,14 @@ title: Ricerca in Terminale Windows
 description: Informazioni su come eseguire ricerche in Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/19/2020
+ms.date: 09/22/2020
 ms.topic: how-to
-ms.service: terminal
-ms.openlocfilehash: a0bc6ecfb337ab11414210fd4d3fe6cd565ad5bf
-ms.sourcegitcommit: a489b75e14e2c123bf6b4ac2a15ff85b515564be
-ms.translationtype: HT
+ms.openlocfilehash: 6e7748e6898ab2a6c7a78d8833179fb694ef66f2
+ms.sourcegitcommit: 8e0901b83a8cc437f090fe58688b86acb73f3cb3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83553253"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90988800"
 ---
 # <a name="how-to-search-in-windows-terminal"></a>Come eseguire ricerche in Terminale Windows
 
@@ -53,4 +52,4 @@ Puoi aprire la finestra di dialogo di ricerca con qualsiasi combinazione di tast
 
 Puoi ad esempio sostituire "CTRL+MAIUSC+F" con "CTRL+F", in modo che premendo `ctrl+f` venga visualizzata la finestra di dialogo di ricerca.
 
-Per altre informazioni, vedi la [pagina sulle combinazioni di tasti](./customize-settings/key-bindings.md).
+Per ulteriori informazioni sui tasti di scelta, visitare la [pagina azioni](./customize-settings/actions.md).

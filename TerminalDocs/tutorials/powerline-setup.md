@@ -3,15 +3,14 @@ title: Terminale Windows - Configurazione di Powerline
 description: Questa esercitazione illustra come configurare Powerline in Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 05/19/2020
+ms.date: 11/11/2020
 ms.topic: tutorial
-ms.service: terminal
-ms.openlocfilehash: 2896ede288e0e466f68323a87e5a4b07bd509d3c
-ms.sourcegitcommit: bae07a8dd2010a95de4d53b1465abe226e4ad18e
-ms.translationtype: HT
+ms.openlocfilehash: 915e8f2f0cdcd5fefdebbc1227d3dc2053349ff4
+ms.sourcegitcommit: 9a2f9d152f65cdc8106fb9aad7fa69b01f3d05db
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856349"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520326"
 ---
 # <a name="tutorial-set-up-powerline-in-windows-terminal"></a>Esercitazione: Configurare Powerline in Terminale Windows
 
@@ -26,6 +25,8 @@ In questa esercitazione verranno illustrate le procedure per:
 > * Configurare Powerline in PowerShell
 > * Configurare Powerline in WSL Ubuntu
 > * Aggiungere i glifi Powerline mancanti
+
+> [!VIDEO https://www.youtube.com/embed/lu__oGZVT98]
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -47,7 +48,7 @@ Install-Module oh-my-posh -Scope CurrentUser
 ```
 
 > [!TIP]
-> Se non è già stato fatto, può essere necessario installare NuGet. La riga di comando di PowerShell chiederà se si vuole installare NuGet in questo caso. Selezionare Sì. Può anche essere necessario confermare l'installazione di moduli di [PSGallery](https://docs.microsoft.com/powershell/scripting/gallery/getting-started?view=powershell-7), un 'repository non attendibile'. Selezionare Sì.
+> Se non è già stato fatto, può essere necessario installare NuGet. La riga di comando di PowerShell chiederà se si vuole installare NuGet in questo caso. Selezionare Sì. Può anche essere necessario confermare l'installazione di moduli di [PSGallery](https://docs.microsoft.com/powershell/scripting/gallery/getting-started), un 'repository non attendibile'. Selezionare Sì.
 
 [Posh-Git](https://github.com/dahlbyk/posh-git) aggiunge al prompt informazioni sullo stato di GIT, nonché il completamento tramite tasto TAB per comandi, parametri, repository remoti e nomi di ramo GIT. [Oh-My-Posh](https://github.com/JanDeDobbeleer/oh-my-posh) offre funzionalità relative al tema per il prompt di PowerShell.
 
@@ -57,11 +58,11 @@ Se usi PowerShell Core, installa PSReadline:
 Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
 ```
 
-[PSReadline](https://docs.microsoft.com/powershell/module/psreadline/?view=powershell-6) consente di personalizzare l'ambiente di modifica da riga di comando in PowerShell.
+[PSReadline](https://docs.microsoft.com/powershell/module/psreadline) consente di personalizzare l'ambiente di modifica da riga di comando in PowerShell.
 
 ### <a name="customize-your-powershell-prompt"></a>Personalizzare il prompt di PowerShell
 
-Apri il profilo di PowerShell con `notepad $PROFILE` o con l'editor di testo che preferisci. Non si tratta del profilo di Terminale Windows. Il profilo di PowerShell è uno script eseguito ogni volta che viene avviato PowerShell. [Altre informazioni sui profili di PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7).
+Apri il profilo di PowerShell con `notepad $PROFILE` o con l'editor di testo che preferisci. Non si tratta del profilo di Terminale Windows. Il profilo di PowerShell è uno script eseguito ogni volta che viene avviato PowerShell. [Altre informazioni sui profili di PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_profiles).
 
 Nel profilo di PowerShell aggiungi quanto segue alla fine del file:
 
@@ -91,6 +92,8 @@ Il file settings.json del profilo di Windows PowerShell sarà ora simile al segu
     "hidden": false
 },
 ```
+> [!TIP]
+> Se si usa anche il terminale integrato in Visual Studio Code, è necessario aggiungere `"terminal.integrated.fontFamily": "Cascadia Code PL"` alle impostazioni Visual Studio Code per assicurarsi che Powerline funzioni anche in questo caso.
 
 ## <a name="set-up-powerline-in-wsl-ubuntu"></a>Configurare Powerline in WSL Ubuntu
 

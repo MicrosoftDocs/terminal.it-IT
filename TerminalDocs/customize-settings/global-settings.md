@@ -3,16 +3,15 @@ title: Terminale Windows - Impostazioni globali
 description: Informazioni su come personalizzare le impostazioni globali in Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 06/18/2020
+ms.date: 11/11/2020
 ms.topic: how-to
-ms.service: terminal
 ms.localizationpriority: high
-ms.openlocfilehash: ba3197bb8b9466d37c01432b60314a7a00227898
-ms.sourcegitcommit: 91a802863cd0730d2e364377ffe44f819a66ff2a
-ms.translationtype: HT
+ms.openlocfilehash: 2724cc52c5a612184a7a5fc3a09be4d3d2d6d232
+ms.sourcegitcommit: 9a2f9d152f65cdc8106fb9aad7fa69b01f3d05db
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84994310"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520266"
 ---
 # <a name="global-settings-in-windows-terminal"></a>Impostazioni globali di Terminale Windows
 
@@ -29,9 +28,6 @@ Imposta il profilo predefinito che viene aperto quando si digita <kbd>ctrl+shift
 **Accetta:** GUID o nome del profilo in formato stringa
 
 **Valore predefinito:** GUID di PowerShell
-
-> [!IMPORTANT]
-> L'uso del nome del profilo per `defaultProfile` è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
 
 <br />
 
@@ -81,6 +77,51 @@ ___
 
 ## <a name="tab-settings"></a>Impostazioni per le schede
 
+### <a name="use-tab-switcher-experience-preview"></a>Usare l'esperienza di selezione scheda ([Anteprima](https://aka.ms/terminal-preview))
+
+:::row:::
+:::column span="":::
+Quando è impostato su `true` o `"mru"` , i `nextTab` comandi e utilizzeranno `prevTab` l'interfaccia utente di selezione scheda, con l'ordine di utilizzo più recente. Quando è impostato su `"inOrder"` , queste azioni cambieranno le schede nell'ordine corrente sulla barra della scheda. L'interfaccia utente mostrerà tutte le schede attualmente aperte in un elenco verticale, navigable con la tastiera o il mouse.
+
+Il selettore di schede verrà aperto sulla pressione iniziale delle azioni per `nextTab` e `prevTab` e resterà aperto finché il tasto di modifica verrà mantenuto premuto. Quando vengono rilasciati tutti i tasti di modifica, lo switcher si chiude e la scheda evidenziata verrà messa a fuoco. <kbd>scheda</kbd> / <kbd>MAIUSC + TAB</kbd>, i tasti freccia <kbd>su</kbd> e <kbd>giù</kbd> e le `nextTab` / `prevTab` azioni possono essere usate per scorrere l'interfaccia utente di selezione.
+
+Per disabilitare lo switcher di tabulazione, è possibile impostare questa impostazione su `false` o su `"disabled"` .
+
+**Nome della proprietà:** `tabSwitcherMode`
+
+**Obbligatoria:** Facoltativo
+
+**Accetta:** `true`, `false`, `"mru"`, `"inOrder"`, `"disabled"`
+
+**Valore predefinito:** `true`
+
+:::column-end:::
+:::column span="":::
+![Switcher Scheda terminale Windows](./../images/tab-switcher.gif)
+
+:::column-end:::
+:::row-end:::
+
+> [!IMPORTANT]
+> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview).
+
+### <a name="enable-tab-switcher"></a>Abilita Switcher schede
+
+Quando questa impostazione è impostata su `true` , i `nextTab` comandi e utilizzeranno `prevTab` l'interfaccia utente di selezione scheda. L'interfaccia utente mostrerà tutte le schede attualmente aperte in un elenco verticale, navigable con la tastiera o il mouse.
+
+Il selettore di schede verrà aperto sulla pressione iniziale delle azioni per `nextTab` e `prevTab` e resterà aperto finché il tasto di modifica verrà mantenuto premuto. Quando vengono rilasciati tutti i tasti di modifica, lo switcher si chiude e la scheda evidenziata verrà messa a fuoco. <kbd>scheda</kbd> / <kbd>MAIUSC + TAB</kbd>, i tasti freccia <kbd>su</kbd> e <kbd>giù</kbd> e le `nextTab` / `prevTab` azioni possono essere usate per scorrere l'interfaccia utente di selezione.
+
+**Nome della proprietà:** `useTabSwitcher`
+
+**Obbligatoria:** Facoltativo
+
+**Accetta:** `true`, `false`
+
+**Valore predefinito:** `true`
+
+> [!CAUTION]
+> L' `"useTabSwitcher"` impostazione non è più disponibile nelle versioni 1,5 e successive. Si consiglia di utilizzare `"tabSwitcherMode"` invece l'impostazione.
+
 ### <a name="always-show-tabs"></a>Mostra sempre le schede
 
 :::row:::
@@ -123,9 +164,6 @@ Consente di impostare la larghezza delle schede. Con `"equal"` tutte le schede h
 :::column-end:::
 :::row-end:::
 
-> [!IMPORTANT]
-> L'impostazione `"compact"` è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
-
 ### <a name="hide-close-all-tabs-popup"></a>Nascondi il popup di chiusura di tutte le schede
 
 :::row:::
@@ -153,7 +191,7 @@ ___
 
 ## <a name="launch-settings"></a>Impostazioni per l'avvio
 
-### <a name="launch-on-startup-preview"></a>Avvio all'avvio del sistema ([anteprima](https://aka.ms/terminal-preview/))
+### <a name="launch-on-startup"></a>Avvia all'avvio
 
 Se questa proprietà è impostata su `true`, abilita l'avvio di Terminale Windows all'avvio del sistema. L'impostazione su `false` disabiliterà la voce dell'attività di avvio del sistema. Nota: se la voce dell'attività di avvio del sistema di Terminale Windows viene disabilitata da criteri dell'organizzazione o da un'azione dell'utente, questa impostazione non avrà effetto.
 
@@ -165,27 +203,24 @@ Se questa proprietà è impostata su `true`, abilita l'avvio di Terminale Window
 
 **Valore predefinito:** `false`
 
-> [!IMPORTANT]
-> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
+### <a name="launch-mode"></a>Modalità di avvio
 
-### <a name="launch-size"></a>Dimensioni all'avvio
-
-Definisce se il terminale verrà avviato con dimensioni ingrandite, a schermo intero o in una finestra.
+Definisce se il terminale verrà avviato come ingrandito, a schermo intero o in una finestra. L'impostazione di questa opzione su `focus` equivale all'avvio del terminale in `default` modalità, ma con la [modalità messa a fuoco](./actions.md#toggle-focus-mode) abilitata. Analogamente, l'impostazione di questa opzione su comporterà `maximizedFocus` l'avvio del terminale in una finestra ingrandita con la modalità messa a fuoco abilitata.
 
 **Nome della proprietà:** `launchMode`
 
 **Obbligatoria:** Facoltativo
 
-**Accetta:** `"default"`, `"maximized"`, `"fullscreen"`
+**Accetta:** `"default"`, `"maximized"`, `"fullscreen"`, `"focus"`, `"maximizedFocus"`
 
 **Valore predefinito:** `"default"`
 
 > [!IMPORTANT]
-> L'impostazione `"fullscreen"` è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
+> Le `"focus"` `"maximizedFocus"` modalità e sono disponibili solo in [Windows Terminal Preview](https://aka.ms/terminal-preview/).
 
 ### <a name="launch-position"></a>Posizione di avvio
 
-Consente di impostare la posizione in pixel dell'angolo superiore sinistro della finestra al primo caricamento. In un sistema con più schermi queste coordinate si riferiscono all'angolo superiore sinistro dello schermo principale. Se non viene specificata una coordinata X o Y, il terminale userà l'impostazione predefinita del sistema per tale valore. Se `launchMode` è impostata su `"maximized"`, la finestra aperta a schermo intero nel monitor specificato da tali coordinate.
+Consente di impostare la posizione in pixel dell'angolo superiore sinistro della finestra al primo caricamento. In un sistema con più schermi queste coordinate si riferiscono all'angolo superiore sinistro dello schermo principale. Se non viene specificata una coordinata X o Y, il terminale userà l'impostazione predefinita del sistema per tale valore. Se `launchMode` è impostato su `"maximized"` o `"maximizedFocus"` , la finestra verrà ingrandita sul monitoraggio specificato da tali coordinate.
 
 **Nome della proprietà:** `initialPosition`
 
@@ -197,7 +232,7 @@ Consente di impostare la posizione in pixel dell'angolo superiore sinistro della
 
 ### <a name="columns-on-first-launch"></a>Colonne al primo avvio
 
-Numero di colonne di tipo carattere visualizzate nella finestra al primo caricamento. Se `launchMode` è impostata su `"maximized"`, questa proprietà viene ignorata.
+Numero di colonne di tipo carattere visualizzate nella finestra al primo caricamento. Se `launchMode` è impostato su `"maximized"` o `"maximizedFocus"` , questa proprietà viene ignorata.
 
 **Nome della proprietà:** `initialCols`
 
@@ -209,7 +244,7 @@ Numero di colonne di tipo carattere visualizzate nella finestra al primo caricam
 
 ### <a name="rows-on-first-launch"></a>Righe al primo avvio
 
-Numero di righe visualizzate nella finestra al primo caricamento. Se `launchMode` è impostata su `"maximized"`, questa proprietà viene ignorata.
+Numero di righe visualizzate nella finestra al primo caricamento. Se `launchMode` è impostato su `"maximized"` o `"maximizedFocus"` , questa proprietà viene ignorata.
 
 **Nome della proprietà:** `initialRows`
 
@@ -218,6 +253,18 @@ Numero di righe visualizzate nella finestra al primo caricamento. Se `launchMode
 **Accetta:** Intero
 
 **Valore predefinito:** `30`
+
+### <a name="always-on-top-mode"></a>Modalità sempre in primo piano
+
+Quando è impostato su true, Windows Terminal viene avviato in tutte le altre finestre sul desktop. Questo stato può anche essere attivato o disattivato con l' `toggleAlwaysOnTop` associazione di tasti.
+
+**Nome della proprietà:** `alwaysOnTop`
+
+**Obbligatoria:** Facoltativo
+
+**Accetta:**`true, false`
+
+**Valore predefinito:** `false`
 
 <br />
 
@@ -278,13 +325,13 @@ Quando è impostata su `true`, una selezione viene immediatamente copiata negli 
 
 ### <a name="copy-formatting"></a>Copia formattazione
 
-Quando è impostata su `true`, negli Appunti vengono copiate anche la formattazione del colore e del carattere del testo selezionato. Quando è impostato su `false`, negli Appunti viene copiato solo il testo normale.
+Quando è impostato su `true` , la formattazione del colore e del carattere del testo selezionato viene anche copiata negli Appunti. Quando è impostato su `false`, negli Appunti viene copiato solo il testo normale. È inoltre possibile specificare i formati che si desidera copiare.
 
 **Nome della proprietà:** `copyFormatting`
 
 **Obbligatoria:** Facoltativo
 
-**Accetta:** `true`, `false`
+**Accetta:** `true` , `false` , `"all"` , `"none"` , `"html"` , `"rtf"`
 
 **Valore predefinito:** `false`
 
@@ -304,17 +351,50 @@ Determina i delimitatori di parola usati quando si fa doppio clic per selezionar
 
 ___
 
-## <a name="scroll-speed"></a>Velocità di scorrimento
+## <a name="paste-warnings"></a>Avvisi incolla
 
-Numero di righe da scorrere per volta quando si usa la rotellina del mouse. Sostituisce l'impostazione di sistema se il valore è diverso da zero o `"system"`.
+### <a name="warn-when-the-text-to-paste-is-very-large"></a>Avvisa quando il testo da incollare è molto grande
 
-**Nome della proprietà:** `rowsToScroll`
+Quando è impostato su, quando si `true` tenta di incollare testo con più di 5 KiB di caratteri verrà visualizzata una finestra di dialogo in cui viene chiesto se continuare o meno con l'operazione Incolla. Quando è impostato su `false` , la finestra di dialogo non viene visualizzata e invece il testo viene incollato immediatamente. Se spesso si fa clic con il pulsante destro del mouse sul terminale per errore dopo aver selezionato una grande quantità di testo, potrebbe essere utile evitare che il terminale non risponda mentre il programma connesso al terminale riceve il contenuto degli Appunti.
+
+**Nome della proprietà:** `largePasteWarning`
 
 **Obbligatoria:** Facoltativo
 
-**Accetta:** Intero
+**Accetta:** `true`, `false`
 
-**Valore predefinito:** `"system"`
+**Valore predefinito:** `true`
+
+### <a name="warn-when-the-text-to-paste-contains-multiple-lines"></a>Avvisa quando il testo da incollare contiene più righe
+
+Quando è impostato su, quando si `true` tenta di incollare testo con più righe verrà visualizzata una finestra di dialogo in cui viene chiesto se continuare o meno con l'operazione Incolla. Quando è impostato su `false` , la finestra di dialogo non viene visualizzata e invece il testo viene incollato immediatamente. Nella maggior parte delle shell, una riga corrisponde a un comando, quindi se si incolla il testo che contiene il carattere "nuova riga" in una shell, è possibile che uno o più comandi vengano eseguiti automaticamente al termine della copia, senza che sia necessario convalidare i comandi. Questa operazione può essere utile se si copiano e si incollano spesso comandi da siti Web non attendibili.
+
+**Nome della proprietà:** `multiLinePasteWarning`
+
+**Obbligatoria:** Facoltativo
+
+**Accetta:** `true`, `false`
+
+**Valore predefinito:** `true`
+
+<br />
+
+___
+
+## <a name="disable-animations-preview"></a>Disabilita animazioni ([Anteprima](https://aka.ms/terminal-preview))
+
+In questo modo vengono disabilitate le animazioni visive nell'applicazione quando è impostato su `true` .
+
+**Nome della proprietà:** `disableAnimations`
+
+**Obbligatoria:** Facoltativo
+
+**Accetta:** `true`, `false`
+
+**Valore predefinito:** `false`
+
+> [!IMPORTANT]
+> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview/).
 
 <br />
 

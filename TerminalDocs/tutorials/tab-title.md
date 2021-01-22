@@ -5,13 +5,12 @@ author: cinnamon-msft
 ms.author: cinnamon
 ms.date: 05/19/2020
 ms.topic: tutorial
-ms.service: terminal
-ms.openlocfilehash: 94c0d9afc8ccd3d95a3f52f5f9f6bdd0cb05bc12
-ms.sourcegitcommit: bb5b7fd7db4b81e0d44e060989dc16b6775c802a
-ms.translationtype: HT
+ms.openlocfilehash: a127b1be1dc3592568db9abd1027555bf38f349c
+ms.sourcegitcommit: 8e0901b83a8cc437f090fe58688b86acb73f3cb3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83416466"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90988756"
 ---
 # <a name="tutorial-configure-tab-titles-in-windows-terminal"></a>Esercitazione: Configurare i titoli delle schede in Terminale Windows
 
