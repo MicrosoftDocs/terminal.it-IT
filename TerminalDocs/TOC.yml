@@ -6,12 +6,22 @@
       href: get-started.md
     - name: Personalizzare le impostazioni
       items:
-        - name: Impostazioni globali
-          href: customize-settings/global-settings.md
-        - name: Impostazioni del profilo
-          href: customize-settings/profile-settings.md
+        - name: Avvio
+          href: customize-settings/startup.md
+        - name: Interazione
+          href: customize-settings/interaction.md
+        - name: Aspetto
+          href: customize-settings/appearance.md
         - name: Combinazioni di colori
           href: customize-settings/color-schemes.md
+        - name: Rendering
+          href: customize-settings/rendering.md
+        - name: Profilo-generale
+          href: customize-settings/profile-general.md
+        - name: Aspetto del profilo
+          href: customize-settings/profile-appearance.md
+        - name: Profilo-avanzato
+          href: customize-settings/profile-advanced.md
         - name: Azioni
           href: customize-settings/actions.md
     - name: Argomenti della riga di comando
