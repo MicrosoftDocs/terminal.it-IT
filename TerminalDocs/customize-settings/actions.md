@@ -3,15 +3,15 @@ title: Azioni del terminale di Windows
 description: Informazioni su come creare azioni personalizzate per il terminale di Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 11/11/2020
+ms.date: 1/28/2021
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 31ba6ab95ffc9c55808cb85ba97651dff19076d2
-ms.sourcegitcommit: 9a2f9d152f65cdc8106fb9aad7fa69b01f3d05db
+ms.openlocfilehash: 050e6fc2bc9d541e49f3a36cc8b2180a4e374825
+ms.sourcegitcommit: 7855b73a8b3f84ee6bd42797e40281a3dadb152a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94520283"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98980974"
 ---
 # <a name="custom-actions-in-windows-terminal"></a>Azioni personalizzate nel terminale di Windows
 
@@ -119,7 +119,7 @@ ___
 `ctrl+`, `shift+`, `alt+`
 
 > [!NOTE]
-> La `Windows` chiave non è supportata come modificatore. 
+> La `Windows` chiave non è supportata come modificatore.
 
 ### <a name="modifier-keys"></a>Tasti di modifica
 
@@ -141,7 +141,7 @@ ___
 
 :::row:::
 :::column span="":::
-Chiude la finestra corrente e tutte le relative schede. Se `confirmCloseAllTabs` è impostato su `true`, verrà visualizzata una finestra di dialogo per confermare la chiusura di tutte le schede. Per altre informazioni su questa impostazione, vedi la [pagina delle impostazioni globali](./global-settings.md#hide-close-all-tabs-popup).
+Chiude la finestra corrente e tutte le relative schede. Se `confirmCloseAllTabs` è impostato su `true`, verrà visualizzata una finestra di dialogo per confermare la chiusura di tutte le schede. Ulteriori informazioni su questa impostazione sono disponibili nella [pagina aspetto](./appearance.md#show-close-all-tabs-popup).
 
 **Nome del comando:** `closeWindow`
 
@@ -199,7 +199,10 @@ Apre i file di impostazioni predefiniti o personalizzati. Senza il campo `target
 
 | Nome | Obbligatoria | Tipo accettato | Description |
 | ---- | --------- | ------- | ----------- |
-| `target` | Facoltativo | `"settingsFile"`, `"defaultsFile"`, `"allFiles"` | Il file di impostazioni da aprire. |
+| `target` | Facoltativo | `"settingsFile"`, `"defaultsFile"`, `"settingsUI"`, `"allFiles"` | Il file di impostazioni da aprire. |
+
+> [!IMPORTANT]
+> Il `"settingsUI"` valore di `target` è disponibile solo in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### <a name="toggle-full-screen"></a>Attiva/Disattiva schermo intero
 
@@ -450,7 +453,7 @@ _Questo comando non è attualmente associato alle impostazioni predefinite_.
 | ---- | --------- | ------- | ----------- |
 | `title` | Facoltativo | String | Nuovo titolo da utilizzare per questa scheda. Se omesso, il comando ripristinerà nuovamente il titolo della scheda al valore originale. |
 
-### <a name="open-tab-rename-text-box-preview"></a>Apri ridenominazione tabulazione casella di testo ([Anteprima](https://aka.ms/terminal-preview))
+### <a name="open-tab-rename-text-box"></a>Aprire la casella di testo Rinomina tabulazione
 
 Questo comando modifica il titolo della scheda in un campo di testo che consente di modificare il titolo per la scheda corrente. Se si deseleziona il campo di testo, il titolo della scheda viene reimpostato sul valore predefinito per l'istanza corrente della shell.
 
@@ -463,9 +466,6 @@ _Questo comando non è attualmente associato alle impostazioni predefinite_.
 ```json
 { "command": "openTabRenamer", "keys": "ctrl+alt+a" }
 ```
-
-> [!IMPORTANT]
-> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview).
 
 ### <a name="change-tab-color"></a>Cambia colore scheda
 
@@ -503,6 +503,33 @@ Questo comando può essere usato per aprire la selezione colori per la scheda at
 { "command": "openTabColorPicker" }
 ```
 
+### <a name="move-tab-preview"></a>Scheda Sposta ([Anteprima](https://aka.ms/terminal-preview))
+
+Questo comando Sposta la scheda "indietro" e "Avanti", che equivale a "left" e "Right" nell'interfaccia utente da sinistra a destra.
+
+**Nome del comando:** `moveTab`
+
+**Associazione predefinita:**
+
+_Questo comando non è attualmente associato alle impostazioni predefinite_.
+
+```json
+// Move tab backward (left in LTR)
+{ "command": { "action": "moveTab", "direction": "backward" }, "keys": "" }
+
+// Move tab forward (right in LTR)
+{ "command": { "action": "moveTab", "direction": "forward" }, "keys": "" }
+```
+
+#### <a name="actions"></a>Azioni
+
+| Nome | Obbligatoria | Tipo accettato | Description |
+| ---- | --------- | ------- | ----------- |
+| `direction` | Obbligatoria | `"backward"`, `"forward"` | Direzione in cui la scheda viene spostata. |
+
+> [!IMPORTANT]
+> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview).
+
 <br />
 
 ___
@@ -523,7 +550,7 @@ Chiude il riquadro attivo. Se non sono presenti riquadri divisi, chiude la sched
 
 ### <a name="move-pane-focus"></a>Sposta stato attivo nel riquadro
 
-Consente di spostare lo stato attivo in un altro riquadro a seconda della direzione.
+Consente di spostare lo stato attivo in un altro riquadro a seconda della direzione. Impostando `direction` su `"previous"` , lo stato attivo viene spostato sul riquadro usato più di recente.
 
 **Nome del comando:** `moveFocus`
 
@@ -533,16 +560,20 @@ Consente di spostare lo stato attivo in un altro riquadro a seconda della direzi
 { "command": { "action": "moveFocus", "direction": "down" }, "keys": "alt+down" },
 { "command": { "action": "moveFocus", "direction": "left" }, "keys": "alt+left" },
 { "command": { "action": "moveFocus", "direction": "right" }, "keys": "alt+right" },
-{ "command": { "action": "moveFocus", "direction": "up" }, "keys": "alt+up" }
+{ "command": { "action": "moveFocus", "direction": "up" }, "keys": "alt+up" },
+{ "command": { "action": "moveFocus", "direction": "previous" }, "keys": "ctrl+alt+left" }
 ```
 
 #### <a name="actions"></a>Azioni
 
 | Nome | Obbligatoria | Tipo accettato | Description |
 | ---- | --------- | ------- | ----------- |
-| `direction` | Obbligatoria | `"left"`, `"right"`, `"up"`, `"down"` | Direzione in cui viene spostato lo stato attivo. |
+| `direction` | Obbligatoria | `"left"`, `"right"`, `"up"`, `"down"`, `"previous"` | Direzione in cui viene spostato lo stato attivo. |
 
-### <a name="zoom-a-pane-preview"></a>Zoom di un riquadro ([Anteprima](https://aka.ms/terminal-preview))
+> [!IMPORTANT]
+> La `"previous"` direzione è disponibile solo in [Windows Terminal Preview](https://aka.ms/terminal-preview).
+
+### <a name="zoom-a-pane"></a>Ingrandire un riquadro
 
 :::row:::
 :::column span="":::
@@ -562,9 +593,6 @@ In questo modo si espande il riquadro con lo stato attivo per riempire l'intero 
 
 :::column-end:::
 :::row-end:::
-
-> [!IMPORTANT]
-> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview).
 
 ### <a name="resize-a-pane"></a>Ridimensiona un riquadro
 
@@ -600,8 +628,8 @@ Divide a metà il riquadro attivo e ne apre un altro. Se viene specificato senza
 { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
 
 // In defaults.json
-{ "command": { "action": "splitPane", "split": "horizontal"}, "keys": "alt+shift+-" },
-{ "command": { "action": "splitPane", "split": "vertical"}, "keys": "alt+shift+plus" }
+{ "command": { "action": "splitPane", "split": "horizontal" }, "keys": "alt+shift+-" },
+{ "command": { "action": "splitPane", "split": "vertical" }, "keys": "alt+shift+plus" }
 ```
 
 #### <a name="actions"></a>Azioni
@@ -615,6 +643,10 @@ Divide a metà il riquadro attivo e ne apre un altro. Se viene specificato senza
 | `index` | Facoltativo | Intero | Profilo che verrà aperto in base alla relativa posizione nel menu a discesa (a partire da 0). |
 | `profile` | Facoltativo | Nome o GUID del profilo in formato stringa | Profilo che verrà aperto in base al relativo nome o GUID. |
 | `splitMode` | Facoltativo | `"duplicate"` | Controlla la modalità di divisione del riquadro. Accetta solo `"duplicate"`, con cui il profilo del riquadro con lo stato attivo viene duplicato in un nuovo riquadro. |
+| `size` | Facoltativo | Float | Consente di specificare la dimensione del nuovo riquadro, come frazione della dimensione del riquadro corrente. `1.0` è "all of the current pane" e `0.0` è "None of the parent". Il valore predefinito è `0.5`. |
+
+> [!IMPORTANT]
+> Il `size` parametro è disponibile solo in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 <br />
 
@@ -687,9 +719,6 @@ Scorre lo schermo verso l'alto in base al numero di righe definito da `"rowsToSc
 | ---- | --------- | ------- | ----------- |
 | `rowsToScroll` | Facoltativo | Intero | Numero di righe da scorrere. |
 
-> [!IMPORTANT]
-> L' `"rowsToScroll"` azione è disponibile solo in [Windows Terminal Preview](https://aka.ms/terminal-preview).
-
 ### <a name="scroll-down"></a>Scorri verso il basso
 
 Scorre lo schermo verso il basso in base al numero di righe definito da `"rowsToScroll"` . Se `"rowsToScroll"` non viene specificato, scorre verso il basso la quantità definita dall'impostazione predefinita del sistema, che corrisponde allo scorrimento del mouse.
@@ -707,9 +736,6 @@ Scorre lo schermo verso il basso in base al numero di righe definito da `"rowsTo
 | Nome | Obbligatoria | Tipo accettato | Description |
 | ---- | --------- | ------- | ----------- |
 | `rowsToScroll` | Facoltativo | Intero | Numero di righe da scorrere. |
-
-> [!IMPORTANT]
-> L' `"rowsToScroll"` azione è disponibile solo in [Windows Terminal Preview](https://aka.ms/terminal-preview).
 
 ### <a name="scroll-up-a-whole-page"></a>Scorri verso l'alto di una pagina intera
 
@@ -734,6 +760,36 @@ Scorre lo schermo verso il basso di una pagina intera, che corrisponde all'altez
 ```json
 { "command": "scrollDownPage", "keys": "ctrl+shift+pgdn" }
 ```
+
+### <a name="scroll-to-the-earliest-history"></a>Scorri fino alla cronologia più antica
+
+Scorre lo schermo verso l'alto nella parte superiore del buffer di input.
+
+**Nome del comando:** `scrollToTop`
+
+**Associazione predefinita:**
+
+```json
+{ "command": "scrollToTop", "keys": "ctrl+shift+home" }
+```
+
+> [!IMPORTANT]
+> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview).
+
+### <a name="scroll-to-the-latest-history"></a>Scorrere fino alla cronologia più recente
+
+Scorre lo schermo verso il basso fino alla fine del buffer di input.
+
+**Nome del comando:** `scrollToBottom`
+
+**Associazione predefinita:**
+
+```json
+{ "command": "scrollToBottom", "keys": "ctrl+shift+end" }
+```
+
+> [!IMPORTANT]
+> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview).
 
 <br />
 
@@ -772,17 +828,20 @@ Reimposta le dimensioni del testo in base al valore predefinito.
 { "command": "resetFontSize", "keys": "ctrl+0" }
 ```
 
-### <a name="toggle-retro-terminal-effects"></a>Imposta/Rimuovi effetti terminali retro
+### <a name="toggle-pixel-shader-effects"></a>Imposta/Nascondi pixel shader effetti
 
-Questo consente di attivare o disabilitare il "effetto terminale retrò", che è abilitato con l'impostazione del profilo `experimental.retroTerminalEffect` .
+Questo consente di attivare o disabilitare gli effetti pixel shader abilitati nel terminale. Se l'utente ha specificato uno shader valido con `experimental.pixelShaderPath` , questa azione attiva o disattiva lo shader. Verrà inoltre attivato il "effetto terminale retrò", che è abilitato con l'impostazione del profilo `experimental.retroTerminalEffect` .
 
-**Nome del comando:** `toggleRetroEffect`
+**Nome del comando:** `toggleShaderEffects`
 
 **Associazione predefinita:**
 
 ```json
-{ "command": "toggleRetroEffect" }
+{ "command": "toggleShaderEffects" }
 ```
+
+> [!CAUTION]
+> L' `toggleRetroEffect` azione non è più disponibile nelle versioni 1,6 e successive. Si consiglia di usare in `toggleShaderEffects` alternativa.
 
 ### <a name="set-the-color-scheme"></a>Imposta la combinazione di colori
 

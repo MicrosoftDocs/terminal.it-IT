@@ -3,19 +3,27 @@ title: Risoluzione dei problemi di Terminale Windows
 description: Informazioni sulle correzioni per i problemi comuni di Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 11/11/2020
+ms.date: 1/28/2021
 ms.topic: overview
 ms.localizationpriority: high
-ms.openlocfilehash: 105b2fb5b93fccf17b4bceeab33baa74affc6686
-ms.sourcegitcommit: 9a2f9d152f65cdc8106fb9aad7fa69b01f3d05db
+ms.openlocfilehash: f2c83f4ec4fc4596ce4a66764c49f73cc5d1fbf5
+ms.sourcegitcommit: 7855b73a8b3f84ee6bd42797e40281a3dadb152a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94520296"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98981004"
 ---
 # <a name="troubleshooting-in-windows-terminal"></a>Risoluzione dei problemi di Terminale Windows
 
 Questa guida descrive alcuni errori e problemi comuni che possono verificarsi in Terminale Windows.
+
+## <a name="open-the-settings-ui"></a>Aprire l'interfaccia utente delle impostazioni
+
+Al momento, l'interfaccia utente delle impostazioni è disponibile solo in [Windows Terminal Preview](https://aka.ms/terminal-preview). Per aprire l'interfaccia utente delle impostazioni, è necessario aggiungere l' `"openSettings"` azione alla `"actions"` matrice per aprirla con il riquadro comandi o la tastiera.
+
+```
+{ "command": { "action": "openSettings", "target": "settingsUI" }, "keys": "ctrl+shift+," },
+```
 
 ## <a name="set-your-wsl-distribution-to-start-in-the-home--directory-when-launched"></a>Impostare la distribuzione di WSL in modo che venga avviata nella home directory `~`
 
@@ -73,7 +81,7 @@ Se al contrario usi questa funzionalità di tasti di scelta rapida per più ling
 
 ## <a name="the-text-is-blurry"></a>Il testo è sfocato
 
-Alcuni driver video e combinazioni di hardware non gestiscono lo scorrimento e/o le aree modificate senza sfocare i dati del frame precedente. Per ovviare a questo problema, è possibile aggiungere una combinazione di [queste impostazioni di rendering globali](./customize-settings/global-settings.md#rendering-settings) per ridurre la pressione esercitata sull'hardware dal renderer di testo del terminale.
+Alcuni driver video e combinazioni di hardware non gestiscono lo scorrimento e/o le aree modificate senza sfocare i dati del frame precedente. Per ovviare a questo problema, è possibile aggiungere una combinazione di [queste impostazioni di rendering globali](./customize-settings/rendering.md) per ridurre la pressione esercitata sull'hardware dal renderer di testo del terminale.
 
 ## <a name="my-colors-look-strange-there-are-black-bars-on-my-screen"></a>I miei colori hanno un aspetto strano. Sono presenti barre nere sullo schermo.
 

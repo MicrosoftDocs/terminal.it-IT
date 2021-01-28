@@ -3,15 +3,15 @@ title: Installazione di Terminale Windows
 description: Questo argomento di avvio rapido illustra come installare ed eseguire Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 09/22/2020
+ms.date: 01/28/2021
 ms.topic: quickstart
 ms.localizationpriority: high
-ms.openlocfilehash: f8900c62bf973860c5ae9dc6600a99c18336949a
-ms.sourcegitcommit: 8e0901b83a8cc437f090fe58688b86acb73f3cb3
+ms.openlocfilehash: f0565e8ef54293c667b38f8d6b8d22b60a4f2ee0
+ms.sourcegitcommit: 7855b73a8b3f84ee6bd42797e40281a3dadb152a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90988593"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98980914"
 ---
 # <a name="install-and-set-up-windows-terminal"></a>Installare e configurare Terminale Windows
 
@@ -43,7 +43,10 @@ Puoi eseguire più shell affiancate usando i riquadri. Per aprire un riquadro, �
 
 Per personalizzare le impostazioni di Terminale Windows, scegli **Impostazioni** dal menu a discesa. Verrà aperto il file `settings.json` nell'editor di testo predefinito. L'editor di testo predefinito viene definito nelle[impostazioni di Windows](ms-settings:defaultapps).
 
-Il terminale supporta la personalizzazione delle [proprietà globali](./customize-settings/global-settings.md) che interessano l'intera applicazione, le [proprietà del profilo](./customize-settings/profile-settings.md) che influiscono sulle impostazioni di ogni profilo e le [azioni](./customize-settings/actions.md) che consentono di interagire con il terminale usando la tastiera o il riquadro comandi.
+Il terminale supporta la personalizzazione delle proprietà globali che interessano l'intera applicazione, le [proprietà del profilo](./customize-settings/profile-general.md) che influiscono sulle impostazioni di ogni profilo e le [azioni](./customize-settings/actions.md) che consentono di interagire con il terminale usando la tastiera o il riquadro comandi.
+
+> [!TIP]
+> È anche possibile usare l'interfaccia utente delle impostazioni per configurare le impostazioni se si usa [Windows Terminal Preview](https://aka.ms/terminal-preview). È possibile apprendere come aprire l'interfaccia utente delle impostazioni nella [pagina azioni](./customize-settings/actions.md#application-level-commands).
 
 ## <a name="command-line-arguments"></a>Argomenti della riga di comando
 

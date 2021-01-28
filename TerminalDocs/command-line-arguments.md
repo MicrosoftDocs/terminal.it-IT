@@ -3,14 +3,14 @@ title: Argomenti della riga di comando di Terminale Windows
 description: Informazioni su come creare argomenti della riga di comando per Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 11/11/2020
+ms.date: 1/28/2021
 ms.topic: how-to
-ms.openlocfilehash: 04eefd4f62b71987ce785f03f005ae7025e8949b
-ms.sourcegitcommit: 9a2f9d152f65cdc8106fb9aad7fa69b01f3d05db
+ms.openlocfilehash: 08cfce587a6c9d686ee0c2a085a98bc1094555f7
+ms.sourcegitcommit: 7855b73a8b3f84ee6bd42797e40281a3dadb152a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94520316"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98980994"
 ---
 # <a name="using-command-line-arguments-for-windows-terminal"></a>Uso degli argomenti della riga di comando per Terminale Windows
 
@@ -42,14 +42,15 @@ Di seguito è riportato l'elenco completo di opzioni e comandi supportati per la
 | `--fullscreen`, `-F` | Avvia il terminale a schermo intero. |
 | `--focus`, `-f` | Avvia il terminale in modalità messa a fuoco. Può essere combinato con `maximized` . |
 
-> [!IMPORTANT]
-> I `--focus` `-f` flag e sono disponibili solo in [Windows Terminal Preview](https://aka.ms/terminal-preview/).
-
 | Comando | Parametri | Descrizione |
 | ------- | ---------- | ----------- |
-| `new-tab`, `nt` | `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline`, `--title` | Crea una nuova scheda. |
-| `split-pane`, `sp` | `-H, --horizontal`, `-V, --vertical`, `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline`, `--title` | Divide un nuovo riquadro. |
+| `new-tab`, `nt` | `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `commandline`, `--title`, `--tabColor` | Crea una nuova scheda. |
+| `split-pane`, `sp` | `-H, --horizontal`, `-V, --vertical`, `--profile, -p profile-name`, `--startingDirectory, -d starting-directory`, `--title`, `--tabColor`, `--size, -s size`, `commandline` | Divide un nuovo riquadro. |
 | `focus-tab`, `ft` | `--target, -t tab-index` | Imposta lo stato attivo su una specifica scheda. |
+| `move-focus`, `mf` | `direction` | Sposta lo stato attivo tra i riquadri nella direzione specificata. Accetta uno tra `up` , `down` , `left` , `right` . |
+
+> [!IMPORTANT]
+> Il `--tabColor` parametro del `new-tab` sottocomando, i `--tabColor` `--size,-s size` parametri del sottocomando `split-pane` e il `move-focus` sottocomando sono disponibili solo in [Windows Terminal Preview](https://aka.ms/terminal-preview/).
 
 > [!NOTE]
 > Quando si apre il terminale di Windows da cmd (prompt dei comandi), se si vogliono usare le impostazioni del profilo "cmd" personalizzate, sarà necessario usare il comando `wt -p cmd` . In caso contrario, per eseguire le impostazioni *predefinite* del profilo, è sufficiente usare `wt cmd` .
@@ -263,6 +264,43 @@ Gli alias di esecuzione non funzionano nelle distribuzioni WSL. Se vuoi usare wt
 
 ---
 <!-- End tab selectors.  -->
+
+### <a name="tab-color-preview"></a>Colore scheda ([Anteprima](https://aka.ms/terminal-preview))
+
+Per aprire una nuova istanza di Terminal con i colori di tabulazione personalizzati, utilizzare l' `--tabColor` argomento. Questo argomento sostituisce il valore definito nel profilo, ma è possibile eseguirne l'override anche usando la selezione dei colori della scheda. Nell'esempio seguente viene creato un nuovo terminale con due schede di colori diversi:
+
+<!-- Start tab selectors. -->
+#### <a name="command-prompt"></a>[Prompt dei comandi](#tab/windows)
+
+```bash
+wt --tabColor #009999 ; new-tab --tabColor #f59218
+```
+
+#### <a name="powershell"></a>[PowerShell](#tab/powershell)
+
+```powershell
+wt --tabColor #009999 ; new-tab --tabColor #f59218
+```
+
+#### <a name="linux"></a>[Linux](#tab/linux)
+
+```bash
+cmd.exe /c "wt.exe" --tabColor #009999 \; new-tab --tabColor #f59218
+```
+
+Gli alias di esecuzione non funzionano nelle distribuzioni WSL. Se vuoi usare wt.exe dalla riga di comando WSL, puoi generarlo direttamente da CMD eseguendo `cmd.exe`. L' `/c` opzione indica a cmd di terminare dopo l'esecuzione e `\;` separa i comandi.
+
+---
+<!-- End tab selectors.  -->
+
+Quando `--tabColor` è impostato per una scheda, è associato al primo riquadro di questa scheda. Pertanto, in una scheda con più riquadri, il colore verrà applicato solo se il primo riquadro è nello stato attivo. Per impostare il colore della scheda per i riquadri aggiuntivi, è necessario aggiungere `--tabColor` anche il parametro al `split-pane` sottocomando. Nell'esempio seguente viene creata una scheda con due riquadri con i colori di tabulazione specificati per ogni riquadro:
+
+```powershell
+wt new-tab --tabColor #009999 ; split-pane --tabColor #f59218
+```
+
+> [!IMPORTANT]
+> Questa funzionalità è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview).
 
 ### <a name="tab-focus"></a>Stato attivo della scheda
 

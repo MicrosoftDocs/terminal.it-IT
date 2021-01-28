@@ -3,14 +3,14 @@ title: Terminale Windows - Configurazione di Powerline
 description: Questa esercitazione illustra come configurare Powerline in Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 11/11/2020
+ms.date: 1/28/2021
 ms.topic: tutorial
-ms.openlocfilehash: 915e8f2f0cdcd5fefdebbc1227d3dc2053349ff4
-ms.sourcegitcommit: 9a2f9d152f65cdc8106fb9aad7fa69b01f3d05db
+ms.openlocfilehash: 20f156c9c1b0be4cab869662a9874e9b6a7673e4
+ms.sourcegitcommit: 7855b73a8b3f84ee6bd42797e40281a3dadb152a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94520326"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98980944"
 ---
 # <a name="tutorial-set-up-powerline-in-windows-terminal"></a>Esercitazione: Configurare Powerline in Terminale Windows
 
@@ -74,9 +74,9 @@ Set-Theme Paradox
 
 A questo punto, ogni nuova istanza inizia con l'importazione di Posh-Git e Oh-My-Posh e continua con l'impostazione del tema Paradox di Oh-My-Posh. Oh-My-Posh include diversi [temi predefiniti](https://github.com/JanDeDobbeleer/oh-my-posh#themes).
 
-### <a name="set-cascadia-code-pl-as-fontface-in-settings"></a>Impostare Cascadia Code PL come tipo di carattere nelle impostazioni
+### <a name="set-cascadia-code-pl-as-your-font"></a>Imposta Cascadia codice PL come tipo di carattere
 
-Per impostare il tipo di carattere Cascadia Code PL da usare con PowerLine (dopo il download, la decompressione e l'installazione nel sistema), sarà necessario aprire le [impostazioni del profilo](../customize-settings/profile-settings.md) nel file settings.json selezionando **Impostazioni** nel menu a discesa di Terminale Windows.
+Per impostare il tipo di carattere Cascadia del codice PL da usare con PowerLine (dopo il download, la decompressione e l'installazione nel sistema), è necessario aprire le [impostazioni del profilo](../customize-settings/profile-appearance.md) nel settings.jsfile selezionando **Impostazioni** (CTRL +,) dal menu a discesa del terminale di Windows. Questa operazione può essere eseguita anche usando l'interfaccia utente di impostazioni se è abilitata.
 
 Una volta aperto il file settings.json, trovare il profilo di Windows PowerShell e aggiungere `"fontFace": "Cascadia Code PL"` per designare Cascadia Code PL come tipo di carattere. In questo modo saranno disponibili i glifi Powerline di Cascadia Code. La modifica sarà osservabile nel terminale non appena si seleziona **Salva** nell'editor.
 

@@ -3,19 +3,22 @@ title: Terminale Windows - Combinazioni colori
 description: Informazioni su come creare combinazioni colori per Terminale Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 7/28/2020
+ms.date: 01/28/2021
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: aa914d1bd92a2afab307142150f6fa096c2936c7
-ms.sourcegitcommit: ebbf6cc7aaf26ebe4d96d87d4478e94357025a71
+ms.openlocfilehash: 6b6741c012a30afa99a17129524d70d72b531f98
+ms.sourcegitcommit: 7855b73a8b3f84ee6bd42797e40281a3dadb152a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174579"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98981024"
 ---
 # <a name="color-schemes-in-windows-terminal"></a>Combinazioni colori in Terminale Windows
 
 Il terminale di Windows consente di definire le proprie combinazioni di colori usando gli schemi predefiniti predefiniti oppure creando uno schema personalizzato da zero. Per modificare gli schemi, è necessario modificare il settings.jssu file in un editor, ad esempio [Visual Studio Code](https://code.visualstudio.com/).
+
+> [!IMPORTANT]
+> L'interfaccia utente delle impostazioni è disponibile solo in [Windows Terminal Preview](https://aka.ms/terminal-preview). Per istruzioni dettagliate su come abilitare l'interfaccia utente delle impostazioni, vedere la [pagina relativa alla risoluzione dei problemi](./../troubleshooting.md#open-the-settings-ui).
 
 ## <a name="switching-to-a-different-color-scheme"></a>Passare a una combinazione di colori diversa
 

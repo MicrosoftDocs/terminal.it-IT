@@ -3,15 +3,15 @@ title: Riquadro comandi terminale di Windows
 description: Informazioni su come usare il riquadro comandi nel terminale di Windows.
 author: cinnamon-msft
 ms.author: cinnamon
-ms.date: 11/11/2020
+ms.date: 1/28/2021
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: ce604bab88114acdca1b49dd4202f4a67e64a1c0
-ms.sourcegitcommit: 9a2f9d152f65cdc8106fb9aad7fa69b01f3d05db
+ms.openlocfilehash: 7260194733978b22c8d6c4d0e579c443d4bc652a
+ms.sourcegitcommit: 7855b73a8b3f84ee6bd42797e40281a3dadb152a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94520341"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98981014"
 ---
 # <a name="how-to-use-the-command-palette-in-windows-terminal"></a>Come usare il riquadro comandi nel terminale di Windows
 
@@ -30,6 +30,15 @@ Il riquadro comandi consente di visualizzare le azioni che è possibile eseguire
 Se si desidera immettere un `wt` comando nel riquadro comandi, è possibile eliminare il `>` carattere nella casella di testo. Il comando verrà eseguito `wt` nella finestra corrente. Altre informazioni sui `wt` comandi sono disponibili nella [pagina argomenti della riga di comando](./command-line-arguments.md).
 
 ![Modalità riga di comando di Windows Terminal](./images/command-palette-command-line-mode.gif)
+
+È possibile aggiungere un'associazione di tasti personalizzata per richiamare direttamente il riquadro comandi nella modalità riga di comando.
+
+```json
+{ "command": "commandPalette", "launchMode": "commandLine", "keys": "" }
+```
+
+> [!IMPORTANT]
+> L'impostazione `"launchMode"` è disponibile solo in [Terminale Windows (anteprima)](https://aka.ms/terminal-preview).
 
 ## <a name="adding-an-icon-to-a-command"></a>Aggiunta di un'icona a un comando
 

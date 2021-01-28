@@ -6,12 +6,12 @@ ms.author: cinnamon
 ms.date: 09/22/2020
 ms.topic: overview
 ms.localizationpriority: high
-ms.openlocfilehash: 7de6f7f2286424958b4035e049cf90a97ff5211a
-ms.sourcegitcommit: 9a2f9d152f65cdc8106fb9aad7fa69b01f3d05db
-ms.translationtype: HT
+ms.openlocfilehash: 7fc5dd524abc7e385a5509700745ecd587260d37
+ms.sourcegitcommit: 7855b73a8b3f84ee6bd42797e40281a3dadb152a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94520306"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98980934"
 ---
 # <a name="what-is-windows-terminal"></a>Che cos'è Terminale Windows?
 
@@ -48,7 +48,7 @@ Terminale Windows usa la GPU per il rendering del testo, assicurando prestazioni
 
 ## <a name="background-image-support"></a>Supporto per immagini di sfondo
 
-Nella finestra di Terminale Windows puoi aggiungere immagini e GIF di sfondo. Per informazioni su come aggiungere immagini di sfondo al tuo profilo, vedi la [pagina Impostazioni del profilo](./customize-settings/profile-settings.md#background-image-settings).
+Nella finestra di Terminale Windows puoi aggiungere immagini e GIF di sfondo. Le informazioni su come aggiungere immagini di sfondo al profilo sono disponibili nella [Pagina profilo-aspetto](./customize-settings/profile-appearance.md#background-image).
 
 ## <a name="command-line-arguments"></a>Argomenti della riga di comando
 
