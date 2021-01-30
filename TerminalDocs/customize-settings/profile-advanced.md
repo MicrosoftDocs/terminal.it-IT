@@ -13,9 +13,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 01/28/2021
 ms.locfileid: "99041971"
 ---
-# <a name="advanced-profile-settings-in-windows-terminal"></a><span data-ttu-id="f4e40-103">Impostazioni avanzate del profilo nel terminale di Windows</span><span class="sxs-lookup"><span data-stu-id="f4e40-103">Advanced profile settings in Windows Terminal</span></span>
+# <a name="advanced-profile-settings-in-windows-terminal"></a><span data-ttu-id="a7637-103">Impostazioni avanzate del profilo nel terminale di Windows</span><span class="sxs-lookup"><span data-stu-id="a7637-103">Advanced profile settings in Windows Terminal</span></span>
 
-<span data-ttu-id="f4e40-104">Le impostazioni elencate di seguito sono specifiche dei singoli profili univoci.</span><span class="sxs-lookup"><span data-stu-id="f4e40-104">The settings listed below are specific to each unique profile.</span></span> <span data-ttu-id="f4e40-105">Se vuoi applicare un'impostazione a tutti i profili, puoi aggiungerla alla sezione `defaults` prima dell'elenco dei profili nel file settings.json.</span><span class="sxs-lookup"><span data-stu-id="f4e40-105">If you'd like a setting to apply to all of your profiles, you can add it to the `defaults` section above the list of profiles in your settings.json file.</span></span>
+<span data-ttu-id="a7637-104">Le impostazioni elencate di seguito sono specifiche dei singoli profili univoci.</span><span class="sxs-lookup"><span data-stu-id="a7637-104">The settings listed below are specific to each unique profile.</span></span> <span data-ttu-id="a7637-105">Se vuoi applicare un'impostazione a tutti i profili, puoi aggiungerla alla sezione `defaults` prima dell'elenco dei profili nel file settings.json.</span><span class="sxs-lookup"><span data-stu-id="a7637-105">If you'd like a setting to apply to all of your profiles, you can add it to the `defaults` section above the list of profiles in your settings.json file.</span></span>
 
 ```json
 "defaults":
@@ -29,146 +29,146 @@ ms.locfileid: "99041971"
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="f4e40-106">L'interfaccia utente delle impostazioni è disponibile solo in [Windows Terminal Preview](https://aka.ms/terminal-preview).</span><span class="sxs-lookup"><span data-stu-id="f4e40-106">The settings UI is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).</span></span> <span data-ttu-id="f4e40-107">Per istruzioni dettagliate su come abilitare l'interfaccia utente delle impostazioni, vedere la [pagina relativa alla risoluzione dei problemi](./../troubleshooting.md#open-the-settings-ui).</span><span class="sxs-lookup"><span data-stu-id="f4e40-107">Detailed instructions on how to enable the settings UI can be found on the [Troubleshooting page](./../troubleshooting.md#open-the-settings-ui).</span></span>
+> <span data-ttu-id="a7637-106">L'interfaccia utente delle impostazioni è disponibile solo in [Windows Terminal Preview](https://aka.ms/terminal-preview).</span><span class="sxs-lookup"><span data-stu-id="a7637-106">The settings UI is only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).</span></span> <span data-ttu-id="a7637-107">Per istruzioni dettagliate su come abilitare l'interfaccia utente delle impostazioni, vedere la [pagina relativa alla risoluzione dei problemi](./../troubleshooting.md#open-the-settings-ui).</span><span class="sxs-lookup"><span data-stu-id="a7637-107">Detailed instructions on how to enable the settings UI can be found on the [Troubleshooting page](./../troubleshooting.md#open-the-settings-ui).</span></span>
 
-## <a name="suppress-title-changes"></a><span data-ttu-id="f4e40-108">Non visualizzare modifiche al titolo</span><span class="sxs-lookup"><span data-stu-id="f4e40-108">Suppress title changes</span></span>
+## <a name="suppress-title-changes"></a><span data-ttu-id="a7637-108">Non visualizzare modifiche al titolo</span><span class="sxs-lookup"><span data-stu-id="a7637-108">Suppress title changes</span></span>
 
-<span data-ttu-id="f4e40-109">Quando è impostata su `true`, `tabTitle` sostituisce il titolo predefinito della scheda. Tutti i messaggi di modifica del titolo dall'applicazione verranno eliminati.</span><span class="sxs-lookup"><span data-stu-id="f4e40-109">When this is set to `true`, `tabTitle` overrides the default title of the tab and any title change messages from the application will be suppressed.</span></span> <span data-ttu-id="f4e40-110">Se `tabTitle` non è impostata, verrà usata `name`.</span><span class="sxs-lookup"><span data-stu-id="f4e40-110">If `tabTitle` isn't set, `name` will be used instead.</span></span> <span data-ttu-id="f4e40-111">Quando è impostata su `false`, `tabTitle` si comporta normalmente.</span><span class="sxs-lookup"><span data-stu-id="f4e40-111">When this is set to `false`, `tabTitle` behaves as normal.</span></span>
+<span data-ttu-id="a7637-109">Quando è impostata su `true`, `tabTitle` sostituisce il titolo predefinito della scheda. Tutti i messaggi di modifica del titolo dall'applicazione verranno eliminati.</span><span class="sxs-lookup"><span data-stu-id="a7637-109">When this is set to `true`, `tabTitle` overrides the default title of the tab and any title change messages from the application will be suppressed.</span></span> <span data-ttu-id="a7637-110">Se `tabTitle` non è impostata, verrà usata `name`.</span><span class="sxs-lookup"><span data-stu-id="a7637-110">If `tabTitle` isn't set, `name` will be used instead.</span></span> <span data-ttu-id="a7637-111">Quando è impostata su `false`, `tabTitle` si comporta normalmente.</span><span class="sxs-lookup"><span data-stu-id="a7637-111">When this is set to `false`, `tabTitle` behaves as normal.</span></span>
 
-<span data-ttu-id="f4e40-112">**Nome della proprietà:** `suppressApplicationTitle`</span><span class="sxs-lookup"><span data-stu-id="f4e40-112">**Property name:** `suppressApplicationTitle`</span></span>
+<span data-ttu-id="a7637-112">**Nome della proprietà:** `suppressApplicationTitle`</span><span class="sxs-lookup"><span data-stu-id="a7637-112">**Property name:** `suppressApplicationTitle`</span></span>
 
-<span data-ttu-id="f4e40-113">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="f4e40-113">**Necessity:** Optional</span></span>
+<span data-ttu-id="a7637-113">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="a7637-113">**Necessity:** Optional</span></span>
 
-<span data-ttu-id="f4e40-114">**Accetta:** `true`, `false`</span><span class="sxs-lookup"><span data-stu-id="f4e40-114">**Accepts:** `true`, `false`</span></span>
+<span data-ttu-id="a7637-114">**Accetta:** `true`, `false`</span><span class="sxs-lookup"><span data-stu-id="a7637-114">**Accepts:** `true`, `false`</span></span>
 
 <br />
 
 ___
 
-## <a name="text-antialiasing"></a><span data-ttu-id="f4e40-115">Anti-aliasing del testo</span><span class="sxs-lookup"><span data-stu-id="f4e40-115">Text antialiasing</span></span>
+## <a name="text-antialiasing"></a><span data-ttu-id="a7637-115">Anti-aliasing del testo</span><span class="sxs-lookup"><span data-stu-id="a7637-115">Text antialiasing</span></span>
 
-<span data-ttu-id="f4e40-116">Controlla la modalità di anti-aliasing del testo nel renderer.</span><span class="sxs-lookup"><span data-stu-id="f4e40-116">This controls how text is antialiased in the renderer.</span></span> <span data-ttu-id="f4e40-117">La modifica di questa impostazione richiede l'avvio di una nuova istanza del terminale.</span><span class="sxs-lookup"><span data-stu-id="f4e40-117">Note that changing this setting will require starting a new terminal instance.</span></span>
+<span data-ttu-id="a7637-116">Controlla la modalità di anti-aliasing del testo nel renderer.</span><span class="sxs-lookup"><span data-stu-id="a7637-116">This controls how text is antialiased in the renderer.</span></span> <span data-ttu-id="a7637-117">La modifica di questa impostazione richiede l'avvio di una nuova istanza del terminale.</span><span class="sxs-lookup"><span data-stu-id="a7637-117">Note that changing this setting will require starting a new terminal instance.</span></span>
 
 ![Terminale Windows - Anti-aliasing del testo](./../images/antialiasing-mode.gif)
 
-<span data-ttu-id="f4e40-119">**Nome della proprietà:** `antialiasingMode`</span><span class="sxs-lookup"><span data-stu-id="f4e40-119">**Property name:** `antialiasingMode`</span></span>
+<span data-ttu-id="a7637-119">**Nome della proprietà:** `antialiasingMode`</span><span class="sxs-lookup"><span data-stu-id="a7637-119">**Property name:** `antialiasingMode`</span></span>
 
-<span data-ttu-id="f4e40-120">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="f4e40-120">**Necessity:** Optional</span></span>
+<span data-ttu-id="a7637-120">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="a7637-120">**Necessity:** Optional</span></span>
 
-<span data-ttu-id="f4e40-121">**Accetta:** `"grayscale"`, `"cleartype"`, `"aliased"`</span><span class="sxs-lookup"><span data-stu-id="f4e40-121">**Accepts:** `"grayscale"`, `"cleartype"`, `"aliased"`</span></span>
+<span data-ttu-id="a7637-121">**Accetta:** `"grayscale"`, `"cleartype"`, `"aliased"`</span><span class="sxs-lookup"><span data-stu-id="a7637-121">**Accepts:** `"grayscale"`, `"cleartype"`, `"aliased"`</span></span>
 
-<span data-ttu-id="f4e40-122">**Valore predefinito:** `"grayscale"`</span><span class="sxs-lookup"><span data-stu-id="f4e40-122">**Default value:** `"grayscale"`</span></span>
-
-<br />
-
-___
-
-## <a name="altgr-aliasing"></a><span data-ttu-id="f4e40-123">Aliasing AltGr</span><span class="sxs-lookup"><span data-stu-id="f4e40-123">AltGr aliasing</span></span>
-
-<span data-ttu-id="f4e40-124">Questa proprietà consente di controllare se Terminale Windows considererà <kbd>CTRL+ALT</kbd> come alias di <kbd>ALTGR</kbd>.</span><span class="sxs-lookup"><span data-stu-id="f4e40-124">This allows you to control if Windows Terminal will treat <kbd>ctrl+alt</kbd> as an alias for <kbd>AltGr</kbd>.</span></span>
-
-<span data-ttu-id="f4e40-125">**Nome della proprietà:** `altGrAliasing`</span><span class="sxs-lookup"><span data-stu-id="f4e40-125">**Property name:** `altGrAliasing`</span></span>
-
-<span data-ttu-id="f4e40-126">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="f4e40-126">**Necessity:** Optional</span></span>
-
-<span data-ttu-id="f4e40-127">**Accetta:** `true`, `false`</span><span class="sxs-lookup"><span data-stu-id="f4e40-127">**Accepts:** `true`, `false`</span></span>
-
-<span data-ttu-id="f4e40-128">**Valore predefinito:** `true`</span><span class="sxs-lookup"><span data-stu-id="f4e40-128">**Default value:** `true`</span></span>
+<span data-ttu-id="a7637-122">**Valore predefinito:** `"grayscale"`</span><span class="sxs-lookup"><span data-stu-id="a7637-122">**Default value:** `"grayscale"`</span></span>
 
 <br />
 
 ___
 
-## <a name="scroll-to-input-when-typing"></a><span data-ttu-id="f4e40-129">Scorri fino all'input durante la digitazione</span><span class="sxs-lookup"><span data-stu-id="f4e40-129">Scroll to input when typing</span></span>
+## <a name="altgr-aliasing"></a><span data-ttu-id="a7637-123">Aliasing AltGr</span><span class="sxs-lookup"><span data-stu-id="a7637-123">AltGr aliasing</span></span>
 
-<span data-ttu-id="f4e40-130">Quando è impostata su `true`, la finestra scorre fino alla riga di input del comando durante la digitazione.</span><span class="sxs-lookup"><span data-stu-id="f4e40-130">When this is set to `true`, the window will scroll to the command input line when typing.</span></span> <span data-ttu-id="f4e40-131">Quando è impostata su `false`, lo scorrimento della finestra non è attivato quando inizi a digitare.</span><span class="sxs-lookup"><span data-stu-id="f4e40-131">When it's set to `false`, the window will not scroll when you start typing.</span></span>
+<span data-ttu-id="a7637-124">Questa proprietà consente di controllare se Terminale Windows considererà <kbd>CTRL+ALT</kbd> come alias di <kbd>ALTGR</kbd>.</span><span class="sxs-lookup"><span data-stu-id="a7637-124">This allows you to control if Windows Terminal will treat <kbd>ctrl+alt</kbd> as an alias for <kbd>AltGr</kbd>.</span></span>
 
-<span data-ttu-id="f4e40-132">**Nome della proprietà:** `snapOnInput`</span><span class="sxs-lookup"><span data-stu-id="f4e40-132">**Property name:** `snapOnInput`</span></span>
+<span data-ttu-id="a7637-125">**Nome della proprietà:** `altGrAliasing`</span><span class="sxs-lookup"><span data-stu-id="a7637-125">**Property name:** `altGrAliasing`</span></span>
 
-<span data-ttu-id="f4e40-133">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="f4e40-133">**Necessity:** Optional</span></span>
+<span data-ttu-id="a7637-126">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="a7637-126">**Necessity:** Optional</span></span>
 
-<span data-ttu-id="f4e40-134">**Accetta:** `true`, `false`</span><span class="sxs-lookup"><span data-stu-id="f4e40-134">**Accepts:** `true`, `false`</span></span>
+<span data-ttu-id="a7637-127">**Accetta:** `true`, `false`</span><span class="sxs-lookup"><span data-stu-id="a7637-127">**Accepts:** `true`, `false`</span></span>
 
-<span data-ttu-id="f4e40-135">**Valore predefinito:** `true`</span><span class="sxs-lookup"><span data-stu-id="f4e40-135">**Default value:** `true`</span></span>
-
-<br />
-
-___
-
-## <a name="history-size"></a><span data-ttu-id="f4e40-136">Dimensioni della cronologia</span><span class="sxs-lookup"><span data-stu-id="f4e40-136">History size</span></span>
-
-<span data-ttu-id="f4e40-137">Consente di impostare il numero di righe a cui è possibile passare scorrendo che precedono quelle visualizzate nella finestra.</span><span class="sxs-lookup"><span data-stu-id="f4e40-137">This sets the number of lines above the ones displayed in the window you can scroll back to.</span></span>
-
-<span data-ttu-id="f4e40-138">**Nome della proprietà:** `historySize`</span><span class="sxs-lookup"><span data-stu-id="f4e40-138">**Property name:** `historySize`</span></span>
-
-<span data-ttu-id="f4e40-139">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="f4e40-139">**Necessity:** Optional</span></span>
-
-<span data-ttu-id="f4e40-140">**Accetta:** Intero</span><span class="sxs-lookup"><span data-stu-id="f4e40-140">**Accepts:** Integer</span></span>
-
-<span data-ttu-id="f4e40-141">**Valore predefinito:** `9001`</span><span class="sxs-lookup"><span data-stu-id="f4e40-141">**Default value:** `9001`</span></span>
+<span data-ttu-id="a7637-128">**Valore predefinito:** `true`</span><span class="sxs-lookup"><span data-stu-id="a7637-128">**Default value:** `true`</span></span>
 
 <br />
 
 ___
 
-## <a name="profile-termination-behavior"></a><span data-ttu-id="f4e40-142">Comportamento di terminazione del profilo</span><span class="sxs-lookup"><span data-stu-id="f4e40-142">Profile termination behavior</span></span>
+## <a name="scroll-to-input-when-typing"></a><span data-ttu-id="a7637-129">Scorri fino all'input durante la digitazione</span><span class="sxs-lookup"><span data-stu-id="a7637-129">Scroll to input when typing</span></span>
 
-<span data-ttu-id="f4e40-143">Consente di impostare la reazione del profilo alla chiusura o a un errore all'avvio.</span><span class="sxs-lookup"><span data-stu-id="f4e40-143">This sets how the profile reacts to termination or failure to launch.</span></span> <span data-ttu-id="f4e40-144">Con `"graceful"`, il profilo verrà chiuso quando viene digitato `exit` o quando il processo viene chiuso normalmente.</span><span class="sxs-lookup"><span data-stu-id="f4e40-144">`"graceful"` will close the profile when `exit` is typed or when the process exits normally.</span></span> <span data-ttu-id="f4e40-145">Con `"always"` il profilo verrà sempre chiuso, mentre con `"never"` non verrà mai chiuso.</span><span class="sxs-lookup"><span data-stu-id="f4e40-145">`"always"` will always close the profile and `"never"` will never close the profile.</span></span> <span data-ttu-id="f4e40-146">`true` e `false` vengono accettati come sinonimi rispettivamente per `"graceful"` e `"never"`.</span><span class="sxs-lookup"><span data-stu-id="f4e40-146">`true` and `false` are accepted as synonyms for `"graceful"` and `"never"`, respectively.</span></span>
+<span data-ttu-id="a7637-130">Quando è impostata su `true`, la finestra scorre fino alla riga di input del comando durante la digitazione.</span><span class="sxs-lookup"><span data-stu-id="a7637-130">When this is set to `true`, the window will scroll to the command input line when typing.</span></span> <span data-ttu-id="a7637-131">Quando è impostata su `false`, lo scorrimento della finestra non è attivato quando inizi a digitare.</span><span class="sxs-lookup"><span data-stu-id="a7637-131">When it's set to `false`, the window will not scroll when you start typing.</span></span>
 
-<span data-ttu-id="f4e40-147">**Nome della proprietà:** `closeOnExit`</span><span class="sxs-lookup"><span data-stu-id="f4e40-147">**Property name:** `closeOnExit`</span></span>
+<span data-ttu-id="a7637-132">**Nome della proprietà:** `snapOnInput`</span><span class="sxs-lookup"><span data-stu-id="a7637-132">**Property name:** `snapOnInput`</span></span>
 
-<span data-ttu-id="f4e40-148">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="f4e40-148">**Necessity:** Optional</span></span>
+<span data-ttu-id="a7637-133">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="a7637-133">**Necessity:** Optional</span></span>
 
-<span data-ttu-id="f4e40-149">**Accetta:** `"graceful"`, `"always"`, `"never"`, `true`, `false`</span><span class="sxs-lookup"><span data-stu-id="f4e40-149">**Accepts:** `"graceful"`, `"always"`, `"never"`, `true`, `false`</span></span>
+<span data-ttu-id="a7637-134">**Accetta:** `true`, `false`</span><span class="sxs-lookup"><span data-stu-id="a7637-134">**Accepts:** `true`, `false`</span></span>
 
-<span data-ttu-id="f4e40-150">**Valore predefinito:** `"graceful"`</span><span class="sxs-lookup"><span data-stu-id="f4e40-150">**Default value:** `"graceful"`</span></span>
+<span data-ttu-id="a7637-135">**Valore predefinito:** `true`</span><span class="sxs-lookup"><span data-stu-id="a7637-135">**Default value:** `true`</span></span>
 
 <br />
 
 ___
 
-## <a name="bell-notification-style"></a><span data-ttu-id="f4e40-151">Stile notifica campanello</span><span class="sxs-lookup"><span data-stu-id="f4e40-151">Bell notification style</span></span>
+## <a name="history-size"></a><span data-ttu-id="a7637-136">Dimensioni della cronologia</span><span class="sxs-lookup"><span data-stu-id="a7637-136">History size</span></span>
 
-<span data-ttu-id="f4e40-152">Controlla cosa accade quando l'applicazione emette un carattere BEL.</span><span class="sxs-lookup"><span data-stu-id="f4e40-152">Controls what happens when the application emits a BEL character.</span></span> <span data-ttu-id="f4e40-153">Quando è impostato su `"all"` , il terminale riprodurrà un suono e lampeggerà l'icona della barra delle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="f4e40-153">When set to `"all"`, the terminal will play a sound and flash the taskbar icon.</span></span>
+<span data-ttu-id="a7637-137">Consente di impostare il numero di righe a cui è possibile passare scorrendo che precedono quelle visualizzate nella finestra.</span><span class="sxs-lookup"><span data-stu-id="a7637-137">This sets the number of lines above the ones displayed in the window you can scroll back to.</span></span>
 
-<span data-ttu-id="f4e40-154">**Nome della proprietà:** `bellStyle`</span><span class="sxs-lookup"><span data-stu-id="f4e40-154">**Property name:** `bellStyle`</span></span>
+<span data-ttu-id="a7637-138">**Nome della proprietà:** `historySize`</span><span class="sxs-lookup"><span data-stu-id="a7637-138">**Property name:** `historySize`</span></span>
 
-<span data-ttu-id="f4e40-155">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="f4e40-155">**Necessity:** Optional</span></span>
+<span data-ttu-id="a7637-139">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="a7637-139">**Necessity:** Optional</span></span>
 
-<span data-ttu-id="f4e40-156">**Accetta:** `"all"`, `"audible"`, `"visual"`, `"none"`</span><span class="sxs-lookup"><span data-stu-id="f4e40-156">**Accepts:** `"all"`, `"audible"`, `"visual"`, `"none"`</span></span>
+<span data-ttu-id="a7637-140">**Accetta:** Intero</span><span class="sxs-lookup"><span data-stu-id="a7637-140">**Accepts:** Integer</span></span>
 
-<span data-ttu-id="f4e40-157">**Valore predefinito:** `"audible"`</span><span class="sxs-lookup"><span data-stu-id="f4e40-157">**Default value:** `"audible"`</span></span>
+<span data-ttu-id="a7637-141">**Valore predefinito:** `9001`</span><span class="sxs-lookup"><span data-stu-id="a7637-141">**Default value:** `9001`</span></span>
+
+<br />
+
+___
+
+## <a name="profile-termination-behavior"></a><span data-ttu-id="a7637-142">Comportamento di terminazione del profilo</span><span class="sxs-lookup"><span data-stu-id="a7637-142">Profile termination behavior</span></span>
+
+<span data-ttu-id="a7637-143">Consente di impostare la reazione del profilo alla chiusura o a un errore all'avvio.</span><span class="sxs-lookup"><span data-stu-id="a7637-143">This sets how the profile reacts to termination or failure to launch.</span></span> <span data-ttu-id="a7637-144">Con `"graceful"`, il profilo verrà chiuso quando viene digitato `exit` o quando il processo viene chiuso normalmente.</span><span class="sxs-lookup"><span data-stu-id="a7637-144">`"graceful"` will close the profile when `exit` is typed or when the process exits normally.</span></span> <span data-ttu-id="a7637-145">Con `"always"` il profilo verrà sempre chiuso, mentre con `"never"` non verrà mai chiuso.</span><span class="sxs-lookup"><span data-stu-id="a7637-145">`"always"` will always close the profile and `"never"` will never close the profile.</span></span> <span data-ttu-id="a7637-146">`true` e `false` vengono accettati come sinonimi rispettivamente per `"graceful"` e `"never"`.</span><span class="sxs-lookup"><span data-stu-id="a7637-146">`true` and `false` are accepted as synonyms for `"graceful"` and `"never"`, respectively.</span></span>
+
+<span data-ttu-id="a7637-147">**Nome della proprietà:** `closeOnExit`</span><span class="sxs-lookup"><span data-stu-id="a7637-147">**Property name:** `closeOnExit`</span></span>
+
+<span data-ttu-id="a7637-148">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="a7637-148">**Necessity:** Optional</span></span>
+
+<span data-ttu-id="a7637-149">**Accetta:** `"graceful"`, `"always"`, `"never"`, `true`, `false`</span><span class="sxs-lookup"><span data-stu-id="a7637-149">**Accepts:** `"graceful"`, `"always"`, `"never"`, `true`, `false`</span></span>
+
+<span data-ttu-id="a7637-150">**Valore predefinito:** `"graceful"`</span><span class="sxs-lookup"><span data-stu-id="a7637-150">**Default value:** `"graceful"`</span></span>
+
+<br />
+
+___
+
+## <a name="bell-notification-style"></a><span data-ttu-id="a7637-151">Stile notifica campanello</span><span class="sxs-lookup"><span data-stu-id="a7637-151">Bell notification style</span></span>
+
+<span data-ttu-id="a7637-152">Controlla cosa accade quando l'applicazione emette un carattere BEL.</span><span class="sxs-lookup"><span data-stu-id="a7637-152">Controls what happens when the application emits a BEL character.</span></span> <span data-ttu-id="a7637-153">Quando è impostato su `"all"` , il terminale riprodurrà un suono e lampeggerà l'icona della barra delle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="a7637-153">When set to `"all"`, the terminal will play a sound and flash the taskbar icon.</span></span>
+
+<span data-ttu-id="a7637-154">**Nome della proprietà:** `bellStyle`</span><span class="sxs-lookup"><span data-stu-id="a7637-154">**Property name:** `bellStyle`</span></span>
+
+<span data-ttu-id="a7637-155">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="a7637-155">**Necessity:** Optional</span></span>
+
+<span data-ttu-id="a7637-156">**Accetta:** `"all"`, `"audible"`, `"visual"`, `"none"`</span><span class="sxs-lookup"><span data-stu-id="a7637-156">**Accepts:** `"all"`, `"audible"`, `"visual"`, `"none"`</span></span>
+
+<span data-ttu-id="a7637-157">**Valore predefinito:** `"audible"`</span><span class="sxs-lookup"><span data-stu-id="a7637-157">**Default value:** `"audible"`</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="f4e40-158">Gli `"all"` `"visual"` stili di notifica e Bell sono disponibili solo in [Windows Terminal Preview](https://aka.ms/terminal-preview).</span><span class="sxs-lookup"><span data-stu-id="f4e40-158">The `"all"` and `"visual"` bell notification styles are only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).</span></span>
+> <span data-ttu-id="a7637-158">Gli `"all"` `"visual"` stili di notifica e Bell sono disponibili solo in [Windows Terminal Preview](https://aka.ms/terminal-preview).</span><span class="sxs-lookup"><span data-stu-id="a7637-158">The `"all"` and `"visual"` bell notification styles are only available in [Windows Terminal Preview](https://aka.ms/terminal-preview).</span></span>
 
 <br />
 
 ___
 
-## <a name="unique-identifier"></a><span data-ttu-id="f4e40-159">Identificatore univoco</span><span class="sxs-lookup"><span data-stu-id="f4e40-159">Unique identifier</span></span>
+## <a name="unique-identifier"></a><span data-ttu-id="a7637-159">Identificatore univoco</span><span class="sxs-lookup"><span data-stu-id="a7637-159">Unique identifier</span></span>
 
-<span data-ttu-id="f4e40-160">I profili possono usare un GUID come identificatore univoco.</span><span class="sxs-lookup"><span data-stu-id="f4e40-160">Profiles can use a GUID as a unique identifier.</span></span> <span data-ttu-id="f4e40-161">Per impostare un profilo come predefinito, è necessario un GUID per l'impostazione globale `defaultProfile`.</span><span class="sxs-lookup"><span data-stu-id="f4e40-161">To make a profile your default profile, it needs a GUID for the `defaultProfile` global setting.</span></span>
+<span data-ttu-id="a7637-160">I profili possono usare un GUID come identificatore univoco.</span><span class="sxs-lookup"><span data-stu-id="a7637-160">Profiles can use a GUID as a unique identifier.</span></span> <span data-ttu-id="a7637-161">Per impostare un profilo come predefinito, è necessario un GUID per l'impostazione globale `defaultProfile`.</span><span class="sxs-lookup"><span data-stu-id="a7637-161">To make a profile your default profile, it needs a GUID for the `defaultProfile` global setting.</span></span>
 
-<span data-ttu-id="f4e40-162">**Nome della proprietà:** `guid`</span><span class="sxs-lookup"><span data-stu-id="f4e40-162">**Property name:** `guid`</span></span>
+<span data-ttu-id="a7637-162">**Nome della proprietà:** `guid`</span><span class="sxs-lookup"><span data-stu-id="a7637-162">**Property name:** `guid`</span></span>
 
-<span data-ttu-id="f4e40-163">**Obbligatoria:** Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="f4e40-163">**Necessity:** Required</span></span>
+<span data-ttu-id="a7637-163">**Obbligatoria:** Obbligatoria</span><span class="sxs-lookup"><span data-stu-id="a7637-163">**Necessity:** Required</span></span>
 
-<span data-ttu-id="f4e40-164">**Accetta:** GUID in formato stringa del Registro di sistema: `"{00000000-0000-0000-0000-000000000000}"`</span><span class="sxs-lookup"><span data-stu-id="f4e40-164">**Accepts:** GUID as a string in registry format: `"{00000000-0000-0000-0000-000000000000}"`</span></span>
+<span data-ttu-id="a7637-164">**Accetta:** GUID in formato stringa del Registro di sistema: `"{00000000-0000-0000-0000-000000000000}"`</span><span class="sxs-lookup"><span data-stu-id="a7637-164">**Accepts:** GUID as a string in registry format: `"{00000000-0000-0000-0000-000000000000}"`</span></span>
 
 <br />
 
 ___
 
-## <a name="source"></a><span data-ttu-id="f4e40-165">Origine</span><span class="sxs-lookup"><span data-stu-id="f4e40-165">Source</span></span>
+## <a name="source"></a><span data-ttu-id="a7637-165">Origine</span><span class="sxs-lookup"><span data-stu-id="a7637-165">Source</span></span>
 
-<span data-ttu-id="f4e40-166">Archivia il nome del generatore di profili che ha originato il profilo.</span><span class="sxs-lookup"><span data-stu-id="f4e40-166">This stores the name of the profile generator that originated the profile.</span></span> <span data-ttu-id="f4e40-167">_Non esistono valori individuabili per questo campo._</span><span class="sxs-lookup"><span data-stu-id="f4e40-167">_There are no discoverable values for this field._</span></span> <span data-ttu-id="f4e40-168">Per altre informazioni sui profili dinamici, vedi la [pagina Profili dinamici](./../dynamic-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="f4e40-168">For additional information on dynamic profiles, visit the [Dynamic profiles page](./../dynamic-profiles.md).</span></span>
+<span data-ttu-id="a7637-166">Archivia il nome del generatore di profili che ha originato il profilo.</span><span class="sxs-lookup"><span data-stu-id="a7637-166">This stores the name of the profile generator that originated the profile.</span></span> <span data-ttu-id="a7637-167">_Non esistono valori individuabili per questo campo._</span><span class="sxs-lookup"><span data-stu-id="a7637-167">_There are no discoverable values for this field._</span></span> <span data-ttu-id="a7637-168">Per altre informazioni sui profili dinamici, vedi la [pagina Profili dinamici](./../dynamic-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="a7637-168">For additional information on dynamic profiles, visit the [Dynamic profiles page](./../dynamic-profiles.md).</span></span>
 
-<span data-ttu-id="f4e40-169">**Nome della proprietà:** `source`</span><span class="sxs-lookup"><span data-stu-id="f4e40-169">**Property name:** `source`</span></span>
+<span data-ttu-id="a7637-169">**Nome della proprietà:** `source`</span><span class="sxs-lookup"><span data-stu-id="a7637-169">**Property name:** `source`</span></span>
 
-<span data-ttu-id="f4e40-170">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="f4e40-170">**Necessity:** Optional</span></span>
+<span data-ttu-id="a7637-170">**Obbligatoria:** Facoltativo</span><span class="sxs-lookup"><span data-stu-id="a7637-170">**Necessity:** Optional</span></span>
 
-<span data-ttu-id="f4e40-171">**Accetta:** String</span><span class="sxs-lookup"><span data-stu-id="f4e40-171">**Accepts:** String</span></span>
+<span data-ttu-id="a7637-171">**Accetta:** String</span><span class="sxs-lookup"><span data-stu-id="a7637-171">**Accepts:** String</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f4e40-172">Questo campo deve essere omesso quando si dichiara un profilo personalizzato.</span><span class="sxs-lookup"><span data-stu-id="f4e40-172">This field should be omitted when declaring a custom profile.</span></span> <span data-ttu-id="f4e40-173">Viene usato dal terminale per connettere i profili generati automaticamente al file di impostazioni.</span><span class="sxs-lookup"><span data-stu-id="f4e40-173">It is used by Terminal to connect automatically generated profiles to your settings file.</span></span>
+> <span data-ttu-id="a7637-172">Questo campo deve essere omesso quando si dichiara un profilo personalizzato.</span><span class="sxs-lookup"><span data-stu-id="a7637-172">This field should be omitted when declaring a custom profile.</span></span> <span data-ttu-id="a7637-173">Viene usato dal terminale per connettere i profili generati automaticamente al file di impostazioni.</span><span class="sxs-lookup"><span data-stu-id="a7637-173">It is used by Terminal to connect automatically generated profiles to your settings file.</span></span>
