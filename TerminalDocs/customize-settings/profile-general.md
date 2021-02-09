@@ -6,12 +6,12 @@ ms.author: cinnamon
 ms.date: 01/28/2021
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: ce5b495df7048b2bff549b75f260df8e50b7ce74
-ms.sourcegitcommit: 7855b73a8b3f84ee6bd42797e40281a3dadb152a
+ms.openlocfilehash: e8eb635075e5ea87c35713762f95cc0a375fe4b4
+ms.sourcegitcommit: 85519c60d559160a7847cf99971b90eb5cb94b4e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "99041969"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99974872"
 ---
 # <a name="general-profile-settings-in-windows-terminal"></a>Impostazioni generali del profilo nel terminale di Windows
 
@@ -73,21 +73,19 @@ Directory in cui viene avviata la shell quando viene caricata.
 
 **Valore predefinito:** `"%USERPROFILE%"`
 
-<br />
+**Esempio:** Avviare il profilo di PowerShell nella cartella *GitHubRepos* della directory dei *documenti* individuando il profilo di powershell.exe e aggiungendo `"startingDirectory": "%USERPROFILE%/Documents/GitHubRepos",`
+
+**Esempio con WSL:** Quando si imposta la directory iniziale per una [distribuzione Linux installata tramite WSL](https://docs.microsoft.com/windows/wsl/install-win10), usare il formato: `"startingDirectory": "\\\\wsl$\\DISTRO NAME\\home\\USERNAME"` , sostituendo con i segnaposto con i nomi appropriati della distribuzione. Ad esempio: `"startingDirectory": "\\\\wsl$\\Ubuntu-20.04\\home\\user1"`.
+
+**Comportamento predefinito:** Se il valore startingDirectory non è specificato, si otterranno risultati diversi a seconda della posizione in cui si avvia il terminale:
+- Se si esegue il terminale di Windows dal menu Start: C:\Windows\System32
+- Se si esegue wt.exe dal menu Start: C:\Windows\System32
+- Se si esegue wt.exe da Win + R:% USERPROFILE%
+- Se si esegue wt.exe dalla barra degli indirizzi di Explorer, ovvero qualunque sia la cartella esaminata.
 
 > [!NOTE]
-> Quando si imposta la directory iniziale a cui si aprono le distribuzioni WSL installate, è necessario usare il formato seguente: `"startingDirectory": "\\\\wsl$\\DISTRO NAME\\home\\USERNAME"` , sostituendo con il nome della distribuzione. Ad esempio: `"startingDirectory": "\\\\wsl$\\Ubuntu-20.04\\home\\user1"`.
+> Le barre rovesciate devono essere precedute da un carattere di escape. Ad esempio, `C:\Users\USERNAME\Documents` deve essere immesso come `C:\\Users\\USERNAME\\Documents` .
 
-> [!NOTE]
-> L'omissione del valore startingDirectory in un profilo comporta...
-</br>
-.. Se si esegue il terminale di Windows dal menu Start: C:\Windows\System32
-</br>
-.. Se si esegue wt.exe dal menu Start: C:\Windows\System32
-</br>
-.. Se si esegue wt.exe da Win + R:% USERPROFILE%
-</br>
-.. Se si esegue wt.exe dalla barra degli indirizzi di Explorer, ovvero qualunque sia la cartella esaminata.
 ___
 
 ## <a name="icon"></a>Icona
@@ -100,8 +98,9 @@ Questa operazione consente di impostare l'icona visualizzata all'interno della s
 
 **Accetta:** Percorso del file sotto forma di stringa o emoji
 
-<br />
+**Esempio:**  Inserendo l'immagine dell'icona `ubuntu.ico` nella cartella `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState` che si trova in, è possibile visualizzare l'icona aggiungendo questa riga al profilo nel settings.jsin: `"icon": "ms-appdata:///roaming/ubuntu.ico"` .
 
+<br>
 ___
 
 ## <a name="tab-title"></a>Titolo scheda

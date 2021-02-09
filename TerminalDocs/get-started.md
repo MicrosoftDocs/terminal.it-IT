@@ -1,17 +1,17 @@
 ---
 title: Installazione di Terminale Windows
-description: Questo argomento di avvio rapido illustra come installare ed eseguire Terminale Windows.
+description: In questa Guida introduttiva si apprenderà come installare e configurare il terminale di Windows.
 author: cinnamon-msft
 ms.author: cinnamon
 ms.date: 01/28/2021
 ms.topic: quickstart
 ms.localizationpriority: high
-ms.openlocfilehash: f0565e8ef54293c667b38f8d6b8d22b60a4f2ee0
-ms.sourcegitcommit: 7855b73a8b3f84ee6bd42797e40281a3dadb152a
+ms.openlocfilehash: 7fc7029d3905f66be15071ade6c6b3b01ef68ef9
+ms.sourcegitcommit: 85519c60d559160a7847cf99971b90eb5cb94b4e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98980914"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99974932"
 ---
 # <a name="install-and-set-up-windows-terminal"></a>Installare e configurare Terminale Windows
 
@@ -33,11 +33,17 @@ Il terminale creerà automaticamente i profili se sono installate distribuzioni 
 
 ## <a name="open-a-new-tab"></a>Aprire una nuova scheda
 
-Per aprire una nuova scheda del profilo predefinito, premi <kbd>CTRL+MAIUSC+T</kbd> oppure il segno più (+). Per aprire un profilo diverso, seleziona la freccia (˅) accanto a + per visualizzare il menu a discesa. Da qui puoi selezionare il profilo da aprire.
+È possibile aprire una nuova scheda del profilo predefinito premendo <kbd>CTRL</kbd> + <kbd>MAIUSC</kbd> + <kbd>T</kbd> o facendo clic sul pulsante + (segno più). Per aprire un profilo diverso, seleziona la freccia (˅) accanto a + per visualizzare il menu a discesa. Da qui puoi selezionare il profilo da aprire.
+
+## <a name="invoke-the-command-palette"></a>Richiamare il riquadro comandi
+
+È possibile richiamare la maggior parte delle funzionalità del terminale Windows tramite il [riquadro comandi](./command-palette.md). La combinazione di tasti predefinita per richiamarla è <kbd>CTRL</kbd> + <kbd>MAIUSC</kbd> + <kbd>P</kbd>.
+
+![Esempio del riquadro comandi in uso](./images/command-palette-iterable-commands.gif)
 
 ## <a name="open-a-new-pane"></a>Aprire un nuovo riquadro
 
-Puoi eseguire più shell affiancate usando i riquadri. Per aprire un riquadro, è possibile utilizzare <kbd>ALT + MAIUSC + più</kbd> per un riquadro verticale o <kbd>ALT + MAIUSC + meno</kbd> per uno orizzontale. È inoltre possibile utilizzare <kbd>ALT + MAIUSC + d</kbd> per aprire un riquadro duplicato del profilo con lo stato attivo. Per altre informazioni sui riquadri, vedi la [pagina Riquadri](./panes.md).
+Puoi eseguire più shell affiancate usando i riquadri. Per aprire un riquadro, è possibile utilizzare <kbd>ALT</kbd> + <kbd>MAIUSC</kbd> + <kbd>+</kbd> per un riquadro verticale o <kbd>ALT</kbd> + <kbd>MAIUSC</kbd> + <kbd>-</kbd> per uno orizzontale. È inoltre possibile utilizzare <kbd>ALT</kbd> + <kbd>MAIUSC</kbd> + <kbd>D</kbd> per aprire un riquadro duplicato del profilo con lo stato attivo. Per altre informazioni sui riquadri, vedi la [pagina Riquadri](./panes.md).
 
 ## <a name="configuration"></a>Configurazione
 

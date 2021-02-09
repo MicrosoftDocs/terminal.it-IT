@@ -6,12 +6,12 @@ ms.author: cinnamon
 ms.date: 1/28/2021
 ms.topic: overview
 ms.localizationpriority: high
-ms.openlocfilehash: f2c83f4ec4fc4596ce4a66764c49f73cc5d1fbf5
-ms.sourcegitcommit: 7855b73a8b3f84ee6bd42797e40281a3dadb152a
+ms.openlocfilehash: da843d477659a17f28be8df27c122e4e8fbfe3a6
+ms.sourcegitcommit: 85519c60d559160a7847cf99971b90eb5cb94b4e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98981004"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99974882"
 ---
 # <a name="troubleshooting-in-windows-terminal"></a>Risoluzione dei problemi di Terminale Windows
 
@@ -66,6 +66,14 @@ Se le impostazioni sono corrette, è possibile che sia in esecuzione uno script 
 In alternativa, se esegui uno script usando l'impostazione del profilo `commandline`, è possibile che stia impostando qui la posizione. Analogamente ai profili PowerShell, i comandi hanno la precedenza sull'impostazione del profilo `startingDirectory`.
 
 Lo scopo di `startingDirectory` è avviare una nuova istanza di Terminale Windows nella directory specificata. Se il terminale esegue qualsiasi codice che cambia la directory, potrebbe essere questa la causa del problema.
+
+## <a name="deleting-a-profile"></a>Eliminazione di un profilo
+
+Per impostazione predefinita, il terminale di Windows viene fornito con PowerShell incorporato e un profilo del prompt dei comandi. Il terminale rileva automaticamente anche se sono installate altre applicazioni della riga di comando, ad esempio PowerShell core, distribuzioni WSL (Ubuntu, Debian e così via) e Azure Cloud Shell. Questi tipi di profili generati automaticamente vengono chiamati "profili dinamici".
+
+Per i profili predefiniti e dinamici, l'eliminazione del profilo dal settings.jssul file non lo rimuoverà dai profili. I profili predefiniti sono definiti in `defaults.json` , quindi sono sempre disponibili. I profili dinamici tenterà di creare uno stub JSON per il proprio profilo nel `settings.json` file ogni volta che un profilo non è già presente nel file.
+
+L'unico modo per rimuovere effettivamente questi profili dall'elenco è "nasconderli". Per nascondere un profilo, aggiungere la proprietà `"hidden": true` al profilo.
 
 ## <a name="ctrl-does-not-increase-the-font-size"></a>CTRL+= non aumenta le dimensioni del carattere
 

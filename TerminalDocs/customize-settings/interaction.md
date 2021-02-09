@@ -6,12 +6,12 @@ ms.author: cinnamon
 ms.date: 01/28/2021
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: e16c093ad1a6b7efb058377840bf8d516ef0fb69
-ms.sourcegitcommit: 7855b73a8b3f84ee6bd42797e40281a3dadb152a
+ms.openlocfilehash: 6eb6b0383f35de7406bde9f454ec60b498a9019c
+ms.sourcegitcommit: 85519c60d559160a7847cf99971b90eb5cb94b4e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "99041974"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99974942"
 ---
 # <a name="interaction-settings-in-windows-terminal"></a>Impostazioni di interazione nel terminale di Windows
 
@@ -62,9 +62,13 @@ Determina i delimitatori di parola usati quando si fa doppio clic per selezionar
 
 **Accetta:** caratteri in formato stringa
 
-**Valore predefinito:** <code>&nbsp;&#x2f;&#x5c;&#x28;&#x29;&#x22;&#x27;&#x2d;&#x3a;&#x2c;&#x2e;&#x3b;&#x3c;&#x3e;&#x7e;&#x21;&#x40;&#x23;&#x24;&#x25;&#x5e;&#x26;&#x2a;&#x7c;&#x2b;&#x3d;&#x5b;&#x5d;&#x7b;&#x7d;&#x7e;&#x3f;│</code><br>_(`│` è `U+2502 BOX DRAWINGS LIGHT VERTICAL`)_
+**Valore predefinito:** 
+<code>&nbsp;&#x2f;&#x5c;&#x5c;&#x28;&#x29;&#x5c;&#x22;&#x27;&#x2d;&#x3a;&#x2c;&#x2e;&#x3b;&#x3c;&#x3e;&#x7e;&#x21;&#x40;&#x23;&#x24;&#x25;&#x5e;&#x26;&#x2a;&#x7c;&#x2b;&#x3d;&#x5b;&#x5d;&#x7b;&#x7d;&#x7e;&#x3f;│</code>
+<br>
+_(`│` è `U+2502 BOX DRAWINGS LIGHT VERTICAL`)_
 
-<br />
+> [!IMPORTANT]
+> I caratteri seguenti devono essere preceduti da una barra rovesciata `\` : `"`
 
 ___
 

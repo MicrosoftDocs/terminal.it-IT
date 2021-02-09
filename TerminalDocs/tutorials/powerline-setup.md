@@ -5,12 +5,12 @@ author: cinnamon-msft
 ms.author: cinnamon
 ms.date: 1/28/2021
 ms.topic: tutorial
-ms.openlocfilehash: 20f156c9c1b0be4cab869662a9874e9b6a7673e4
-ms.sourcegitcommit: 7855b73a8b3f84ee6bd42797e40281a3dadb152a
+ms.openlocfilehash: 0032a8253cb8d8c6311278267034043e5b0ee99a
+ms.sourcegitcommit: 85519c60d559160a7847cf99971b90eb5cb94b4e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98980944"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99974912"
 ---
 # <a name="tutorial-set-up-powerline-in-windows-terminal"></a>Esercitazione: Configurare Powerline in Terminale Windows
 
@@ -105,6 +105,13 @@ Ubuntu include diverse opzioni Powerline da cui eseguire l'installazione. Per qu
 sudo apt install golang-go
 go get -u github.com/justjanne/powerline-go
 ```
+
+> [!TIP]
+> Se si usa Ubuntu 18,04 o 16,04, è necessario installare prima la versione corretta di Golang:
+> ```bash
+> sudo add-apt-repository ppa:longsleep/golang-backports
+> sudo apt update
+> ```
 
 ### <a name="customize-your-ubuntu-prompt"></a>Personalizzare il prompt di Ubuntu
 

@@ -6,12 +6,12 @@ ms.author: cinnamon
 ms.date: 01/28/2021
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 0019a96f80e73740d980c9c6e156cf50134f0945
-ms.sourcegitcommit: 7855b73a8b3f84ee6bd42797e40281a3dadb152a
+ms.openlocfilehash: 052dfb096131f470c8468be24eae7ce44813fa87
+ms.sourcegitcommit: 85519c60d559160a7847cf99971b90eb5cb94b4e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "99041971"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99974902"
 ---
 # <a name="advanced-profile-settings-in-windows-terminal"></a>Impostazioni avanzate del profilo nel terminale di Windows
 
@@ -156,7 +156,8 @@ I profili possono usare un GUID come identificatore univoco. Per impostare un pr
 
 **Accetta:** GUID in formato stringa del Registro di sistema: `"{00000000-0000-0000-0000-000000000000}"`
 
-<br />
+> [!TIP]
+> È possibile eseguire `[guid]::NewGuid()` in PowerShell per generare un GUID per il profilo personalizzato.
 
 ___
 

@@ -5,12 +5,12 @@ author: cinnamon-msft
 ms.author: cinnamon
 ms.date: 1/28/2021
 ms.topic: how-to
-ms.openlocfilehash: 08cfce587a6c9d686ee0c2a085a98bc1094555f7
-ms.sourcegitcommit: 7855b73a8b3f84ee6bd42797e40281a3dadb152a
+ms.openlocfilehash: efb5711b2569571e65f5c157b96fde68a61b292c
+ms.sourcegitcommit: 85519c60d559160a7847cf99971b90eb5cb94b4e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98980994"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99974922"
 ---
 # <a name="using-command-line-arguments-for-windows-terminal"></a>Uso degli argomenti della riga di comando per Terminale Windows
 
@@ -25,7 +25,7 @@ Per aprire una nuova istanza di Terminale Windows dalla riga di comando, puoi us
 
 La riga di comando `wt` accetta due tipi di valori, ovvero **opzioni** e **comandi**. Le **opzioni** sono un elenco di flag e di altri parametri che controllano il comportamento della riga di comando `wt` nel complesso. I **comandi** forniscono l'azione, o l'elenco di azioni delimitate da punti e virgola, che è necessario implementare. Se non specifichi un comando, per impostazione predefinita viene usato `new-tab`.
 
-```bash
+```cmd
 wt [options] [command ; ]
 ```
 
@@ -66,7 +66,7 @@ Per aprire una nuova istanza del terminale, in questo caso il comando aprirà il
 <!-- Start tab selectors. -->
 #### <a name="command-prompt"></a>[Prompt dei comandi](#tab/windows)
 
-```bash
+```cmd
 wt -p "Ubuntu-18.04"
 ```
 
@@ -96,7 +96,7 @@ Per specificare la cartella da usare come directory iniziale della console, in q
 <!-- Start tab selectors. -->
 #### <a name="command-prompt"></a>[Prompt dei comandi](#tab/windows)
 
-```bash
+```cmd
 wt -d d:\
 ```
 
@@ -124,7 +124,7 @@ Per aprire una nuova istanza del terminale con più schede, immetti:
 <!-- Start tab selectors. -->
 #### <a name="command-prompt"></a>[Prompt dei comandi](#tab/windows)
 
-```bash
+```cmd
 wt ; ;
 ```
 
@@ -152,7 +152,7 @@ Per aprire una nuova istanza del terminale con più schede, in questo caso un pr
 <!-- Start tab selectors. -->
 #### <a name="command-prompt"></a>[Prompt dei comandi](#tab/windows)
 
-```bash
+```cmd
 wt -p "Command Prompt" ; new-tab -p "Windows PowerShell"
 ```
 
@@ -182,7 +182,7 @@ Per aprire una nuova istanza del terminale con una scheda contenente tre riquadr
 <!-- Start tab selectors. -->
 #### <a name="command-prompt"></a>[Prompt dei comandi](#tab/windows)
 
-```bash
+```cmd
 wt -p "Command Prompt" ; split-pane -p "Windows PowerShell" ; split-pane -H wsl.exe
 ```
 
@@ -214,7 +214,7 @@ I `new-tab` `split-pane` comandi e possono essere sequenziati per ottenere più 
 <!-- Start tab selectors. -->
 #### <a name="command-prompt"></a>[Prompt dei comandi](#tab/windows)
 
-```bash
+```cmd
 wt -p "Command Prompt" ; split-pane -V wsl.exe ; new-tab -d c:\ ; split-pane -H -d c:\ wsl.exe
 ```
 
@@ -244,7 +244,7 @@ Per aprire una nuova istanza del terminale con titoli di schede personalizzati, 
 <!-- Start tab selectors. -->
 #### <a name="command-prompt"></a>[Prompt dei comandi](#tab/windows)
 
-```bash
+```cmd
 wt --title tabname1 ; new-tab -p "Ubuntu-18.04" --title tabname2
 ```
 
@@ -272,7 +272,7 @@ Per aprire una nuova istanza di Terminal con i colori di tabulazione personalizz
 <!-- Start tab selectors. -->
 #### <a name="command-prompt"></a>[Prompt dei comandi](#tab/windows)
 
-```bash
+```cmd
 wt --tabColor #009999 ; new-tab --tabColor #f59218
 ```
 
@@ -309,7 +309,7 @@ Per aprire una nuova istanza del terminale con lo stato attivo su una specifica 
 <!-- Start tab selectors. -->
 #### <a name="command-prompt"></a>[Prompt dei comandi](#tab/windows)
 
-```bash
+```cmd
 wt ; new-tab -p "Ubuntu-18.04" ; focus-tab -t 1
 ```
 

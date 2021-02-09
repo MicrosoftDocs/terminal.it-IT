@@ -5,12 +5,12 @@ author: cinnamon-msft
 ms.author: cinnamon
 ms.date: 05/19/2020
 ms.topic: tutorial
-ms.openlocfilehash: a127b1be1dc3592568db9abd1027555bf38f349c
-ms.sourcegitcommit: 8e0901b83a8cc437f090fe58688b86acb73f3cb3
+ms.openlocfilehash: 2c80040b609e83b5fb454d932bebc1ae95ac0598
+ms.sourcegitcommit: 85519c60d559160a7847cf99971b90eb5cb94b4e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90988756"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99974892"
 ---
 # <a name="tutorial-configure-tab-titles-in-windows-terminal"></a>Esercitazione: Configurare i titoli delle schede in Terminale Windows
 
@@ -47,7 +47,7 @@ Una shell ha controllo completo sul proprio titolo, ma ogni shell imposta il tit
 | Prompt dei comandi | `TITLE "New Title"` |
 | bash* | `echo -ne "\033]0;New Title\a"` |
 
-Tieni presente che alcune distribuzioni di Linux, ad esempio Ubuntu, impostano automaticamente il titolo mentre interagisci con la shell. Se il comando precedente non funziona, esegui il comando seguente:
+Si noti che alcune distribuzioni di Linux, ad esempio Ubuntu, impostano automaticamente il titolo durante l'interazione con la Shell. Se il comando precedente non funziona, esegui il comando seguente:
 
 ```bash
 PS1=$

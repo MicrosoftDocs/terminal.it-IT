@@ -5,12 +5,12 @@ author: cinnamon-msft
 ms.author: cinnamon
 ms.date: 05/19/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7d3f4de1420446cfca60f91eaa8a092c8f5b1cd4
-ms.sourcegitcommit: 8e0901b83a8cc437f090fe58688b86acb73f3cb3
+ms.openlocfilehash: 9cbbd4411c1890b673d1dd2bed88bbd42cf0f6f4
+ms.sourcegitcommit: 85519c60d559160a7847cf99971b90eb5cb94b4e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90988776"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99974862"
 ---
 # <a name="tutorial-ssh-in-windows-terminal"></a>Esercitazione: SSH in Terminale Windows
 
@@ -20,18 +20,27 @@ Questa esercitazione illustra come configurare un profilo che usa SSH in Termina
 
 ## <a name="create-a-profile"></a>Creare un profilo
 
-Per avviare una sessione SSH al prompt dei comandi, esegui `ssh user@machine`. Ti verrà richiesto di immettere la password. Per creare un profilo di Terminale Windows che esegue questa operazione all'avvio, aggiungi l'impostazione `commandline` a un profilo nel file settings.json.
+Per avviare una sessione SSH al prompt dei comandi, esegui `ssh user@machine`. Ti verrà richiesto di immettere la password. È possibile creare un profilo terminale di Windows che esegue questa operazione all'avvio aggiungendo l' `commandline` impostazione a un profilo nel settings.jssu file all'interno `list` di oggetti profilo.
 
-```js
-"commandline": "ssh cinnamon@roll"
+```json
+{
+  "name": "user@machine ssh profile",
+  "commandline": "ssh user@machine",
+}
 ```
+
+Per altre informazioni, vedere:
+
+* [Profilo terminale Windows-impostazioni generali](./../customize-settings/profile-general.md)
 
 ## <a name="specify-starting-directory"></a>Specificare la directory iniziale
 
 Per specificare la directory iniziale per una sessione SSH richiamata da Terminale Windows, è possibile usare questo comando:
 
-```bash
-"commandline": "ssh -t bob@foo \"cd /data/bob && exec bash -l\""
+```json
+{
+  "commandline": "ssh -t bob@foo \"cd /data/bob && exec bash -l\""
+}
 ```
 
 Il flag `-t` forza l'allocazione del pseudo-terminale. Questa funzionalità può essere usata per eseguire programmi arbitrari basati su schermo in un computer remoto, ad esempio per l'implementazione di servizi di menu. Sarà necessario usare le virgolette doppie di escape perché le derivate di Bourne shell non eseguono analisi aggiuntive per una stringa racchiusa tra virgolette singole.
